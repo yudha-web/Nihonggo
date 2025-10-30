@@ -31,7 +31,7 @@
     /* HEADER GRADIENT HIJAU DI DALAM KARTU PLAYER */
     .visual-header {
       background: linear-gradient(180deg, #1db954 0%, rgba(15, 23, 40, 0) 100%); /* Dari hijau ke transparan ke background kartu */
-      padding: 30px 18px 70px 18px; /* Padding lebih besar di bawah untuk menempatkan kontrol di atasnya */
+      padding: 30px 22px 70px 22px; /* Padding lebih besar di bawah untuk menempatkan kontrol di atasnya */
       position: relative;
       color: white; /* Untuk teks di header */
       text-align: center; /* Teks header di tengah */
@@ -44,8 +44,9 @@
     }
     .visual-header .meta {
         font-size: 13px; /* Sedikit lebih kecil */
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 0.9); /* Dibuat lebih putih agar terbaca */
         margin-top: 4px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Sedikit bayangan agar lebih jelas */
     }
 
     /* Kontrol Player (sekarang berada di bawah visual-header, bukan di playerCard terpisah) */
@@ -59,14 +60,16 @@
     .main-controls-group {
       display: flex;
       align-items: center;
-      justify-content: center; /* Kontrol utama di tengah */
-      gap: 16px; /* Jarak antar tombol */
+      justify-content: space-between; /* Untuk menempatkan shuffle/loop di ujung */
+      gap: 8px; /* Jarak antar tombol */
       margin-bottom: 25px; /* Jarak ke info track */
     }
-
-    .main-controls-group .smbtn {
-        color: var(--main-text); /* Ikon di kontrol utama lebih terang */
+    .main-controls-center-group { /* Group baru untuk play, prev, next, rwd, ffw */
+        display: flex;
+        align-items: center;
+        gap: 16px;
     }
+
 
     /* Tombol Play/Pause yang besar */
     .bigbtn{
@@ -83,6 +86,7 @@
       cursor:pointer;
       box-shadow:0 6px 20px rgba(0,0,0,0.5); /* Bayangan lebih kuat */
       transition: transform 0.2s ease-out;
+      flex-shrink: 0; /* Pastikan tidak mengecil */
     }
     .bigbtn:hover {
         transform: scale(1.05); /* Efek hover kecil */
@@ -93,7 +97,7 @@
         height: 28px;
     }
 
-    /* Tombol Navigasi Kecil (Prev, Next, Rwd, Ffw) */
+    /* Tombol Navigasi Kecil (Prev, Next, Rwd, Ffw, Loop, Shuffle) */
     .smbtn{
       width:48px; /* Ukuran tombol lebih standar */
       height:48px;
@@ -154,22 +158,6 @@
       flex-grow: 1; /* Mengisi ruang yang tersedia */
     }
 
-    /* Tombol shuffle dan loop yang dipindahkan */
-    .extra-controls {
-        display: flex;
-        gap: 8px; /* Jarak antar tombol shuffle/loop */
-        align-items: center;
-    }
-    .extra-controls .smbtn {
-        width: 38px;
-        height: 38px;
-        /* Gaya ikon disesuaikan */
-    }
-    .extra-controls .smbtn svg {
-        width: 18px;
-        height: 18px;
-    }
-    
     select{
       background:transparent;
       border:1px solid rgba(255,255,255,0.08); /* Border sedikit lebih jelas */
@@ -298,12 +286,37 @@
     /* Styling untuk Footer di dalam main-player-card */
     .main-player-card .copyright {
         text-align: center;
-        /* margin-top: 20px; Biarkan margin-bottom di controlsBottom yang mengatur */
         padding-top: 15px; /* Padding atas agar terpisah dari kontrol */
         border-top: 1px solid rgba(255,255,255,0.03); /* Garis pemisah halus */
         color: var(--muted);
         font-size: 11px; /* Lebih kecil agar minimalis */
     }
+    .main-player-card .copyright .instagram-link {
+        margin-top: 8px; /* Jarak dari copyright utama */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-size: 12px; /* Sedikit lebih besar dari copyright, lebih kecil dari teks biasa */
+    }
+    .main-player-card .copyright .instagram-link a {
+        color: var(--muted); /* Warna teks link */
+        text-decoration: none; /* Hilangkan underline */
+        transition: color 0.2s;
+    }
+    .main-player-card .copyright .instagram-link a:hover {
+        color: var(--main-text); /* Warna lebih terang saat hover */
+    }
+    .main-player-card .copyright .instagram-link svg {
+        width: 14px; /* Ukuran ikon Instagram */
+        height: 14px;
+        fill: var(--muted);
+        transition: fill 0.2s;
+    }
+    .main-player-card .copyright .instagram-link a:hover svg {
+        fill: var(--main-text);
+    }
+
   </style>
 </head>
 <body>
@@ -317,20 +330,30 @@
       
       <div class="player-controls-area">
         <div class="main-controls-group">
-          <button id="prev" class="smbtn" title="Previous">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 3.5A.5.5 0 0 1 1 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4-1a.5.5 0 0 1 .5.5v3.146L14.707 9.854a.5.5 0 0 1 .146.353v3.146a.5.5 0 0 1-.724.447l-7-4.5a.5.5 0 0 1-.01-.734l7-4.5A.5.5 0 0 1 14 3.25z"/></svg>
+          <button id="shuffle" class="smbtn" title="Shuffle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.43 1.25H3.57C1.57 1.25 0 2.82 0 4.82v6.36c0 2 1.57 3.57 3.57 3.57h8.86c2 0 3.57-1.57 3.57-3.57V4.82c0-2-1.57-3.57-3.57-3.57zm-6.14 7.64a.5.5 0 0 1 0-.707l2.828-2.828a.5.5 0 0 1 .707 0l2.828 2.828a.5.5 0 0 1 0 .707l-2.828 2.828a.5.5 0 0 1-.707 0l-2.828-2.828zM3.5 6.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/></svg>
           </button>
-          <button id="rwd" class="smbtn" title="Rewind 10s">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.793 11.207a.5.5 0 0 1 0-.708L14.6 9H10.5a.5.5 0 0 1 0-1h4.102l-1.808-1.499a.5.5 0 0 1 .374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5zM4.35 6.467a4.5 4.5 0 0 0 4.291 3.284 4.673 4.673 0 0 0 3.321-1.341A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H1.359l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 1.556 7.202z"/></svg>
-          </button>
-          <button id="play" class="bigbtn" title="Play/Pause">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
-          </button>
-          <button id="ffw" class="smbtn" title="Fast Forward 10s">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M3.207 4.793a.5.5 0 0 1 0 .708L1.4 7H5.5a.5.5 0 0 1 0 1H1.398l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 14.444 8.798l1.4-.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H4.641l-1.808-1.499a.5.5 0 0 1-.374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 14.444 8.798zM11.65 9.533a4.5 4.5 0 0 0-4.291-3.284 4.673 4.673 0 0 0-3.321 1.341A6 6 0 0 0 1.583 8.798l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1H14.641l-1.808-1.499a.5.5 0 0 1-.374-.827z"/></svg>
-          </button>
-          <button id="next" class="smbtn" title="Next">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M15.5 3.5a.5.5 0 0 1 0 1v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zM11 4.5v7l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V2.846c0-.63.692-1.01 1.233-.696L11 4.5z"/></svg>
+          
+          <div class="main-controls-center-group">
+            <button id="prev" class="smbtn" title="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 3.5A.5.5 0 0 1 1 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4-1a.5.5 0 0 1 .5.5v3.146L14.707 9.854a.5.5 0 0 1 .146.353v3.146a.5.5 0 0 1-.724.447l-7-4.5a.5.5 0 0 1-.01-.734l7-4.5A.5.5 0 0 1 14 3.25z"/></svg>
+            </button>
+            <button id="rwd" class="smbtn" title="Rewind 10s">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.793 11.207a.5.5 0 0 1 0-.708L14.6 9H10.5a.5.5 0 0 1 0-1h4.102l-1.808-1.499a.5.5 0 0 1 .374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5zM4.35 6.467a4.5 4.5 0 0 0 4.291 3.284 4.673 4.673 0 0 0 3.321-1.341A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H1.359l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 1.556 7.202z"/></svg>
+            </button>
+            <button id="play" class="bigbtn" title="Play/Pause">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+            </button>
+            <button id="ffw" class="smbtn" title="Fast Forward 10s">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M3.207 4.793a.5.5 0 0 1 0 .708L1.4 7H5.5a.5.5 0 0 1 0 1H1.398l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 14.444 8.798l1.4-.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H4.641l-1.808-1.499a.5.5 0 0 1-.374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 14.444 8.798zM11.65 9.533a4.5 4.5 0 0 0-4.291-3.284 4.673 4.673 0 0 0-3.321 1.341A6 6 0 0 0 1.583 8.798l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1H14.641l-1.808-1.499a.5.5 0 0 1-.374-.827z"/></svg>
+            </button>
+            <button id="next" class="smbtn" title="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M15.5 3.5a.5.5 0 0 1 0 1v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zM11 4.5v7l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V2.846c0-.63.692-1.01 1.233-.696L11 4.5z"/></svg>
+            </button>
+          </div>
+
+          <button id="loop" class="smbtn" title="Toggle loop">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 8a2 2 0 0 1 2-2h10.93l-3.65-3.65a.5.5 0 0 1 .707-.707l5.44 5.44a.5.5 0 0 1 0 .707l-5.44 5.44a.5.5 0 0 1-.707-.707l3.65-3.65H2a2 2 0 0 1-2-2z"/></svg>
           </button>
         </div>
         
@@ -365,20 +388,19 @@
             <label class="tiny">Volume</label>
             <input id="vol" type="range" min="0" max="1" step="0.01" value="1">
           </div>
-
-          <div class="extra-controls">
-            <button id="shuffle" class="smbtn" title="Shuffle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M12.43 1.25H3.57C1.57 1.25 0 2.82 0 4.82v6.36c0 2 1.57 3.57 3.57 3.57h8.86c2 0 3.57-1.57 3.57-3.57V4.82c0-2-1.57-3.57-3.57-3.57zm-6.14 7.64a.5.5 0 0 1 0-.707l2.828-2.828a.5.5 0 0 1 .707 0l2.828 2.828a.5.5 0 0 1 0 .707l-2.828 2.828a.5.5 0 0 1-.707 0l-2.828-2.828zM3.5 6.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/></svg>
-            </button>
-            <button id="loop" class="smbtn" title="Toggle loop">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 8a2 2 0 0 1 2-2h10.93l-3.65-3.65a.5.5 0 0 1 .707-.707l5.44 5.44a.5.5 0 0 1 0 .707l-5.44 5.44a.5.5 0 0 1-.707-.707l3.65-3.65H2a2 2 0 0 1-2-2z"/></svg>
-            </button>
-          </div>
         </div>
 
       </div> 
       <div class="copyright">
         &copy; 2025 Yudha. All rights reserved.
+        <div class="instagram-link">
+            <a href="https://www.instagram.com/isal_yud" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.269.087 3.85.048 4.703.01 5.555 0 5.827 0 8s.01 2.444.048 3.297c.04.852.174 1.433.372 1.942.205.526.478.96.923 1.417.444.445.877.718 1.417.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372a3.927 3.927 0 0 0 1.417-.923c.445-.444.718-.877.923-1.417.198-.51.333-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.444-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.917 3.917 0 0 0-.923-1.417A3.927 3.927 0 0 0 13.24 0.42c-.51-.198-1.09-.333-1.942-.372C10.445.01 10.173 0 8 0zm0 2.16c2.115 0 2.385.008 3.232.046.78.035 1.204.166 1.486.275.373.145.64.318.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.038.843.046 1.113.046 3.233 0 2.115-.008 2.385-.046 3.232-.035.78-.166 1.204-.275 1.486a2.59 2.59 0 0 1-.599.92c-.28.28-.546.453-.92.598-.281.11-.705.24-1.485.275-.843.038-1.113.046-3.233.046-2.115 0-2.385-.008-3.232-.046-.78-.035-1.204-.166-1.486-.275a2.59 2.59 0 0 1-.92-.599c-.28-.28-.453-.546-.598-.92-.11-.281-.24-.705-.275-1.485C2.16 10.445 2.152 10.173 2.152 8s.008-2.444.046-3.297c.035-.78.166-1.204.275-1.486.145-.373.318-.64.599-.92.28-.28.546-.453.92-.598.281-.11.705-.24 1.485-.275C5.555 2.16 5.827 2.152 8 2.152zm0 3.654a4.111 4.111 0 1 0 0 8.222 4.111 4.111 0 0 0 0-8.222zM8 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5.725-4.522a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
+                </svg>
+                isal_yud
+            </a>
+        </div>
       </div>
     </section>
 
