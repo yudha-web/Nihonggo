@@ -3,36 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Minna Nihonggo</title>
+  <title>Audio Player Minna Nihonggo</title>
   <style>
-    /*=== VARIABLE DAN GLOBAL STYLE ===*/
+    /*==================================
+      0. GLOBAL & VARIABLE DEFINITION
+    ==================================*/
     :root{
-      --bg:#0f1720; --card:#0f1728; --muted:#9aa6b2; --accent:#1db954; --panel:#0b1220;
-      --glass: rgba(255,255,255,0.03);
+      --bg:#0f1720; 
+      --card:#0f1728; 
+      --muted:#9aa6b2; 
+      --accent:#1db954; 
       --main-text: #e6eef3;
       /* Neumorphism Shadows */
       --shadow-light: rgba(255, 255, 255, 0.05);
       --shadow-dark: rgba(0, 0, 0, 0.6);
+      --glass: rgba(255,255,255,0.03);
     }
     *{box-sizing:border-box}
     body{
-      margin:0; font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      background:linear-gradient(180deg,#071021 0%, #0b1220 100%); color:var(--main-text);
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      margin:0; 
+      font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#071021 0%, #0b1220 100%); 
+      color:var(--main-text);
+      -webkit-font-smoothing:antialiased; 
+      -moz-osx-font-smoothing:grayscale;
       padding:28px;
     }
-    .wrap{max-width:500px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:22px}
+    .wrap{
+      max-width:500px; 
+      margin:0 auto; 
+      display:grid; 
+      grid-template-columns:1fr; 
+      gap:22px
+    }
 
-    /* KARTU PLAYER UTAMA */
+    /*==================================
+      1. MAIN PLAYER CARD & HEADER
+    ==================================*/
     .main-player-card {
         background: var(--card);
         border-radius: 18px;
+        /* Outer Concave Shadow */
         box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light); 
         overflow: hidden;
         padding-bottom: 20px;
     }
-
-    /* HEADER GRADIENT */
     .visual-header {
       background: linear-gradient(180deg, #1db954 0%, rgba(15, 23, 40, 0) 100%);
       padding: 30px 22px 70px 22px;
@@ -40,22 +55,26 @@
       color: white;
       text-align: center;
     }
-    .visual-header h1 {font-size: 26px; font-weight: 700; margin: 0; letter-spacing: -0.5px;}
+    .visual-header h1 {
+        font-size: 26px; 
+        font-weight: 700; 
+        margin: 0;
+    }
     .visual-header .meta {
         font-size: 13px;
         color: rgba(255, 255, 255, 0.9);
         margin-top: 4px;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
 
-    /* Kontrol Player */
+    /*==================================
+      2. BUTTONS (NEUMORPHISM)
+    ==================================*/
     .player-controls-area {
         position: relative;
         margin-top: -50px;
         z-index: 10;
         padding: 0 22px;
     }
-    /* KONTROL UTAMA: HANYA PREV, PLAY, NEXT */
     .main-controls-group {
       display: flex;
       align-items: center;
@@ -64,20 +83,23 @@
       margin-bottom: 25px;
     }
 
-    /* Tombol Style */
+    /* Big Play Button (Raised/Cembung) */
     .bigbtn{
       width:64px; height:64px; border-radius:999px; border:none;
       background:var(--accent); 
       color:white;
-      /* NEUMORPHISM BARU untuk Tombol Besar (Cembung) */
       box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.15); 
       display:inline-flex; align-items:center; justify-content:center;
       cursor:pointer; flex-shrink: 0;
       transition: all 0.2s ease-out;
     }
-    .bigbtn:hover {transform: scale(1.05); box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5), -10px -10px 20px rgba(255, 255, 255, 0.2);}
+    .bigbtn:hover {
+        transform: scale(1.05); 
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5), -10px -10px 20px rgba(255, 255, 255, 0.2);
+    }
     .bigbtn svg {width: 28px; height: 28px;}
 
+    /* Small Utility Buttons (Slightly Raised) */
     .smbtn{
       width:44px; height:44px; border-radius:999px; border:none;
       background:var(--card);
@@ -85,7 +107,6 @@
       cursor:pointer; display: flex; align-items: center; justify-content: center; 
       flex-shrink: 0; 
       transition: all 0.2s;
-      /* Efek Cembung Default: sedikit menonjol */
       box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light); 
     }
     .smbtn:hover {
@@ -94,25 +115,32 @@
         box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light); 
     }
     .smbtn:active {
-        /* Efek Cekung saat ditekan */
+        /* Pressed/Cekung State */
         box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light); 
         transform: scale(0.98);
     }
     .smbtn svg {width: 22px; height: 22px;}
     .smbtn.active-control { 
         color: var(--accent); 
-        /* Memberikan sedikit efek cekung saat aktif */
+        /* Slightly concave when active */
         box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light); 
     }
 
-    /* TRACK INFO & VISUALIZER */
+    /*==================================
+      3. TRACK INFO & VISUALIZER
+    ==================================*/
     .track-info{ 
       text-align: center;
       margin-bottom: 5px; 
     } 
-    .title{font-weight:600; font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 6px;}
-
-    /* Area Visualizer */
+    .title{
+        font-weight:600; 
+        font-size: 18px; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        margin-bottom: 6px;
+    }
     .audio-visualizer {
         display: flex;
         justify-content: center;
@@ -136,14 +164,36 @@
         transition: height 0.05s ease-out; 
     }
 
-    /* Progress Bar */
-    /* Pastikan Progress bar bisa disentuh/diklik dengan mudah */
-    .progress{height:12px;background:rgba(255,255,255,0.08);border-radius:999px;cursor:pointer;position:relative; margin-bottom: 8px; margin-top: 15px; padding: 2px 0;}
-    .progress > .bar{height:100%;width:0;background:var(--accent);border-radius:999px}
-    /* Waktu dan Durasi diletakkan di bawah progress bar */
-    .time{display:flex;justify-content:space-between;font-size:12px;color:var(--muted); margin-bottom: 10px;}
+    /*==================================
+      4. PROGRESS & SEEK BAR
+    ==================================*/
+    .progress{
+        height:12px;
+        background:rgba(255,255,255,0.08);
+        border-radius:999px;
+        cursor:pointer;
+        position:relative; 
+        margin-bottom: 8px; 
+        margin-top: 15px; 
+        padding: 2px 0; /* Area sentuh lebih besar */
+    }
+    .progress > .bar{
+        height:100%;
+        width:0;
+        background:var(--accent);
+        border-radius:999px
+    }
+    .time{
+        display:flex;
+        justify-content:space-between;
+        font-size:12px;
+        color:var(--muted); 
+        margin-bottom: 10px;
+    }
 
-    /* Bottom Controls */
+    /*==================================
+      5. BOTTOM CONTROLS & SETTINGS
+    ==================================*/
     .controlsBottom{
         display:flex; 
         align-items:center; 
@@ -153,23 +203,20 @@
         margin-top: 10px; 
         margin-bottom: 5px; 
     }
-    /* Grup Pengaturan di Bawah (Speed + Volume) */
-    .controlsBottom .settings-group {
+    .settings-group {
         display: flex;
         gap: 25px; 
         align-items: center;
         flex-grow: 1; 
         justify-content: center;
     }
-    
-    .controlsBottom .speed-control,
-    .controlsBottom .volume-control {
+    .speed-control,
+    .volume-control {
       display: flex;
       flex-direction: column;
       align-items: center; 
     }
-
-    .controlsBottom .label {
+    .label {
         font-size: 12px;
         color: var(--muted);
         margin-bottom: 5px;
@@ -177,7 +224,7 @@
         text-align: center;
     }
 
-    /* STYLE DROPDOWN SPEED */
+    /* Speed Dropdown */
     #speed {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -193,21 +240,15 @@
     #speed:focus {
         outline: 1px solid var(--accent);
     }
-    /* VOLUME INPUT */
+    /* Volume Range Input */
     .volume-control input[type="range"] {
         width: 80px; 
     }
-    /* VOLUME THUMB SHADOW */
-    .volume-control input[type="range"]::-webkit-slider-thumb {
-        box-shadow: 0 0 0 3px var(--card), 0 0 0 5px var(--shadow-light); 
-        transition: all 0.1s;
-    }
-    .volume-control input[type="range"]:focus::-webkit-slider-thumb {
-        box-shadow: 0 0 0 3px var(--accent); 
-    }
 
 
-    /*=== PLAYLIST CARD ===*/
+    /*==================================
+      6. PLAYLIST CARD
+    ==================================*/
     .playlist-card{
       background:var(--card);
       padding:18px;
@@ -216,23 +257,11 @@
       display: flex; 
       flex-direction: column; 
     }
-
-    /* Area yang dapat di-scroll */
     .playlist-scroll-area {
         max-height: 350px; 
         overflow-y: auto; 
         padding-right: 5px; 
     }
-    /* Style Scrollbar (Opsional) */
-    .playlist-scroll-area::-webkit-scrollbar {
-        width: 8px;
-    }
-    .playlist-scroll-area::-webkit-scrollbar-thumb {
-        background-color: rgba(29, 185, 84, 0.4); 
-        border-radius: 4px;
-    }
-
-
     .playlist-header {
       display: flex;
       justify-content: space-between;
@@ -242,7 +271,7 @@
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* PLAYLIST ITEM RAPI + NOMOR URUT */
+    /* Track Item */
     .track {
         display: flex;
         align-items: center;
@@ -263,13 +292,6 @@
         color: var(--muted);
         flex-shrink: 0;
     }
-    .track .name {
-        flex-grow: 1;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin-right: 10px;
-    }
     .track.active{
         background:rgba(29,185,84,0.1); 
         color: #fff; 
@@ -279,8 +301,6 @@
         color: var(--accent);
         font-weight: 500;
     }
-
-    /* Equalizer Icon di Playlist */
     .equalizer-icon {
         display: none; 
         width: 15px;
@@ -300,7 +320,9 @@
         height: 5px; 
     }
 
-    /* FOOTER/COPYRIGHT */
+    /*==================================
+      7. FOOTER
+    ==================================*/
     .main-player-card .copyright {
         text-align: center;
         padding-top: 10px; 
@@ -334,9 +356,7 @@
 
         <div class="main-controls-group">
             <button id="prev" class="smbtn" title="Previous Track">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M12.5 3.25L5.75 8l6.75 4.75V3.25zM3.25 12.75V3.25h1.5v9.5h-1.5z"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.5 3.25L5.75 8l6.75 4.75V3.25zM3.25 12.75V3.25h1.5v9.5h-1.5z"/></svg>
             </button>
 
             <button id="rwd" class="smbtn" title="Rewind 10s">
@@ -344,9 +364,7 @@
             </button>
 
             <button id="play" class="bigbtn" title="Play/Pause">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 16 16">
-                <path d="M10.824 8.697l-6.363 3.692C4.015 12.607 3 12.185 3 11.231V4.769c0-.954 1.015-1.376 1.46-.867l6.363 3.692a1.002 1.002 0 0 1 0 1.393z"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 16 16"><path d="M10.824 8.697l-6.363 3.692C4.015 12.607 3 12.185 3 11.231V4.769c0-.954 1.015-1.376 1.46-.867l6.363 3.692a1.002 1.002 0 0 1 0 1.393z"/></svg>
             </button>
 
             <button id="ffw" class="smbtn" title="Forward 10s">
@@ -354,9 +372,7 @@
             </button>
 
             <button id="next" class="smbtn" title="Next Track">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M3.5 3.25L10.25 8l-6.75 4.75V3.25zM12.75 3.25v9.5h1.5V3.25h-1.5z"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 3.25L10.25 8l-6.75 4.75V3.25zM12.75 3.25v9.5h1.5V3.25h-1.5z"/></svg>
             </button>
         </div>
 
@@ -382,9 +398,7 @@
 
         <div class="controlsBottom">
           <button id="shuffle" class="smbtn" title="Shuffle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.256 4.668 2.506a5.492 5.492 0 0 0-.649-1.385C4.358 3.712 3.51 3 2.5 3H.5a.5.5 0 0 1 0-1H2.5C3.656 2 4.5 2.802 5.093 3.512l.708.946-1.895 2.158c-.14.16-.29.317-.45.438-.16.12-.34.21-.52.28-.18.07-.37.1-.56.12-.19.02-.38.03-.57.03H.5a.5.5 0 0 1 0-1H2.5c.29 0 .58-.04.86-.13.28-.09.54-.22.78-.4.24-.18.46-.4.63-.64L6 4.312V13h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H5V5.5c0-.12.01-.24.03-.36.02-.12.06-.23.1-.34.04-.11.1-.22.17-.32l.708-.946C6.673 3.198 7.514 2 9.5 2h4.86c.29 0 .58-.04.86-.13.28-.09.54-.22.78-.4.24-.18.46-.4.63-.64L16 4.312V13h.5a.5.5 0 0 1 0 1H13.5a.5.5 0 0 1 0-1H14V5.5c0-.12-.01-.24-.03-.36-.02-.12-.06-.23-.1-.34-.04-.11-.1-.22-.17-.32l-.708-.946C12.327 3.198 11.486 2 9.5 2H.5z"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.256 4.668 2.506a5.492 5.492 0 0 0-.649-1.385C4.358 3.712 3.51 3 2.5 3H.5a.5.5 0 0 1 0-1H2.5C3.656 2 4.5 2.802 5.093 3.512l.708.946-1.895 2.158c-.14.16-.29.317-.45.438-.16.12-.34.21-.52.28-.18.07-.37.1-.56.12-.19.02-.38.03-.57.03H.5a.5.5 0 0 1 0-1H2.5c.29 0 .58-.04.86-.13.28-.09.54-.22.78-.4.24-.18.46-.4.63-.64L6 4.312V13h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H5V5.5c0-.12.01-.24.03-.36.02-.12.06-.23.1-.34.04-.11.1-.22.17-.32l.708-.946C6.673 3.198 7.514 2 9.5 2h4.86c.29 0 .58-.04.86-.13.28-.09.54-.22.78-.4.24-.18.46-.4.63-.64L16 4.312V13h.5a.5.5 0 0 1 0 1H13.5a.5.5 0 0 1 0-1H14V5.5c0-.12-.01-.24-.03-.36-.02-.12-.06-.23-.1-.34-.04-.11-.1-.22-.17-.32l-.708-.946C12.327 3.198 11.486 2 9.5 2H.5z"/></svg>
           </button>
 
           <div class="settings-group">
@@ -411,9 +425,7 @@
           </div>
 
           <button id="loop" class="smbtn" title="Toggle loop">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M11 5v3.5a.5.5 0 0 0 1 0V4.5a.5.5 0 0 0-.5-.5H7a.5.5 0 0 0 0 1h3.5A1.5 1.5 0 0 1 12 7.5V11a.5.5 0 0 0 1 0V7.5A2.5 2.5 0 0 0 10.5 5H4.5a.5.5 0 0 0 0 1H12.5a.5.5 0 0 0 0-1H4.5A2.5 2.5 0 0 0 2 7.5V11a.5.5 0 0 0 1 0V7.5A1.5 1.5 0 0 1 4.5 6H11z"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M11 5v3.5a.5.5 0 0 0 1 0V4.5a.5.5 0 0 0-.5-.5H7a.5.5 0 0 0 0 1h3.5A1.5 1.5 0 0 1 12 7.5V11a.5.5 0 0 0 1 0V7.5A2.5 2.5 0 0 0 10.5 5H4.5a.5.5 0 0 0 0 1H12.5a.5.5 0 0 0 0-1H4.5A2.5 2.5 0 0 0 2 7.5V11a.5.5 0 0 0 1 0V7.5A1.5 1.5 0 0 1 4.5 6H11z"/></svg>
           </button>
         </div>
 
@@ -446,6 +458,9 @@
   <audio id="audio" preload="metadata"></audio>
 
   <script>
+    //==================================
+    //  CONFIGURATION & ICONS
+    //==================================
     const files = [
       "01 Dai 1 Ka - Kaiwa.mp3","02 Dai 1 Ka - Mondai 1.mp3","03 Dai 1 Ka - Mondai 2.mp3","04 Dai 1 Ka - Mondai 3.mp3",
       "05 Dai 2 Ka - Kaiwa.mp3","06 Dai 2 Ka - Mondai 1.mp3","07 Dai 2 Ka - Mondai 2.mp3","08 Dai 2 Ka - Mondai 3.mp3",
@@ -471,11 +486,12 @@
       "85 Dai 25 Ka - Kaiwa.mp3","86 Dai 25 Ka - Mondai 1.mp3","87 Dai 25 Ka - Mondai 2.mp3"
     ];
 
-    // Ikon Play/Pause dengan fill solid (sesuai ilustrasi)
     const playIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 16 16"><path d="M10.824 8.697l-6.363 3.692C4.015 12.607 3 12.185 3 11.231V4.769c0-.954 1.015-1.376 1.46-.867l6.363 3.692a1.002 1.002 0 0 1 0 1.393z"/></svg>';
     const pauseIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 16 16"><path d="M5.5 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4-1a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/></svg>';
 
-    // Elements
+    //==================================
+    //  DOM ELEMENTS & STATE
+    //==================================
     const audio = document.getElementById('audio');
     const playBtn = document.getElementById('play');
     const nowTitle = document.getElementById('nowTitle');
@@ -488,25 +504,29 @@
     const loopBtn = document.getElementById('loop');
     const shuffleBtn = document.getElementById('shuffle');
     const playlistEl = document.getElementById('playlist');
-    const audioVisualizer = document.getElementById('audioVisualizer');
+    const visualBars = [...document.querySelectorAll('.bar-item')]; 
     const rwdBtn = document.getElementById('rwd');
     const ffwBtn = document.getElementById('ffw');
-
-    // WEB AUDIO API SETUP
-    let audioContext;
-    let analyser;
-    let source;
-    let dataArray;
-    const visualBars = [...document.querySelectorAll('.bar-item')]; 
-
-    // state
+    
+    // Player State
     let current = 0;
     let isPlaying = false;
     let isLoop = false;
     let isShuffle = false;
+    let isSeeking = false; // State untuk drag/slide progress bar
     let order = files.map((_,i)=>i);
-    
-    // Fungsi untuk inisialisasi Web Audio 
+
+    // Web Audio API State
+    let audioContext;
+    let analyser;
+    let source;
+    let dataArray;
+
+
+    //==================================
+    //  CORE PLAYER FUNCTIONS
+    //==================================
+
     function setupAudioContext() {
         if (!audioContext) {
             audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -525,56 +545,6 @@
         }
     }
     
-    // FUNGSI DRAW VISUALIZER REAL-TIME
-    function drawVisualizer() {
-        if (!audioContext) return; 
-        
-        requestAnimationFrame(drawVisualizer);
-        
-        analyser.getByteFrequencyData(dataArray);
-
-        const numBars = visualBars.length; 
-        const step = Math.floor(dataArray.length / numBars); 
-
-        for (let i = 0; i < numBars; i++) {
-            const dataIndex = i * step; 
-            let value = dataArray[dataIndex] || 0;
-
-            const normalizedValue = Math.min(value / 255, 1) * 10; 
-            const height = Math.max(4, 5 + normalizedValue); 
-
-            visualBars[i].style.height = height + 'px';
-        }
-    }
-    
-    // build playlist UI 
-    function buildList(){
-      playlistEl.innerHTML = '';
-      files.forEach((f,i)=>{
-        const tr = document.createElement('div');
-        tr.className = 'track';
-        tr.dataset.index = i;
-        const trackNumber = String(i+1).padStart(2,'0'); 
-        const fileNameWithoutExtension = f.replace(/\.mp3$/, '');
-        const equalizerIcon = `<div class="equalizer-icon"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>`;
-        tr.innerHTML = `<div class="num">${trackNumber}</div><div class="name">${fileNameWithoutExtension}</div>${equalizerIcon}`;
-        tr.onclick = ()=>{ playIndex(i); };
-        playlistEl.appendChild(tr);
-      });
-      highlight();
-    }
-
-    function highlight(){
-      [...document.querySelectorAll('.track')].forEach(n=>n.classList.remove('active'));
-      const el = document.querySelector('.track[data-index="'+current+'"]');
-      if(el) el.classList.add('active');
-      
-      const scrollArea = document.querySelector('.playlist-scroll-area');
-      if (el && scrollArea) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    }
-
     function setSource(i){
       current = i; 
       const path = encodeURI(files[i]);
@@ -600,59 +570,33 @@
       drawVisualizer(); 
     }
 
-    // controls
-    playBtn.onclick = ()=>{
-      if(!audio.src){ setSource(current); }
+    function togglePlay(){
+        if(!audio.src){ setSource(current); }
       
-      setupAudioContext();
-      
-      if(audio.paused){ 
-        if (audioContext.state === 'suspended') {
-            audioContext.resume();
-        }
+        setupAudioContext();
         
-        audio.play().catch(error => console.error("Play failed:", error)); 
-        playBtn.innerHTML = pauseIcon; 
-        isPlaying=true; 
-        drawVisualizer();
-      }
-      else { 
-        audio.pause(); 
-        playBtn.innerHTML = playIcon; 
-        isPlaying=false; 
-        visualBars.forEach(bar => bar.style.height = '6px');
-      }
-    };
-
-    // Tombol Previous Track
-    document.getElementById('prev').onclick = ()=>{ 
-        current = (current - 1 + files.length) % files.length; 
-        playIndex(current); 
-    };
-
-    // Tombol Rewind 10s
-    rwdBtn.onclick = ()=>{ 
-        if (!isNaN(audio.duration)) {
-            audio.currentTime = Math.max(0, audio.currentTime - 10);
+        if(audio.paused){ 
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+            
+            audio.play().catch(error => console.error("Play failed:", error)); 
+            playBtn.innerHTML = pauseIcon; 
+            isPlaying=true; 
+            drawVisualizer();
         }
-    };
-    
-    // Tombol Forward 10s
-    ffwBtn.onclick = ()=>{ 
-        if (!isNaN(audio.duration)) {
-            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+        else { 
+            audio.pause(); 
+            playBtn.innerHTML = playIcon; 
+            isPlaying=false; 
+            visualBars.forEach(bar => bar.style.height = '6px');
         }
-    };
-    
-    // Tombol Next Track
-    document.getElementById('next').onclick = ()=>{ 
-        current = (current + 1) % files.length; 
-        playIndex(current); 
-    };
+    }
 
-    document.getElementById('playAll').onclick = ()=>{ 
-      playIndex(isShuffle ? order[0] : 0); 
-    };
+
+    //==================================
+    //  UTILITY FUNCTIONS
+    //==================================
 
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -661,7 +605,93 @@
         }
     }
 
-    // Re-bind shuffle/loop clicks
+    function formatTime(sec){
+      if(!sec || isNaN(sec)) return '0:00';
+      const s = Math.floor(sec%60).toString().padStart(2,'0');
+      const m = Math.floor(sec/60);
+      return `${m}:${s}`;
+    }
+
+    // Playlist UI update
+    function highlight(){
+      [...document.querySelectorAll('.track')].forEach(n=>n.classList.remove('active'));
+      const el = document.querySelector('.track[data-index="'+current+'"]');
+      if(el) el.classList.add('active');
+      
+      const scrollArea = document.querySelector('.playlist-scroll-area');
+      if (el && scrollArea) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function buildList(){
+      playlistEl.innerHTML = '';
+      files.forEach((f,i)=>{
+        const tr = document.createElement('div');
+        tr.className = 'track';
+        tr.dataset.index = i;
+        const trackNumber = String(i+1).padStart(2,'0'); 
+        const fileNameWithoutExtension = f.replace(/\.mp3$/, '');
+        const equalizerIcon = `<div class="equalizer-icon"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>`;
+        tr.innerHTML = `<div class="num">${trackNumber}</div><div class="name">${fileNameWithoutExtension}</div>${equalizerIcon}`;
+        tr.onclick = ()=>{ playIndex(i); };
+        playlistEl.appendChild(tr);
+      });
+      highlight();
+    }
+
+    // Visualizer real-time update
+    function drawVisualizer() {
+        if (!audioContext) return; 
+        
+        requestAnimationFrame(drawVisualizer);
+        
+        analyser.getByteFrequencyData(dataArray);
+
+        const numBars = visualBars.length; 
+        const step = Math.floor(dataArray.length / numBars); 
+
+        for (let i = 0; i < numBars; i++) {
+            const dataIndex = i * step; 
+            let value = dataArray[dataIndex] || 0;
+
+            const normalizedValue = Math.min(value / 255, 1) * 10; 
+            const height = Math.max(4, 5 + normalizedValue); 
+
+            visualBars[i].style.height = height + 'px';
+        }
+    }
+
+
+    //==================================
+    //  EVENT HANDLERS
+    //==================================
+    
+    // Core Controls
+    playBtn.onclick = togglePlay;
+    document.getElementById('prev').onclick = ()=>{ 
+        current = (current - 1 + files.length) % files.length; 
+        playIndex(current); 
+    };
+    document.getElementById('next').onclick = ()=>{ 
+        current = (current + 1) % files.length; 
+        playIndex(current); 
+    };
+    rwdBtn.onclick = ()=>{ 
+        if (!isNaN(audio.duration)) {
+            audio.currentTime = Math.max(0, audio.currentTime - 10);
+        }
+    };
+    ffwBtn.onclick = ()=>{ 
+        if (!isNaN(audio.duration)) {
+            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+        }
+    };
+    document.getElementById('playAll').onclick = ()=>{ 
+      playIndex(isShuffle ? order[0] : 0); 
+    };
+    
+    // Loop/Shuffle Toggle
     loopBtn.onclick = ()=>{ 
         isLoop = !isLoop; 
         loopBtn.classList.toggle('active-control', isLoop); 
@@ -679,6 +709,7 @@
     };
 
 
+    // Audio Events
     audio.addEventListener('timeupdate', ()=>{
       if (!isNaN(audio.duration)){
         const pct = (audio.currentTime / audio.duration) * 100;
@@ -690,7 +721,6 @@
       vol.style.background = `linear-gradient(to right, var(--accent) ${volPct}%, rgba(255,255,255,0.08) ${volPct}%)`;
     });
 
-    // Audio Events
     audio.addEventListener('ended', ()=>{
         isPlaying = false;
         playBtn.innerHTML = playIcon; 
@@ -711,37 +741,27 @@
         playIndex(nextIndex); 
     });
 
-    // Event listener untuk Volume dan Speed
+    // Speed & Volume Controls
     vol.addEventListener('input', ()=>{ audio.volume = vol.value; });
     speed.addEventListener('change', ()=>{ audio.playbackRate = speed.value; });
 
     
-    // =========================================================
-    // BARU: FUNGSI SLIDE-SLIDE/DRAG PROGRESS BAR (SEEKING)
-    // =========================================================
-
-    // Fungsi Pembantu untuk menghitung waktu seek
+    // Progress Bar Seek (Slide-Slide/Drag)
     function seekTo(e) {
       if (!audio.duration || isNaN(audio.duration)) return;
       
       const rect = progress.getBoundingClientRect();
-      // Mendukung sentuhan (touches) dan mouse (clientX)
       const clientX = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : null);
       
       if (clientX === null) return;
       
-      // Hitung posisi relatif X
       const offsetX = clientX - rect.left;
       const width = rect.width;
-      
-      // Pastikan offset di dalam batas 0 dan lebar
       const safeOffsetX = Math.max(0, Math.min(offsetX, width));
 
       const seekTime = (safeOffsetX / width) * audio.duration;
       audio.currentTime = seekTime;
     }
-
-    let isSeeking = false;
 
     // MOUSE DOWN: Mulai mencari
     progress.addEventListener('mousedown', (e) => {
@@ -749,21 +769,19 @@
       seekTo(e);
       e.preventDefault(); 
     });
-
     // TOUCH START: Mulai mencari (untuk perangkat seluler)
     progress.addEventListener('touchstart', (e) => {
         isSeeking = true;
         seekTo(e);
-        e.preventDefault(); // Mencegah scrolling saat drag
+        e.preventDefault(); 
     });
     
-    // MOUSE MOVE: Lanjutkan mencari
+    // MOUSE MOVE: Lanjutkan mencari (hanya jika isSeeking true)
     document.addEventListener('mousemove', (e) => {
       if (isSeeking) {
         seekTo(e);
       }
     });
-
     // TOUCH MOVE: Lanjutkan mencari (untuk perangkat seluler)
     document.addEventListener('touchmove', (e) => {
         if (isSeeking) {
@@ -776,32 +794,26 @@
     document.addEventListener('mouseup', () => {
       isSeeking = false;
     });
-
     document.addEventListener('touchend', () => {
         isSeeking = false;
     });
+
+
+    //==================================
+    //  INITIALIZATION
+    //==================================
     
-    // =========================================================
-    // AKHIR DARI FUNGSI SLIDE-SLIDE
-    // =========================================================
+    (function init(){
+        buildList();
+        setSource(0);
+        audio.load();
+        playBtn.innerHTML = playIcon; 
+        loopBtn.classList.toggle('active-control', isLoop); 
+        shuffleBtn.classList.toggle('active-control', isShuffle);
+        vol.dispatchEvent(new Event('input')); // Update visual volume bar
+        visualBars.forEach(bar => bar.style.height = '6px'); // Set visualizer ke keadaan statis
+    })();
 
-    // Format waktu
-    function formatTime(sec){
-      if(!sec || isNaN(sec)) return '0:00';
-      const s = Math.floor(sec%60).toString().padStart(2,'0');
-      const m = Math.floor(sec/60);
-      return `${m}:${s}`;
-    }
-
-    // init
-    buildList();
-    setSource(0);
-    audio.load();
-    playBtn.innerHTML = playIcon; 
-    loopBtn.classList.toggle('active-control', isLoop); 
-    shuffleBtn.classList.toggle('active-control', isShuffle);
-    vol.dispatchEvent(new Event('input')); 
-    visualBars.forEach(bar => bar.style.height = '6px'); 
   </script>
 </body>
 </html>
