@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nihonggo — Modern Audio Player</title>
+  <title>Minna Nihonggo</title>
   <style>
     :root{
       --bg:#0f1720; --card:#0f1728; --muted:#9aa6b2; --accent:#1db954; --panel:#0b1220;
@@ -16,93 +16,143 @@
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
       padding:28px;
     }
-    .wrap{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:22px}
-    header{grid-column:1/-1;display:flex;align-items:center;gap:16px}
-    h1{margin:0;font-size:20px}
-    .meta{color:var(--muted);font-size:13px}
+    .wrap{max-width:500px; /* Lebar lebih kecil agar mirip tampilan HP */
+          margin:0 auto;
+          display:grid;
+          grid-template-columns:1fr; /* Hanya satu kolom di tampilan utama */
+          gap:22px}
+    
     .playerCard{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
     
-    /* Perubahan Struktur Kontrol */
-    .audio-controls {
+    /* Tampilan Kontrol Atas (Prev, Rwd, Play, Ffw, Next, Judul Lagu) */
+    .controls-header {
       display: flex;
       align-items: center;
-      gap: 10px;
-    }
-    .main-controls {
-      display: flex;
-      gap: 8px; /* Mengatur jarak antar Prev/Rwd/Play/Ffw/Next */
-      align-items: center;
-      margin-right: 12px;
-      padding-right: 12px;
-      border-right: 1px solid rgba(255,255,255,0.05); /* Garis pemisah visual */
+      justify-content: space-between;
+      margin-bottom: 15px; /* Jarak ke progress bar */
     }
 
-    /* Tombol Utama */
-    .bigbtn{width:58px;height:58px;border-radius:12px;border:none;background:linear-gradient(180deg,var(--panel),#071426);color:white;font-size:18px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.5)}
-    .smbtn{width:42px;height:42px;border-radius:10px;border:none;background:var(--glass);color:var(--muted);cursor:pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
+    /* Group Tombol Navigasi */
+    .main-nav-group {
+      display: flex;
+      gap: 5px; /* Jarak antar tombol */
+      align-items: center;
+    }
+
+    .bigbtn{width:50px;height:50px;border-radius:10px;border:none;background:linear-gradient(180deg,var(--panel),#071426);color:white;font-size:18px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,0.5)}
+    /* Tombol navigasi (Prev/Next/Rwd/Ffw) dibuat lebih kecil dan transparan */
+    .smbtn{width:38px;height:38px;border-radius:8px;border:none;background:transparent;color:var(--muted);cursor:pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s;}
+    .smbtn:hover {background:var(--glass);} /* Hover effect */
     .smbtn svg, .bigbtn svg {
       display: block;
       margin: 0 auto;
     }
 
-    .info{flex-grow: 1;} /* Memastikan info mengambil sisa ruang */
-    .title{font-weight:600}
-    .sub{color:var(--muted);font-size:13px}
-    .progress{height:8px;background:rgba(255,255,255,0.06);border-radius:999px;cursor:pointer;margin-top:14px;position:relative}
-    .progress > .bar{height:100%;width:0;background:linear-gradient(90deg,var(--accent),#3dd37d);border-radius:999px}
-    .time{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-top:8px}
-    .rightPanel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:14px;border-radius:12px;height:fit-content}
-    .playlist{max-height:68vh;overflow:auto;padding-right:6px}
-    .track{display:flex;align-items:center;gap:12px;padding:10px;border-radius:8px;cursor:pointer}
-    .track:hover{background:rgba(255,255,255,0.02)}
-    .track.active{background:linear-gradient(90deg,rgba(29,185,84,0.14),rgba(29,185,84,0.06));box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)}
-    .track .num{width:36px;text-align:right;color:var(--muted);font-size:13px}
-    .track .name{flex:1;font-size:14px}
-    .controlsBottom{display:flex;gap:8px;align-items:center;margin-top:12px}
-    select,input[type="range"]{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:6px;border-radius:8px}
-    .tiny{font-size:13px;color:var(--muted)}
-    .vol-ctrl-group{ margin-left:10px; }
-    .vol-range{ width:120px; }
+    .track-info{ 
+      flex-grow: 1; 
+      text-align: center; /* Judul di tengah (mirip tampilan) */
+    } 
+    .title{font-weight:600; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+    .sub{color:var(--muted);font-size:12px}
+    
+    /* Progress Bar */
+    .progress{height:6px;background:rgba(255,255,255,0.06);border-radius:999px;cursor:pointer;position:relative}
+    .progress > .bar{height:100%;width:0;background:var(--accent);border-radius:999px}
+    .time{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:4px; margin-bottom: 8px;}
+    
+    /* Kontrol Bawah (Speed, Volume, Loop, Shuffle) */
+    .controlsBottom{display:flex;gap:12px;align-items:center;justify-content: space-between; margin-top:12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);}
 
-    @media(max-width:860px){.wrap{grid-template-columns:1fr;}.rightPanel{order:3}}
+    .speed-control, .volume-control {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .volume-control {
+      flex-grow: 1;
+    }
+    
+    select{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.04);
+      color:var(--muted);
+      padding:4px 6px;
+      border-radius:8px;
+      font-size: 13px;
+    }
+    input[type="range"]{
+      background:transparent;
+      border:none; /* Hilangkan border untuk slider */
+      flex-grow: 1;
+    }
+
+    .tiny{font-size:13px;color:var(--muted); white-space: nowrap;}
+    
+    /* Kontrol Loop/Shuffle */
+    .smbtn-icon {
+      width:38px;
+      height:38px;
+      background: transparent !important;
+      color:var(--muted);
+      font-size: 18px; /* Ukuran ikon loop/shuffle */
+    }
+
+    /* Gaya Playlist */
+    .playlist-card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 30px rgba(0,0,0,0.6);
+    }
+    .playlist-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:12px;
+    }
+    .playlist-header strong{font-size:16px;}
+    .playlist-header button{background:var(--glass);}
+    .playlist{max-height:50vh;overflow-y:auto;padding-right:6px}
+    .track{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:8px;cursor:pointer}
+    .track:hover{background:rgba(255,255,255,0.02)}
+    .track.active{background:rgba(29,185,84,0.1); color: #fff;}
+    .track .num{width:20px;text-align:left;color:var(--muted);font-size:13px; font-weight: 500;}
+    .track .name{flex:1;font-size:14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div>
-        <h1>Nihonggo — Modern Audio Player</h1>
-        <div class="meta">Pemutar audio dengan kontrol kecepatan hingga 3x, *shuffle*, dan navigasi 10 detik.</div>
-      </div>
-    </header>
-
+    
     <section class="playerCard">
-      <div class="audio-controls">
-        <div class="main-controls">
+      
+      <div class="controls-header">
+        
+        <div class="main-nav-group">
           <button id="prev" class="smbtn" title="Previous">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 3.5A.5.5 0 0 1 1 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4-1a.5.5 0 0 1 .5.5v3.146L14.707 9.854a.5.5 0 0 1 .146.353v3.146a.5.5 0 0 1-.724.447l-7-4.5a.5.5 0 0 1-.01-.734l7-4.5A.5.5 0 0 1 14 3.25z"/></svg>
           </button>
-          
           <button id="rwd" class="smbtn" title="Rewind 10s">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M12.793 11.207a.5.5 0 0 1 0-.708L14.6 9H10.5a.5.5 0 0 1 0-1h4.102l-1.808-1.499a.5.5 0 0 1 .374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5zM4.35 6.467a4.5 4.5 0 0 0 4.291 3.284 4.673 4.673 0 0 0 3.321-1.341 6 6 0 0 0 4.417-6.096l1.4-.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H1.359l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 1.556 7.202z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M12.793 11.207a.5.5 0 0 1 0-.708L14.6 9H10.5a.5.5 0 0 1 0-1h4.102l-1.808-1.499a.5.5 0 0 1 .374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5zM4.35 6.467a4.5 4.5 0 0 0 4.291 3.284 4.673 4.673 0 0 0 3.321-1.341A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H1.359l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 1.556 7.202z"/></svg>
           </button>
-          
           <button id="play" class="bigbtn" title="Play/Pause">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
           </button>
-          
           <button id="ffw" class="smbtn" title="Fast Forward 10s">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M3.207 4.793a.5.5 0 0 1 0 .708L1.4 7H5.5a.5.5 0 0 1 0 1H1.398l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 14.444 8.798l1.4-.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H4.641l-1.808-1.499a.5.5 0 0 1 .374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 14.444 8.798zM11.65 9.533a4.5 4.5 0 0 0-4.291-3.284 4.673 4.673 0 0 0-3.321 1.341A6 6 6 0 0 0 1.583 8.798l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1H14.641l-1.808-1.499a.5.5 0 0 1-.374-.827z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M3.207 4.793a.5.5 0 0 1 0 .708L1.4 7H5.5a.5.5 0 0 1 0 1H1.398l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 14.444 8.798l1.4-.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H4.641l-1.808-1.499a.5.5 0 0 1 .374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 14.444 8.798zM11.65 9.533a4.5 4.5 0 0 0-4.291-3.284 4.673 4.673 0 0 0-3.321 1.341A6 6 0 0 0 1.583 8.798l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1H14.641l-1.808-1.499a.5.5 0 0 1-.374-.827z"/></svg>
           </button>
-          
           <button id="next" class="smbtn" title="Next">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M15.5 3.5a.5.5 0 0 1 0 1v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zM11 4.5v7l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V2.846c0-.63.692-1.01 1.233-.696L11 4.5z"/></svg>
           </button>
         </div>
+        
+        <div class="track-info">
+          <div class="title" id="nowTitle">01 Dai 1 Ka - Kaiwa.mp3</div>
+          <div class="sub" id="nowSub">Track 1 / 87</div>
+        </div>
 
-        <div class="info">
-          <div class="title" id="nowTitle">— Pilih lagu —</div>
-          <div class="sub" id="nowSub">Nihonggo collection</div>
+        <div class="main-nav-group">
+          <button id="loop" class="smbtn smbtn-icon" title="Toggle loop">🔁</button>
+          <button id="shuffle" class="smbtn smbtn-icon" title="Shuffle">🔀</button>
         </div>
       </div>
 
@@ -112,30 +162,31 @@
       <div class="time"><span id="current">0:00</span><span id="duration">0:00</span></div>
 
       <div class="controlsBottom">
-        <label class="tiny">Speed</label>
-        <select id="speed">
-          <option value="0.25">0.25×</option>
-          <option value="0.5">0.5×</option>
-          <option value="0.75">0.75×</option>
-          <option value="1.0" selected>1×</option>
-          <option value="1.25">1.25×</option>
-          <option value="1.5">1.5×</option>
-          <option value="1.75">1.75×</option>
-          <option value="2.0">2×</option>
-          <option value="2.5">2.5×</option>
-          <option value="3.0">3×</option>
-        </select>
+        <div class="speed-control">
+          <label class="tiny">Speed</label>
+          <select id="speed">
+            <option value="0.25">0.25×</option>
+            <option value="0.5">0.5×</option>
+            <option value="0.75">0.75×</option>
+            <option value="1.0" selected>1×</option>
+            <option value="1.25">1.25×</option>
+            <option value="1.5">1.5×</option>
+            <option value="1.75">1.75×</option>
+            <option value="2.0">2×</option>
+            <option value="2.5">2.5×</option>
+            <option value="3.0">3×</option>
+          </select>
+        </div>
 
-        <label class="tiny vol-ctrl-group">Volume</label>
-        <input id="vol" type="range" min="0" max="1" step="0.01" value="1" class="vol-range">
-
-        <button id="loop" class="smbtn" title="Toggle loop">🔁</button>
-        <button id="shuffle" class="smbtn" title="Shuffle">🔀</button>
+        <div class="volume-control">
+          <label class="tiny">Volume</label>
+          <input id="vol" type="range" min="0" max="1" step="0.01" value="1">
+        </div>
       </div>
     </section>
 
-    <aside class="rightPanel playerCard">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <aside class="playlist-card">
+      <div class="playlist-header">
         <strong>Playlist (87)</strong>
         <div style="font-size:13px;color:var(--muted)"><button id="playAll" class="smbtn" title="Play All">▶ All</button></div>
       </div>
@@ -210,7 +261,9 @@
         const tr = document.createElement('div');
         tr.className = 'track';
         tr.dataset.index = i;
-        tr.innerHTML = `<div class="num">${String(i+1).padStart(2,'0')}</div><div class="name">${f}</div>`;
+        // Menampilkan nomor lagu yang dimulai dari 1
+        const trackNumber = String(i+1).padStart(2,'0'); 
+        tr.innerHTML = `<div class="num">${trackNumber}</div><div class="name">${f}</div>`;
         tr.onclick = ()=>{ playIndex(i); };
         playlistEl.appendChild(tr);
       });
@@ -306,8 +359,9 @@
     speed.onchange = ()=>{ audio.playbackRate = parseFloat(speed.value); };
     vol.oninput = ()=>{ audio.volume = parseFloat(vol.value); };
 
-    loopBtn.onclick = ()=>{ isLoop = !isLoop; loopBtn.style.background = isLoop ? 'rgba(29,185,84,0.14)' : 'var(--glass)'; };
-    shuffleBtn.onclick = ()=>{ isShuffle = !isShuffle; shuffleBtn.style.background = isShuffle ? 'rgba(255,165,0,0.12)' : 'var(--glass)'; };
+    // Warna background loop/shuffle saat aktif (sesuai accent color)
+    loopBtn.onclick = ()=>{ isLoop = !isLoop; loopBtn.style.color = isLoop ? 'var(--accent)' : 'var(--muted)'; };
+    shuffleBtn.onclick = ()=>{ isShuffle = !isShuffle; shuffleBtn.style.color = isShuffle ? 'var(--accent)' : 'var(--muted)'; };
 
     playAllBtn.onclick = ()=>{ current = 0; setSource(current); audio.play(); playBtn.innerHTML = pauseIcon; };
 
