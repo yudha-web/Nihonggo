@@ -1,0 +1,3791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+  <file name="01 Dai 1 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>01 Dai 1 Ka - Kaiwa.mp3</original>
+    <mtime>1593294194</mtime>
+    <size>3696</size>
+    <md5>838a8282a7be5bc140f5ba995d7109cc</md5>
+    <crc32>e275d55d</crc32>
+    <sha1>cef4b2a1e255f75eecb50b8761be47335e7d8e8e</sha1>
+  </file>
+  <file name="01 Dai 1 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292019</mtime>
+    <size>959214</size>
+    <md5>26e0f2cb3029d164c9e6c2470b05ee2f</md5>
+    <crc32>2f11a0c0</crc32>
+    <sha1>f55a83a4471fca92e024fadd2edd189a4d84e80d</sha1>
+    <format>VBR MP3</format>
+    <length>23.95</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 1 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>01</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="01 Dai 1 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>01 Dai 1 Ka - Kaiwa.mp3</original>
+    <mtime>1593293327</mtime>
+    <size>18997</size>
+    <md5>fccf00d7ee48e2f6ccf896916d264cfb</md5>
+    <crc32>929d3b5d</crc32>
+    <sha1>b8d214f54f91fd8081d88abb452b40520ebe6691</sha1>
+  </file>
+  <file name="01 Dai 1 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>01 Dai 1 Ka - Kaiwa.mp3</original>
+    <mtime>1593293686</mtime>
+    <size>295104</size>
+    <md5>ca5611c0c1e366a83caafb72ce2eb0c0</md5>
+    <crc32>201be4a4</crc32>
+    <sha1>b541345c805b719369494001f566e2990a150eb0</sha1>
+  </file>
+  <file name="02 Dai 1 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>02 Dai 1 Ka - Mondai 1.mp3</original>
+    <mtime>1593294062</mtime>
+    <size>3536</size>
+    <md5>d2c3fb12220f50649b73c433f2affb29</md5>
+    <crc32>3a0f5b8e</crc32>
+    <sha1>2f5534ae72a9cc9a56988d2ef1ea0d45c5e1660e</sha1>
+  </file>
+  <file name="02 Dai 1 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292052</mtime>
+    <size>1248177</size>
+    <md5>5a58fe798b12a2a14af75a8955e34264</md5>
+    <crc32>90f691c8</crc32>
+    <sha1>6e21be7131ab651b464d18a2bb5125fbe2d393b3</sha1>
+    <format>VBR MP3</format>
+    <length>31.18</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 1 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>02</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="02 Dai 1 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>02 Dai 1 Ka - Mondai 1.mp3</original>
+    <mtime>1593293345</mtime>
+    <size>14976</size>
+    <md5>22edd82df4eccccbc1f68bc27d15da21</md5>
+    <crc32>300ef8bb</crc32>
+    <sha1>84bd461f21800115c8c3e99849722cdeeed4a283</sha1>
+  </file>
+  <file name="02 Dai 1 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>02 Dai 1 Ka - Mondai 1.mp3</original>
+    <mtime>1593293727</mtime>
+    <size>275264</size>
+    <md5>7492b7c301e15cb07cb93c56d37ce4c8</md5>
+    <crc32>9bc470bc</crc32>
+    <sha1>5d70f54602c9be0a7f6f881835de7467712d323c</sha1>
+  </file>
+  <file name="03 Dai 1 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>03 Dai 1 Ka - Mondai 2.mp3</original>
+    <mtime>1593294044</mtime>
+    <size>4144</size>
+    <md5>3bf4bce5ad25cb31095dd477bb71ed31</md5>
+    <crc32>8c1389ff</crc32>
+    <sha1>3ea1d3630a44a3e753c78dc8010a1ae3a8b03d40</sha1>
+  </file>
+  <file name="03 Dai 1 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292063</mtime>
+    <size>1205937</size>
+    <md5>68c2213f8ea5ab8677c039c756ec6721</md5>
+    <crc32>7c8be393</crc32>
+    <sha1>3e5119a7cd7165afafc9f481917cdc030c101fb9</sha1>
+    <format>VBR MP3</format>
+    <length>30.12</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 1 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>03</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="03 Dai 1 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>03 Dai 1 Ka - Mondai 2.mp3</original>
+    <mtime>1593293322</mtime>
+    <size>18679</size>
+    <md5>cbac48407dd27b4f2ea186ed94375607</md5>
+    <crc32>9ac952dd</crc32>
+    <sha1>17f4768a07e17d3b28576bc0749526f5920e13b0</sha1>
+  </file>
+  <file name="03 Dai 1 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>03 Dai 1 Ka - Mondai 2.mp3</original>
+    <mtime>1593293736</mtime>
+    <size>292342</size>
+    <md5>ffc6e45a31f9b5e934570af731490f52</md5>
+    <crc32>a428ab81</crc32>
+    <sha1>9756287a3eafdb53cc03d21f517c9a9f74e64e58</sha1>
+  </file>
+  <file name="04 Dai 1 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>04 Dai 1 Ka - Mondai 3.mp3</original>
+    <mtime>1593294034</mtime>
+    <size>10016</size>
+    <md5>55f8fdee6f0b8ac7a19e164e3727efad</md5>
+    <crc32>3144f23b</crc32>
+    <sha1>006b169dcc87ddaec601baf46c4bce442a7abd76</sha1>
+  </file>
+  <file name="04 Dai 1 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292072</mtime>
+    <size>3096177</size>
+    <md5>7ae42a6160bd9ec26c3cbb7f097b982a</md5>
+    <crc32>175258a0</crc32>
+    <sha1>6f89c2b83a886c981536681b2fbb3a23dc65bb66</sha1>
+    <format>VBR MP3</format>
+    <length>77.38</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 1 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>04</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="04 Dai 1 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>04 Dai 1 Ka - Mondai 3.mp3</original>
+    <mtime>1593293317</mtime>
+    <size>20857</size>
+    <md5>5e43fc844d5b62e9e6c5285fa7d33a15</md5>
+    <crc32>d4127a43</crc32>
+    <sha1>f7da6930836f94479a0171e4c53d02e9e3b9d0f1</sha1>
+  </file>
+  <file name="04 Dai 1 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>04 Dai 1 Ka - Mondai 3.mp3</original>
+    <mtime>1593293599</mtime>
+    <size>283932</size>
+    <md5>6ca97a4fcc3a5e0aa295d9bb3bfc51c8</md5>
+    <crc32>0386e71a</crc32>
+    <sha1>1551c03272f27ed7dcaa50392006eafaaf52e652</sha1>
+  </file>
+  <file name="05 Dai 2 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>05 Dai 2 Ka - Kaiwa.mp3</original>
+    <mtime>1593294075</mtime>
+    <size>5368</size>
+    <md5>33935c81f36d02c96da54f295bef18be</md5>
+    <crc32>129f6516</crc32>
+    <sha1>f0f88343a77ec95f85133774f45366f9312fe0bb</sha1>
+  </file>
+  <file name="05 Dai 2 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292081</mtime>
+    <size>1474734</size>
+    <md5>2447d7e0df25c5dee49c37eafbba64e6</md5>
+    <crc32>8cf4224d</crc32>
+    <sha1>0b1c9fb784a33ef4fc5184726d620d87f21cb7dc</sha1>
+    <format>VBR MP3</format>
+    <length>36.84</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 2 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>05</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="05 Dai 2 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>05 Dai 2 Ka - Kaiwa.mp3</original>
+    <mtime>1593293455</mtime>
+    <size>16586</size>
+    <md5>62ede38f7690337d04fbb0710e643f58</md5>
+    <crc32>fbda4e0a</crc32>
+    <sha1>6664bd682b1188c29f5d22af0150cd67f83e77d6</sha1>
+  </file>
+  <file name="05 Dai 2 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>05 Dai 2 Ka - Kaiwa.mp3</original>
+    <mtime>1593293744</mtime>
+    <size>294286</size>
+    <md5>d78164bc143d1c70c7b50b1fdcf4b5bc</md5>
+    <crc32>23aa4042</crc32>
+    <sha1>0a5ab4a35f412fa8485ab50699954f8ad60bbc30</sha1>
+  </file>
+  <file name="06 Dai 2 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>06 Dai 2 Ka - Mondai 1.mp3</original>
+    <mtime>1593293999</mtime>
+    <size>3768</size>
+    <md5>e8ef734d9ce37fc96336e950ad71b018</md5>
+    <crc32>7986985e</crc32>
+    <sha1>bf667b5525de0bdf6dc26a7401824f0fdc764a2f</sha1>
+  </file>
+  <file name="06 Dai 2 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292112</mtime>
+    <size>1170417</size>
+    <md5>6c9008773afe6dfbec4d4bf2966daa9f</md5>
+    <crc32>1bf967d7</crc32>
+    <sha1>20c1ec15069672e735e9c2cc80053e825784a78e</sha1>
+    <format>VBR MP3</format>
+    <length>29.23</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 2 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>06</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="06 Dai 2 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>06 Dai 2 Ka - Mondai 1.mp3</original>
+    <mtime>1593293433</mtime>
+    <size>16853</size>
+    <md5>09bc6d7dee2e3c531b14eac6a45bd2eb</md5>
+    <crc32>64766096</crc32>
+    <sha1>77ed0cbcea98c37eb9a24287b0cda938f16958df</sha1>
+  </file>
+  <file name="06 Dai 2 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>06 Dai 2 Ka - Mondai 1.mp3</original>
+    <mtime>1593293619</mtime>
+    <size>278053</size>
+    <md5>12f9a382a7a4979ed8df0ab86febf694</md5>
+    <crc32>f14da0ea</crc32>
+    <sha1>dff9c2ca809500ff46e47d40dc6418e32e370999</sha1>
+  </file>
+  <file name="07 Dai 2 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>07 Dai 2 Ka - Mondai 2.mp3</original>
+    <mtime>1593294175</mtime>
+    <size>4824</size>
+    <md5>64a5ffe9ef15aa106c6213f71cf8e09f</md5>
+    <crc32>265ef838</crc32>
+    <sha1>25394da585e837f7a77f9f9715fa3381df991747</sha1>
+  </file>
+  <file name="07 Dai 2 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292130</mtime>
+    <size>1449777</size>
+    <md5>f232a1e8aeab683071015124fa91861e</md5>
+    <crc32>0db5fd85</crc32>
+    <sha1>78c63eb905e8c5d4e4715e87d4b2003edf28860c</sha1>
+    <format>VBR MP3</format>
+    <length>36.22</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 2 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>07</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="07 Dai 2 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>07 Dai 2 Ka - Mondai 2.mp3</original>
+    <mtime>1593293275</mtime>
+    <size>17720</size>
+    <md5>83958265d7b171f42d4e2c19e9ef8983</md5>
+    <crc32>674b145a</crc32>
+    <sha1>02ea7ed83147ae660a3b36af8ba8f7b3e8f4e14e</sha1>
+  </file>
+  <file name="07 Dai 2 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>07 Dai 2 Ka - Mondai 2.mp3</original>
+    <mtime>1593293763</mtime>
+    <size>296700</size>
+    <md5>3fefa734cb1825823a55c6c416ad4f72</md5>
+    <crc32>1c623be7</crc32>
+    <sha1>b00d6b81e45f260f76183b0a75b4eeef0fe5b7b5</sha1>
+  </file>
+  <file name="08 Dai 2 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>08 Dai 2 Ka - Mondai 3.mp3</original>
+    <mtime>1593294142</mtime>
+    <size>6000</size>
+    <md5>b73d8cb88d1dd43716c6900b30946803</md5>
+    <crc32>ed4be77a</crc32>
+    <sha1>3012dac7d79ce9e7876b5ce0ed432a119f20f060</sha1>
+  </file>
+  <file name="08 Dai 2 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292143</mtime>
+    <size>1820337</size>
+    <md5>c1355cf622a2ab0b61a1f6f8b8f2037a</md5>
+    <crc32>bfb05812</crc32>
+    <sha1>effc0c1ebb1c8c2c15b4a2ae07f19c3eddc1d763</sha1>
+    <format>VBR MP3</format>
+    <length>45.48</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 2 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>08</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="08 Dai 2 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>08 Dai 2 Ka - Mondai 3.mp3</original>
+    <mtime>1593293064</mtime>
+    <size>18467</size>
+    <md5>4e521e12d1b0ec708dd72118ca84e1b8</md5>
+    <crc32>f59958f4</crc32>
+    <sha1>5b98e7760c120c4355e26d8e0a829da04d9cab33</sha1>
+  </file>
+  <file name="08 Dai 2 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>08 Dai 2 Ka - Mondai 3.mp3</original>
+    <mtime>1593293596</mtime>
+    <size>284899</size>
+    <md5>0e15c44f27402c9983964e84bea3a0d9</md5>
+    <crc32>b5d827b4</crc32>
+    <sha1>e8a57b4113b29265e5bc491e4edbaf5f16ad76fb</sha1>
+  </file>
+  <file name="09 Dai 3 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>09 Dai 3 Ka - Kaiwa.mp3</original>
+    <mtime>1593294146</mtime>
+    <size>6040</size>
+    <md5>ddd3358f4e59ffc0e5f859a2bca76f04</md5>
+    <crc32>29de2bf9</crc32>
+    <sha1>35c127bf191a762a2954b914dedd6471f63d1af1</sha1>
+  </file>
+  <file name="09 Dai 3 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292153</mtime>
+    <size>1507374</size>
+    <md5>fe40bf4d98cc8ed0fce13c7b929e533b</md5>
+    <crc32>e5c9e33f</crc32>
+    <sha1>7f7a5affde497f7de653d2c19590845c63f01cf2</sha1>
+    <format>VBR MP3</format>
+    <length>37.66</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 3 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>09</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="09 Dai 3 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>09 Dai 3 Ka - Kaiwa.mp3</original>
+    <mtime>1593293168</mtime>
+    <size>19458</size>
+    <md5>9880894a51695f91991cb97e866da7fe</md5>
+    <crc32>8d74f99a</crc32>
+    <sha1>8c7d4dcc61000400c3a39796ab7aa3526c3a5261</sha1>
+  </file>
+  <file name="09 Dai 3 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>09 Dai 3 Ka - Kaiwa.mp3</original>
+    <mtime>1593293610</mtime>
+    <size>301983</size>
+    <md5>bdf34e67df2487b6b72cea484f8a2e46</md5>
+    <crc32>016f9976</crc32>
+    <sha1>7e576c38011ceba3f2d90c526c28ce23aee478da</sha1>
+  </file>
+  <file name="10 Dai 3 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>10 Dai 3 Ka - Mondai 1.mp3</original>
+    <mtime>1593294179</mtime>
+    <size>3704</size>
+    <md5>b69caac0f5a657f9a63920af53900313</md5>
+    <crc32>a7cf830a</crc32>
+    <sha1>e50a15da19f9d80c792c003479020ca3cdf318d9</sha1>
+  </file>
+  <file name="10 Dai 3 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292166</mtime>
+    <size>1185777</size>
+    <md5>18386aecd88af9576fd4829aa04da6c8</md5>
+    <crc32>40e44144</crc32>
+    <sha1>6d7994a6e50c20cfc85b8940d521c2754e0e5d1e</sha1>
+    <format>VBR MP3</format>
+    <length>29.62</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 3 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>10</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="10 Dai 3 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>10 Dai 3 Ka - Mondai 1.mp3</original>
+    <mtime>1593293388</mtime>
+    <size>16912</size>
+    <md5>da1001551df3dd098e0d29a4d71abe14</md5>
+    <crc32>f545b0b1</crc32>
+    <sha1>fbd445d191b32fb1c103130d79f6f12dc75304d5</sha1>
+  </file>
+  <file name="10 Dai 3 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>10 Dai 3 Ka - Mondai 1.mp3</original>
+    <mtime>1593293659</mtime>
+    <size>281123</size>
+    <md5>2f0bc080626759bf63b3793c4ec38d8d</md5>
+    <crc32>d2c7c2c1</crc32>
+    <sha1>8c1f7beaa1cc27bf2e2e70c08f1fc5739a874e62</sha1>
+  </file>
+  <file name="11 Dai 3 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>11 Dai 3 Ka - Mondai 2.mp3</original>
+    <mtime>1593294016</mtime>
+    <size>10992</size>
+    <md5>a0b97bc2d3191550f1cf149e819bd0ea</md5>
+    <crc32>25a602c7</crc32>
+    <sha1>9c27d1e0e98d62d89fff880259372ca72b354226</sha1>
+  </file>
+  <file name="11 Dai 3 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292179</mtime>
+    <size>3251697</size>
+    <md5>c9ba93b6ccf8e4b63da9f60cf80f9247</md5>
+    <crc32>3d122647</crc32>
+    <sha1>8f067f34eafbc3adde7d72a738e0a2d4917475ee</sha1>
+    <format>VBR MP3</format>
+    <length>81.26</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 3 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>11</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="11 Dai 3 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>11 Dai 3 Ka - Mondai 2.mp3</original>
+    <mtime>1593293410</mtime>
+    <size>22436</size>
+    <md5>6cf686af32a1dcc8ac2eb2067337ebca</md5>
+    <crc32>c0544762</crc32>
+    <sha1>629f0fe1586b039789009b618d127c7d89e2ecbe</sha1>
+  </file>
+  <file name="11 Dai 3 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>11 Dai 3 Ka - Mondai 2.mp3</original>
+    <mtime>1593293652</mtime>
+    <size>285353</size>
+    <md5>69742befa66c95a8e53ba992cf327e95</md5>
+    <crc32>2ec7a1a2</crc32>
+    <sha1>f58f7a6bf7bbbf80fcfda6d5a9b4c00230b796c8</sha1>
+  </file>
+  <file name="12 Dai 4 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>12 Dai 4 Ka - Kaiwa.mp3</original>
+    <mtime>1593294048</mtime>
+    <size>6224</size>
+    <md5>13acb29328e860b28f65f80e067677c4</md5>
+    <crc32>409a0632</crc32>
+    <sha1>241f62f6538934d7bc5cdbda77aec1d4c6e94a4c</sha1>
+  </file>
+  <file name="12 Dai 4 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292187</mtime>
+    <size>1586094</size>
+    <md5>6b65b62ad18046db769fa3068a1f69a6</md5>
+    <crc32>f07a2514</crc32>
+    <sha1>20b706d1d7bf475f1dee0a3421d70bb84a77a014</sha1>
+    <format>VBR MP3</format>
+    <length>39.62</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 4 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>12</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="12 Dai 4 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>12 Dai 4 Ka - Kaiwa.mp3</original>
+    <mtime>1593293042</mtime>
+    <size>19581</size>
+    <md5>fbaf1d57895455b2138ee61d01fe079e</md5>
+    <crc32>a7148054</crc32>
+    <sha1>04295d481284bb0f042e647e5dbea09fdc252ded</sha1>
+  </file>
+  <file name="12 Dai 4 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>12 Dai 4 Ka - Kaiwa.mp3</original>
+    <mtime>1593293637</mtime>
+    <size>292856</size>
+    <md5>78643a6e736f613ee4b68718382790b1</md5>
+    <crc32>ed711736</crc32>
+    <sha1>cb512d22e4ed5edb7baeb5ae4476a57e951bd5fc</sha1>
+  </file>
+  <file name="13 Dai 4 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>13 Dai 4 Ka - Mondai 1.mp3</original>
+    <mtime>1593294184</mtime>
+    <size>4376</size>
+    <md5>877ceb2d922919cf6c7f9d1167280400</md5>
+    <crc32>f11f9eb5</crc32>
+    <sha1>5b27876e3e9c508f7527a4935a725194801bb84e</sha1>
+  </file>
+  <file name="13 Dai 4 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292194</mtime>
+    <size>1235697</size>
+    <md5>4bafae110a5a8672a7636bd8f7989d73</md5>
+    <crc32>d2161dca</crc32>
+    <sha1>8c91d841e7eeefa1a1cdc5a9127028b456bddf4c</sha1>
+    <format>VBR MP3</format>
+    <length>30.86</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 4 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>13</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="13 Dai 4 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>13 Dai 4 Ka - Mondai 1.mp3</original>
+    <mtime>1593293445</mtime>
+    <size>18947</size>
+    <md5>a0fb7467a5aae34617146a8be3e52a7b</md5>
+    <crc32>e5257019</crc32>
+    <sha1>c8a3b90db8b4045af684534e687dc1e795f05842</sha1>
+  </file>
+  <file name="13 Dai 4 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>13 Dai 4 Ka - Mondai 1.mp3</original>
+    <mtime>1593293675</mtime>
+    <size>281521</size>
+    <md5>6fdae15b7878694e09189ff64027d650</md5>
+    <crc32>c84a5bcb</crc32>
+    <sha1>4e7c73281153aa4f9e82e79a1164e3c33c315b8a</sha1>
+  </file>
+  <file name="14 Dai 4 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>14 Dai 4 Ka - Mondai 2.mp3</original>
+    <mtime>1593294029</mtime>
+    <size>3184</size>
+    <md5>7295b467b37d879eca6b32b84772b771</md5>
+    <crc32>b95e4c1d</crc32>
+    <sha1>5fecd4225e9713deeb964704079a7f55f07bbc8d</sha1>
+  </file>
+  <file name="14 Dai 4 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292205</mtime>
+    <size>1036017</size>
+    <md5>dd53411c5320901e6401a028359aeba4</md5>
+    <crc32>c8be654c</crc32>
+    <sha1>3593cc8ad93fb09a9689291af093a78ee0e4ef20</sha1>
+    <format>VBR MP3</format>
+    <length>25.87</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 4 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>14</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="14 Dai 4 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>14 Dai 4 Ka - Mondai 2.mp3</original>
+    <mtime>1593293424</mtime>
+    <size>18215</size>
+    <md5>b049f1105b751555a35e750a64bbe5b1</md5>
+    <crc32>8982cdd1</crc32>
+    <sha1>8c7f8671b8946dc0477ce98c3c9ef943d9ed5b04</sha1>
+  </file>
+  <file name="14 Dai 4 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>14 Dai 4 Ka - Mondai 2.mp3</original>
+    <mtime>1593293749</mtime>
+    <size>289579</size>
+    <md5>611d22a9139ffcfa2ee1b979f2eb8ca7</md5>
+    <crc32>1e622d85</crc32>
+    <sha1>b1e478100ca907f3f85deacb1c3e7d80543983e2</sha1>
+  </file>
+  <file name="15 Dai 4 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>15 Dai 4 Ka - Mondai 3.mp3</original>
+    <mtime>1593294189</mtime>
+    <size>8376</size>
+    <md5>028efce259ab17d237adccfb626962b6</md5>
+    <crc32>f5a96972</crc32>
+    <sha1>ee423475c56252d8dc99828575e90a93ce94ff1a</sha1>
+  </file>
+  <file name="15 Dai 4 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292211</mtime>
+    <size>2457777</size>
+    <md5>626cad1d5ede84731d6afb32253555f6</md5>
+    <crc32>8720523d</crc32>
+    <sha1>e413e76b79955b1d4d864d71656ee3e7abdb3fdd</sha1>
+    <format>VBR MP3</format>
+    <length>61.42</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 4 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>15</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="15 Dai 4 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>15 Dai 4 Ka - Mondai 3.mp3</original>
+    <mtime>1593293418</mtime>
+    <size>19815</size>
+    <md5>ae2af981e8ff9de475f6cbddfd40ec3d</md5>
+    <crc32>b0ac6a59</crc32>
+    <sha1>f01efbb0f8d13a5f1375221c0d8e703b8aa37727</sha1>
+  </file>
+  <file name="15 Dai 4 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>15 Dai 4 Ka - Mondai 3.mp3</original>
+    <mtime>1593293725</mtime>
+    <size>286387</size>
+    <md5>6f9150ced760c9acb36d61cba85b6c0b</md5>
+    <crc32>ae5972b3</crc32>
+    <sha1>989c620c8e07f699fcfdde093807b646b757b6f1</sha1>
+  </file>
+  <file name="16 Dai 4 Ka - Mondai 4.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>16 Dai 4 Ka - Mondai 4.mp3</original>
+    <mtime>1593294098</mtime>
+    <size>8592</size>
+    <md5>60d86a4fd2422d04ea728be9cf82af3b</md5>
+    <crc32>47b0d851</crc32>
+    <sha1>aa308ba7e05db2dee542cae6db7c782a6440c0ff</sha1>
+  </file>
+  <file name="16 Dai 4 Ka - Mondai 4.mp3" source="original">
+    <mtime>1593292219</mtime>
+    <size>2294577</size>
+    <md5>6ee267ab4014b9641fa7303575596935</md5>
+    <crc32>0f226ce8</crc32>
+    <sha1>eea4b2ae8e926853ff2bac1ec9804b436c27a8ef</sha1>
+    <format>VBR MP3</format>
+    <length>57.34</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 4 Ka - Mondai 4</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>16</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="16 Dai 4 Ka - Mondai 4.png" source="derivative">
+    <format>PNG</format>
+    <original>16 Dai 4 Ka - Mondai 4.mp3</original>
+    <mtime>1593293429</mtime>
+    <size>22592</size>
+    <md5>c6c083896ee43e95f516d0f62a3ed6cb</md5>
+    <crc32>abe9679c</crc32>
+    <sha1>5d7ea4d57d5b61f2db6219208ff97da04b6d58ba</sha1>
+  </file>
+  <file name="16 Dai 4 Ka - Mondai 4_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>16 Dai 4 Ka - Mondai 4.mp3</original>
+    <mtime>1593293716</mtime>
+    <size>285318</size>
+    <md5>45fc1742d5571fd993a42bd0b847f170</md5>
+    <crc32>a6278156</crc32>
+    <sha1>62dfa30efe786dc605575509a175be1dec2b50b8</sha1>
+  </file>
+  <file name="17 Dai 5 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>17 Dai 5 Ka - Kaiwa.mp3</original>
+    <mtime>1593294007</mtime>
+    <size>8224</size>
+    <md5>6ca9238146861863733e5d679fdce46f</md5>
+    <crc32>0f1c7337</crc32>
+    <sha1>a3bf0d6de235d7d849e54c9cf96312a553f7893f</sha1>
+  </file>
+  <file name="17 Dai 5 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292227</mtime>
+    <size>1983534</size>
+    <md5>6796242d24bf7f6eeb9a5f5ca202bdcb</md5>
+    <crc32>1896c40c</crc32>
+    <sha1>ea50f94938067a49cfaf881dc5a600c70231f396</sha1>
+    <format>VBR MP3</format>
+    <length>49.56</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 5 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>17</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="17 Dai 5 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>17 Dai 5 Ka - Kaiwa.mp3</original>
+    <mtime>1593293401</mtime>
+    <size>19237</size>
+    <md5>6cadffdbe6c91c26e47e3dff8acdcd6e</md5>
+    <crc32>7dd49ce2</crc32>
+    <sha1>8d748ec53dea88794413443788eda35a2694e0fb</sha1>
+  </file>
+  <file name="17 Dai 5 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>17 Dai 5 Ka - Kaiwa.mp3</original>
+    <mtime>1593293701</mtime>
+    <size>298378</size>
+    <md5>eeb70c43f8012b1223fda06acae7c885</md5>
+    <crc32>ebe9239f</crc32>
+    <sha1>67592839ec0d2f837ef18405ea5daad51d557ae1</sha1>
+  </file>
+  <file name="18 Dai 5 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>18 Dai 5 Ka - Mondai 1.mp3</original>
+    <mtime>1593294011</mtime>
+    <size>3896</size>
+    <md5>1027676bfd7171ef327041a0dedd5b50</md5>
+    <crc32>782a9621</crc32>
+    <sha1>26f1ff7ba5d115e5f37ef5daeebc2389eeff8a0d</sha1>
+  </file>
+  <file name="18 Dai 5 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292232</mtime>
+    <size>1205937</size>
+    <md5>630ab7d83d8752ec119544194b8d17d3</md5>
+    <crc32>91f12f7e</crc32>
+    <sha1>b2ce647c0e526eea1cca1a696c856ea782613d8e</sha1>
+    <format>VBR MP3</format>
+    <length>30.12</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 5 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>18</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="18 Dai 5 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>18 Dai 5 Ka - Mondai 1.mp3</original>
+    <mtime>1593293394</mtime>
+    <size>16902</size>
+    <md5>98cf8606bd588c47f9cbbaa9bac8e066</md5>
+    <crc32>11cf756c</crc32>
+    <sha1>d24078119ae3a6f30bc837aba788054eb9408681</sha1>
+  </file>
+  <file name="18 Dai 5 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>18 Dai 5 Ka - Mondai 1.mp3</original>
+    <mtime>1593293769</mtime>
+    <size>281241</size>
+    <md5>7e349bc0c0a520506704989def96fcf7</md5>
+    <crc32>5cbcb0af</crc32>
+    <sha1>9e92a862becb8d54c296cc260444c323fd439b11</sha1>
+  </file>
+  <file name="19 Dai 5 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>19 Dai 5 Ka - Mondai 2.mp3</original>
+    <mtime>1593294021</mtime>
+    <size>3240</size>
+    <md5>a821b756ebd7a2b3ecf26383152f5b69</md5>
+    <crc32>ee88d4b4</crc32>
+    <sha1>68dd93c42508fbf13b353ca5600196dbf3058308</sha1>
+  </file>
+  <file name="19 Dai 5 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292239</mtime>
+    <size>955377</size>
+    <md5>83cc79beeed3f5fbf9a1b7b02dc46c86</md5>
+    <crc32>43e646b9</crc32>
+    <sha1>c0c90e46e72b3aa8cc864aaa50f891bf25e8f803</sha1>
+    <format>VBR MP3</format>
+    <length>23.86</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 5 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>19</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="19 Dai 5 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>19 Dai 5 Ka - Mondai 2.mp3</original>
+    <mtime>1593293383</mtime>
+    <size>18509</size>
+    <md5>cdce199fb7c069c44727201c3eec224d</md5>
+    <crc32>14a6cf84</crc32>
+    <sha1>31c4c0fe4ec7aaf3df60668de437e8118006af4b</sha1>
+  </file>
+  <file name="19 Dai 5 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>19 Dai 5 Ka - Mondai 2.mp3</original>
+    <mtime>1593293766</mtime>
+    <size>295706</size>
+    <md5>617fd2570d732053e8b8f52f12d0310c</md5>
+    <crc32>22c67b87</crc32>
+    <sha1>feccf0e78a41e99080920c4168edee3800ff543d</sha1>
+  </file>
+  <file name="20 Dai 5 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>20 Dai 5 Ka - Mondai 3.mp3</original>
+    <mtime>1593294094</mtime>
+    <size>7888</size>
+    <md5>d92690cc2f1de37c09fe6fdd7e46054e</md5>
+    <crc32>85030f19</crc32>
+    <sha1>4bf75096d65211f08bb0d43b708f6d6ac731f8db</sha1>
+  </file>
+  <file name="20 Dai 5 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292243</mtime>
+    <size>2200497</size>
+    <md5>1f3e36a8f1399ac733b311bc360db9da</md5>
+    <crc32>6758114a</crc32>
+    <sha1>c7500ed8c4527fa1f2c4e5f6558b2ea76a524205</sha1>
+    <format>VBR MP3</format>
+    <length>54.98</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 5 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>20</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="20 Dai 5 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>20 Dai 5 Ka - Mondai 3.mp3</original>
+    <mtime>1593293437</mtime>
+    <size>19862</size>
+    <md5>7a44e521b0d5e17b401ba73f6eb67128</md5>
+    <crc32>9229736d</crc32>
+    <sha1>c2622c2882129cc91441d744f6645e9722c2963b</sha1>
+  </file>
+  <file name="20 Dai 5 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>20 Dai 5 Ka - Mondai 3.mp3</original>
+    <mtime>1593293626</mtime>
+    <size>292563</size>
+    <md5>edf95a8d50a706be1433447d5dd4098a</md5>
+    <crc32>d61c1cc3</crc32>
+    <sha1>890a96901a7a0fa0c42cb0eac9d026e92f5982f7</sha1>
+  </file>
+  <file name="21 Dai 6 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>21 Dai 6 Ka - Kaiwa.mp3</original>
+    <mtime>1593294106</mtime>
+    <size>4680</size>
+    <md5>95898c6ff7d12030d513b512d2474bab</md5>
+    <crc32>83342681</crc32>
+    <sha1>ec2d0df5afa9e8a166985f8684e963a5676500a4</sha1>
+  </file>
+  <file name="21 Dai 6 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292248</mtime>
+    <size>1113774</size>
+    <md5>a3a5af33d9e1c1b5ee7a8f87dad80f1c</md5>
+    <crc32>a20def7b</crc32>
+    <sha1>4f8f96b147dfe0d70d4aea2c46ab87919c5cfe96</sha1>
+    <format>VBR MP3</format>
+    <length>27.82</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 6 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>21</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="21 Dai 6 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>21 Dai 6 Ka - Kaiwa.mp3</original>
+    <mtime>1593293070</mtime>
+    <size>20032</size>
+    <md5>a36b70c7ef90368764505f32a52b7005</md5>
+    <crc32>a1ab3a83</crc32>
+    <sha1>3c45b3c532b5e2fa93cf2d20d94201cf2948faa5</sha1>
+  </file>
+  <file name="21 Dai 6 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>21 Dai 6 Ka - Kaiwa.mp3</original>
+    <mtime>1593293605</mtime>
+    <size>299374</size>
+    <md5>5bbe78fc632bbbb449fb45e784053e64</md5>
+    <crc32>037eb7f5</crc32>
+    <sha1>dea1d1f81f2490db4e8df72649a4c00309ab8d42</sha1>
+  </file>
+  <file name="22 Dai 6 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>22 Dai 6 Ka - Mondai 1.mp3</original>
+    <mtime>1593294155</mtime>
+    <size>4136</size>
+    <md5>520543295985025102da4127f1de7939</md5>
+    <crc32>f499036b</crc32>
+    <sha1>f20e72c0ea9a8231488ef6ef4cf27dda59a2af10</sha1>
+  </file>
+  <file name="22 Dai 6 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292254</mtime>
+    <size>1209777</size>
+    <md5>82bc434d04607172653dedcf5714e1b7</md5>
+    <crc32>af095a25</crc32>
+    <sha1>3bb01cc2afa3c706a52fea0da27e7d78cd4c7b17</sha1>
+    <format>VBR MP3</format>
+    <length>30.22</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 6 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>22</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="22 Dai 6 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>22 Dai 6 Ka - Mondai 1.mp3</original>
+    <mtime>1593293059</mtime>
+    <size>17029</size>
+    <md5>8f0ecd5f6852a569845520ddce7cd18f</md5>
+    <crc32>0d7241be</crc32>
+    <sha1>6ef38562c14914ef9488af7d531f7b493dac5d4d</sha1>
+  </file>
+  <file name="22 Dai 6 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>22 Dai 6 Ka - Mondai 1.mp3</original>
+    <mtime>1593293674</mtime>
+    <size>281693</size>
+    <md5>300a6cb803b53a254eac7b8c8baceef6</md5>
+    <crc32>c7fae7db</crc32>
+    <sha1>5b731ed20ca4ef4d53f2e26015b552983733b0d9</sha1>
+  </file>
+  <file name="23 Dai 6 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>23 Dai 6 Ka - Mondai 2.mp3</original>
+    <mtime>1593294161</mtime>
+    <size>13600</size>
+    <md5>bb8663698c95e371ea0bc00956ae09da</md5>
+    <crc32>c2004548</crc32>
+    <sha1>5fceb20cef13987c612aaff84332f440b1cb3f0e</sha1>
+  </file>
+  <file name="23 Dai 6 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292264</mtime>
+    <size>3728817</size>
+    <md5>3afa635185d0c7217d6d1af6038614ab</md5>
+    <crc32>19f9f32e</crc32>
+    <sha1>4b1f12a73945e125928e87de3120eb1c8150a061</sha1>
+    <format>VBR MP3</format>
+    <length>93.19</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 6 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>23</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="23 Dai 6 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>23 Dai 6 Ka - Mondai 2.mp3</original>
+    <mtime>1593293269</mtime>
+    <size>24335</size>
+    <md5>447a4004e7d1fc2968b4cf47ad60d5d7</md5>
+    <crc32>624894e9</crc32>
+    <sha1>3420d3b09f0f93d42c0a1ece8f23696e541ba4c4</sha1>
+  </file>
+  <file name="23 Dai 6 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>23 Dai 6 Ka - Mondai 2.mp3</original>
+    <mtime>1593293662</mtime>
+    <size>289058</size>
+    <md5>4de17322f6a45b7e3dc0f1be65a00e24</md5>
+    <crc32>1385c3eb</crc32>
+    <sha1>7436398ce0f56a0e4d80b11184a39f5d95851faa</sha1>
+  </file>
+  <file name="24 Dai 7 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>24 Dai 7 Ka - Kaiwa.mp3</original>
+    <mtime>1593294166</mtime>
+    <size>5952</size>
+    <md5>425a3553209a5dcc116fe84959358155</md5>
+    <crc32>f6baf158</crc32>
+    <sha1>93a0b4e27463657e4e7d7c8051bd7a54248e6b63</sha1>
+  </file>
+  <file name="24 Dai 7 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292277</mtime>
+    <size>1834734</size>
+    <md5>320a71ad9edb86fb468620c147e1634a</md5>
+    <crc32>e22124a4</crc32>
+    <sha1>2f06fbaaa827f6a5c3a6858c00f1f0623f2b437a</sha1>
+    <format>VBR MP3</format>
+    <length>45.84</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 7 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>24</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="24 Dai 7 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>24 Dai 7 Ka - Kaiwa.mp3</original>
+    <mtime>1593293377</mtime>
+    <size>16837</size>
+    <md5>f33cc4a50cedd225fa2782e25e469beb</md5>
+    <crc32>e6173f65</crc32>
+    <sha1>b1297cf590d121225b1ede9ae85c02a2ab39996d</sha1>
+  </file>
+  <file name="24 Dai 7 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>24 Dai 7 Ka - Kaiwa.mp3</original>
+    <mtime>1593293758</mtime>
+    <size>294246</size>
+    <md5>62915dbf0729173e2fc4d55b4121c526</md5>
+    <crc32>f29fccec</crc32>
+    <sha1>6a32df75c5a46bb6bd5183ac182d6764d6e37e43</sha1>
+  </file>
+  <file name="25 Dai 7 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>25 Dai 7 Ka - Mondai 1.mp3</original>
+    <mtime>1593294170</mtime>
+    <size>4528</size>
+    <md5>e0dec26a59d21a948ab8052158fc99af</md5>
+    <crc32>2aa84869</crc32>
+    <sha1>4d82baa89df2778477bfc692821414fa54d1595d</sha1>
+  </file>
+  <file name="25 Dai 7 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292283</mtime>
+    <size>1321137</size>
+    <md5>148b35d5d55fd874549ed274e2a4fce2</md5>
+    <crc32>64fe8ea0</crc32>
+    <sha1>3de96e3fa660831515ab5b139a06152d7dbf81d3</sha1>
+    <format>VBR MP3</format>
+    <length>33</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 7 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>25</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="25 Dai 7 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>25 Dai 7 Ka - Mondai 1.mp3</original>
+    <mtime>1593293441</mtime>
+    <size>19039</size>
+    <md5>ae6a5deef85aa52910fe6365ca9fab8e</md5>
+    <crc32>4a25b9a2</crc32>
+    <sha1>2b219ec39d9c2e46aa1407ff154d6d74a3badaea</sha1>
+  </file>
+  <file name="25 Dai 7 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>25 Dai 7 Ka - Mondai 1.mp3</original>
+    <mtime>1593293718</mtime>
+    <size>283168</size>
+    <md5>877e30f93a0ce02fde1c1a8f2e6902da</md5>
+    <crc32>a0dc7ea7</crc32>
+    <sha1>b54861b4ecb6f1cbdf7130f06b8d2463229c29cc</sha1>
+  </file>
+  <file name="26 Dai 7 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>26 Dai 7 Ka - Mondai 2.mp3</original>
+    <mtime>1593294025</mtime>
+    <size>3120</size>
+    <md5>cfd9e52dd58d580938a1fd0f94b06368</md5>
+    <crc32>453bf129</crc32>
+    <sha1>c3f82f98ea2814762c948386140eb143f7ff7dc0</sha1>
+  </file>
+  <file name="26 Dai 7 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292291</mtime>
+    <size>912177</size>
+    <md5>d37e4ef8ea6629c180d35c70dcad2cda</md5>
+    <crc32>f2499313</crc32>
+    <sha1>dd99ee6a8522e118166cacbdf78310b90f541859</sha1>
+    <format>VBR MP3</format>
+    <length>22.78</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 7 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>26</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="26 Dai 7 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>26 Dai 7 Ka - Mondai 2.mp3</original>
+    <mtime>1593293373</mtime>
+    <size>15981</size>
+    <md5>908eadba62977e235aebae8c913b541a</md5>
+    <crc32>f8daeb63</crc32>
+    <sha1>26a518991961ef4ae1ec30a2168750d3908b6e7f</sha1>
+  </file>
+  <file name="26 Dai 7 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>26 Dai 7 Ka - Mondai 2.mp3</original>
+    <mtime>1593293733</mtime>
+    <size>296711</size>
+    <md5>fdb79dbf35362b63252e4fb350ce6757</md5>
+    <crc32>c6583f28</crc32>
+    <sha1>089ae307e1976155a458cec4bf816b66e11b5706</sha1>
+  </file>
+  <file name="27 Dai 7 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>27 Dai 7 Ka - Mondai 3.mp3</original>
+    <mtime>1593294090</mtime>
+    <size>8312</size>
+    <md5>161fa20e09544ce79e400312e282c613</md5>
+    <crc32>f9900c94</crc32>
+    <sha1>bd9b184e90b04d14fda89fd4a0b5ad570ede21cf</sha1>
+  </file>
+  <file name="27 Dai 7 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292300</mtime>
+    <size>2285937</size>
+    <md5>3d4b14e4be9740889c8abcc49f36c0c4</md5>
+    <crc32>067195d1</crc32>
+    <sha1>1156afeed66cb9efaf87cdf51e24c8914b758295</sha1>
+    <format>VBR MP3</format>
+    <length>57.12</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 7 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>27</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="27 Dai 7 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>27 Dai 7 Ka - Mondai 3.mp3</original>
+    <mtime>1593293307</mtime>
+    <size>22334</size>
+    <md5>4922ffd57af25282040b59efa9295a00</md5>
+    <crc32>d5ae3b53</crc32>
+    <sha1>11294099747ca9522bcc4fd6d706399a90286cae</sha1>
+  </file>
+  <file name="27 Dai 7 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>27 Dai 7 Ka - Mondai 3.mp3</original>
+    <mtime>1593293696</mtime>
+    <size>292288</size>
+    <md5>31cd8af8868e6431da512a1f6a51e79c</md5>
+    <crc32>59b34f58</crc32>
+    <sha1>a53cb7dfa1fccef93192bdeca9e3108a8bfd95fe</sha1>
+  </file>
+  <file name="28 Dai 8 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>28 Dai 8 Ka - Kaiwa.mp3</original>
+    <mtime>1593294079</mtime>
+    <size>6992</size>
+    <md5>426142f9e141ed3fa3b08382387d88bc</md5>
+    <crc32>4ef189c0</crc32>
+    <sha1>6ea09de671fcae243d9056135fa0ab5a1c236999</sha1>
+  </file>
+  <file name="28 Dai 8 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292315</mtime>
+    <size>1685934</size>
+    <md5>a50bacf95421469d90cb06d3fbf29dd6</md5>
+    <crc32>4e635cf9</crc32>
+    <sha1>d280d1b76fa746180a2ba5c0a7ea454290961d81</sha1>
+    <format>VBR MP3</format>
+    <length>42.12</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 8 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>28</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="28 Dai 8 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>28 Dai 8 Ka - Kaiwa.mp3</original>
+    <mtime>1593293300</mtime>
+    <size>22521</size>
+    <md5>2c03e6aab80824274200e40af9c18eae</md5>
+    <crc32>16722278</crc32>
+    <sha1>8919ae7a97b4e1377fcae7adae3720a361b13a9f</sha1>
+  </file>
+  <file name="28 Dai 8 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>28 Dai 8 Ka - Kaiwa.mp3</original>
+    <mtime>1593293688</mtime>
+    <size>302136</size>
+    <md5>8eb515056749695605b9ec2268dee2db</md5>
+    <crc32>0606c295</crc32>
+    <sha1>e5f2744e222b2c0a8abd319427017e9f86f13787</sha1>
+  </file>
+  <file name="29 Dai 8 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>29 Dai 8 Ka - Mondai 1.mp3</original>
+    <mtime>1593293793</mtime>
+    <size>3728</size>
+    <md5>0acb522687c1b32a634072c9464c6f4c</md5>
+    <crc32>1e180e9b</crc32>
+    <sha1>abd382ee5e3b9e0678d657e2d41b16c68eb77cf7</sha1>
+  </file>
+  <file name="29 Dai 8 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292339</mtime>
+    <size>1179057</size>
+    <md5>8c5db416309b50fee661e08845b857c7</md5>
+    <crc32>5c9b3cc1</crc32>
+    <sha1>10f257925b95b8f40d67d7da85ff9f2ccb4f86c4</sha1>
+    <format>VBR MP3</format>
+    <length>29.45</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 8 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>29</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="29 Dai 8 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>29 Dai 8 Ka - Mondai 1.mp3</original>
+    <mtime>1593293351</mtime>
+    <size>17808</size>
+    <md5>79d2ceb4fca0544f8eab752c149705d3</md5>
+    <crc32>3a8f908a</crc32>
+    <sha1>a5944609f871a87b07545abed6e0681ac2801a35</sha1>
+  </file>
+  <file name="29 Dai 8 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>29 Dai 8 Ka - Mondai 1.mp3</original>
+    <mtime>1593293723</mtime>
+    <size>281318</size>
+    <md5>d789058e7286f31d3bdafaec1ef3a572</md5>
+    <crc32>43fff685</crc32>
+    <sha1>77224dad3675af1a000e3e165690e01fac1de619</sha1>
+  </file>
+  <file name="30 Dai 8 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>30 Dai 8 Ka - Mondai 2.mp3</original>
+    <mtime>1593294071</mtime>
+    <size>3424</size>
+    <md5>92dc0e4bca0a27fffdd89ae27327937d</md5>
+    <crc32>eea4671c</crc32>
+    <sha1>99207d80944753986d507cd631f1efc780df9380</sha1>
+  </file>
+  <file name="30 Dai 8 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292346</mtime>
+    <size>916017</size>
+    <md5>8013c8da2bfb7ed446e3bc5325dd926c</md5>
+    <crc32>7dd3389e</crc32>
+    <sha1>82c67ccf188e8386bedb5c5ed5309611d6521d78</sha1>
+    <format>VBR MP3</format>
+    <length>22.87</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 8 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>30</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="30 Dai 8 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>30 Dai 8 Ka - Mondai 2.mp3</original>
+    <mtime>1593293365</mtime>
+    <size>17215</size>
+    <md5>e203cd513a5c413f7e7ecc1f9ba258cd</md5>
+    <crc32>82f346d8</crc32>
+    <sha1>320992017be1426282574fb5277db3077de3c736</sha1>
+  </file>
+  <file name="30 Dai 8 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>30 Dai 8 Ka - Mondai 2.mp3</original>
+    <mtime>1593293779</mtime>
+    <size>298541</size>
+    <md5>f3b64e944e8244b040a5cda291370443</md5>
+    <crc32>a11b35ea</crc32>
+    <sha1>56e1fb7dfbb2194519b6d32b7da1dd8f313318f5</sha1>
+  </file>
+  <file name="31 Dai 8 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>31 Dai 8 Ka - Mondai 3.mp3</original>
+    <mtime>1593294040</mtime>
+    <size>9064</size>
+    <md5>620ffc985e15d075073c2767268671ff</md5>
+    <crc32>39cf76c8</crc32>
+    <sha1>46b66c162cc20a4fd1eb0fa74aa353300389f1ec</sha1>
+  </file>
+  <file name="31 Dai 8 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292355</mtime>
+    <size>2420337</size>
+    <md5>2b2b51f2e735944b30439feed7d9ca9f</md5>
+    <crc32>3b1ecaf4</crc32>
+    <sha1>fbf47d889baf47718abeb2e5a6cfbaca4e399e32</sha1>
+    <format>VBR MP3</format>
+    <length>60.48</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 8 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>31</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="31 Dai 8 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>31 Dai 8 Ka - Mondai 3.mp3</original>
+    <mtime>1593293358</mtime>
+    <size>22426</size>
+    <md5>8171e4d4758a026ae8b0a03e45f0b944</md5>
+    <crc32>91e4f7ce</crc32>
+    <sha1>0e18fcde1450c9703ac6ebc9b322ed43ea980800</sha1>
+  </file>
+  <file name="31 Dai 8 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>31 Dai 8 Ka - Mondai 3.mp3</original>
+    <mtime>1593293708</mtime>
+    <size>294902</size>
+    <md5>aa6e6ef648e9f65d9f68f0c9f0764453</md5>
+    <crc32>0ca26cfb</crc32>
+    <sha1>243820191fe3b764f96ecb53420f5cfd20d8f3b7</sha1>
+  </file>
+  <file name="32 Dai 9 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>32 Dai 9 Ka - Kaiwa.mp3</original>
+    <mtime>1593294003</mtime>
+    <size>7456</size>
+    <md5>c8f59a41e0ec2554d1ac2d0d1f2e1687</md5>
+    <crc32>ec5af4df</crc32>
+    <sha1>96ae976b2ada3d2e65600440d9dfab7b86f6f412</sha1>
+  </file>
+  <file name="32 Dai 9 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292364</mtime>
+    <size>1912494</size>
+    <md5>ffab4074156e1d6f76b3a24f2a3aa6f8</md5>
+    <crc32>aac03cc6</crc32>
+    <sha1>139d78c59e3c75fbc5a5caef5992e2c673a81571</sha1>
+    <format>VBR MP3</format>
+    <length>47.78</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 9 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>32</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="32 Dai 9 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>32 Dai 9 Ka - Kaiwa.mp3</original>
+    <mtime>1593293291</mtime>
+    <size>21513</size>
+    <md5>84e05d75203638a5f240db0f7a2466a5</md5>
+    <crc32>ac37de08</crc32>
+    <sha1>55ef3f19592e67adfb76a337a8feb5671a5b813d</sha1>
+  </file>
+  <file name="32 Dai 9 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>32 Dai 9 Ka - Kaiwa.mp3</original>
+    <mtime>1593293777</mtime>
+    <size>303174</size>
+    <md5>494989027ffa5dbcfbc9233f7c714c6c</md5>
+    <crc32>3b17df95</crc32>
+    <sha1>02974e4fecd8427e1a377e8dc4260d2c3b28274e</sha1>
+  </file>
+  <file name="33 Dai 9 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>33 Dai 9 Ka - Mondai 1.mp3</original>
+    <mtime>1593294052</mtime>
+    <size>3856</size>
+    <md5>19642fc67166c18dad111e84d8f75714</md5>
+    <crc32>aa5602b2</crc32>
+    <sha1>12eb5300a5a8b7fa3a6493e68aa679341615dad7</sha1>
+  </file>
+  <file name="33 Dai 9 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292370</mtime>
+    <size>1204977</size>
+    <md5>108b5ddf2f298a944d1645cde89891b4</md5>
+    <crc32>bcef698a</crc32>
+    <sha1>8ffc4640d79613282fc004e1ab6f54eb9424bb39</sha1>
+    <format>VBR MP3</format>
+    <length>30.1</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 9 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>33</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="33 Dai 9 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>33 Dai 9 Ka - Mondai 1.mp3</original>
+    <mtime>1593293338</mtime>
+    <size>16678</size>
+    <md5>11e0ebd0af9e0b846ef934bf82d89670</md5>
+    <crc32>519ea2e2</crc32>
+    <sha1>024a667bf92ed6e3f924d3d26f7535c2a561eeec</sha1>
+  </file>
+  <file name="33 Dai 9 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>33 Dai 9 Ka - Mondai 1.mp3</original>
+    <mtime>1593293746</mtime>
+    <size>280241</size>
+    <md5>92cde43ae66527775bcea7bd0c3c1756</md5>
+    <crc32>2f8a23a7</crc32>
+    <sha1>41d345867447db5cb07524cae3d17e66126f61c5</sha1>
+  </file>
+  <file name="34 Dai 9 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>34 Dai 9 Ka - Mondai 2.mp3</original>
+    <mtime>1593294059</mtime>
+    <size>14584</size>
+    <md5>2b5153a2581bb76f7b539e50cf269921</md5>
+    <crc32>a1e26ce6</crc32>
+    <sha1>d029f5fb1e3d36b8d83dfdfbcf28a19946a9ebb8</sha1>
+  </file>
+  <file name="34 Dai 9 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292377</mtime>
+    <size>3844017</size>
+    <md5>493093ea15c32afd0394e4ba5e22b778</md5>
+    <crc32>a8f1743a</crc32>
+    <sha1>68f9eadea1d6d57821be8cedc5128c219b52e20e</sha1>
+    <format>VBR MP3</format>
+    <length>96.07</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 9 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>34</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="34 Dai 9 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>34 Dai 9 Ka - Mondai 2.mp3</original>
+    <mtime>1593293332</mtime>
+    <size>24155</size>
+    <md5>c7006beaff027c76b72a94614895b0d8</md5>
+    <crc32>ad4fd5bc</crc32>
+    <sha1>2dd85d2dde48a15e4f1427c54bb0f459d23c1c20</sha1>
+  </file>
+  <file name="34 Dai 9 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>34 Dai 9 Ka - Mondai 2.mp3</original>
+    <mtime>1593293633</mtime>
+    <size>291099</size>
+    <md5>281145825ebfe985db997442ecb3c109</md5>
+    <crc32>4183a1d9</crc32>
+    <sha1>ca9556ccd8b9f2ff2a2a34d2adeb3c5be5c9f512</sha1>
+  </file>
+  <file name="35 Dai 10 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>35 Dai 10 Ka - Kaiwa.mp3</original>
+    <mtime>1593294067</mtime>
+    <size>6424</size>
+    <md5>6fd1921c90a3f173d4a1e45a6f19b596</md5>
+    <crc32>4bc9921e</crc32>
+    <sha1>e89ea79092ad3357e3aa2a12902487ad268888ff</sha1>
+  </file>
+  <file name="35 Dai 10 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292384</mtime>
+    <size>1555375</size>
+    <md5>4441061f73cff0ccc1991085a75782c3</md5>
+    <crc32>47a50f12</crc32>
+    <sha1>7667f21594556657b02e16c5663ed0422f9e4f9d</sha1>
+    <format>VBR MP3</format>
+    <length>38.86</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 10 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>35</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="35 Dai 10 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>35 Dai 10 Ka - Kaiwa.mp3</original>
+    <mtime>1593293077</mtime>
+    <size>20742</size>
+    <md5>ed285f8a6776345f91cdc176f4cec586</md5>
+    <crc32>699b8f55</crc32>
+    <sha1>36e11f7e209f613fd81c0b4654190522fc3cf1fa</sha1>
+  </file>
+  <file name="35 Dai 10 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>35 Dai 10 Ka - Kaiwa.mp3</original>
+    <mtime>1593293656</mtime>
+    <size>300013</size>
+    <md5>461f367e871207ddf68c70b1b8dba358</md5>
+    <crc32>a263e013</crc32>
+    <sha1>48169717858721f30c9b99e8b31833054afe51f2</sha1>
+  </file>
+  <file name="36 Dai 10 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>36 Dai 10 Ka - Mondai 1.mp3</original>
+    <mtime>1593293815</mtime>
+    <size>4160</size>
+    <md5>1e4057765553a8f9bec1d8983a766400</md5>
+    <crc32>c3438016</crc32>
+    <sha1>2de5bc674a6a11d29dca60e5f1209f2aaed8b3ac</sha1>
+  </file>
+  <file name="36 Dai 10 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292391</mtime>
+    <size>1221298</size>
+    <md5>a195436cb9c2196195b845786934684f</md5>
+    <crc32>b9f14ecd</crc32>
+    <sha1>fbe62bca3cf549074e20e04ada3bfe631ed421d6</sha1>
+    <format>VBR MP3</format>
+    <length>30.5</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 10 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>36</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="36 Dai 10 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>36 Dai 10 Ka - Mondai 1.mp3</original>
+    <mtime>1593293094</mtime>
+    <size>16905</size>
+    <md5>746211f6da419c58fc00719f0e7430c4</md5>
+    <crc32>f87990e3</crc32>
+    <sha1>0be269c043808d46e7f47790e05c55ccb7b81d84</sha1>
+  </file>
+  <file name="36 Dai 10 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>36 Dai 10 Ka - Mondai 1.mp3</original>
+    <mtime>1593293773</mtime>
+    <size>280781</size>
+    <md5>cd587c910379becb4e641d32bec46c1f</md5>
+    <crc32>5f440128</crc32>
+    <sha1>a4c159981b732f99ed571f670b31fc5b0a4fe67d</sha1>
+  </file>
+  <file name="37 Dai 10 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>37 Dai 10 Ka - Mondai 2.mp3</original>
+    <mtime>1593293963</mtime>
+    <size>8224</size>
+    <md5>09fe28e68b8d6a5ca2c1b21dfe6b6074</md5>
+    <crc32>f5e2dbd1</crc32>
+    <sha1>df3ad00edf704622a4c32a2bda0b2ba35324ee75</sha1>
+  </file>
+  <file name="37 Dai 10 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292398</mtime>
+    <size>2088178</size>
+    <md5>d3610147001cf756a76d808bea2b7c65</md5>
+    <crc32>dd36cc48</crc32>
+    <sha1>b8317cebde6983a964b576499800e2498a06ee42</sha1>
+    <format>VBR MP3</format>
+    <length>52.18</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 10 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>37</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="37 Dai 10 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>37 Dai 10 Ka - Mondai 2.mp3</original>
+    <mtime>1593293566</mtime>
+    <size>21014</size>
+    <md5>788305e17b97dfd83c37b36656df7cc5</md5>
+    <crc32>b0423e1c</crc32>
+    <sha1>e1b46414d97ff2ec7835c07bb25fc0cc9198d6b2</sha1>
+  </file>
+  <file name="37 Dai 10 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>37 Dai 10 Ka - Mondai 2.mp3</original>
+    <mtime>1593293671</mtime>
+    <size>290315</size>
+    <md5>7ff5e80268d02c46214d65e038572ce0</md5>
+    <crc32>5dcfccc6</crc32>
+    <sha1>43687d1c68f6a5e165decfb6331d51cc827f96cf</sha1>
+  </file>
+  <file name="38 Dai 10 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>38 Dai 10 Ka - Mondai 3.mp3</original>
+    <mtime>1593293967</mtime>
+    <size>6560</size>
+    <md5>ea6835dbc6ca1d6b297e556b1d0d9200</md5>
+    <crc32>309ba31c</crc32>
+    <sha1>bbbd018ecc959383b3c7b5c3aa82717530944487</sha1>
+  </file>
+  <file name="38 Dai 10 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292404</mtime>
+    <size>1732978</size>
+    <md5>d84abe6cfe54ae8ade16121c6e671d17</md5>
+    <crc32>2ee81992</crc32>
+    <sha1>08597f477cbbe2f04373a493cec2664f5b88c29f</sha1>
+    <format>VBR MP3</format>
+    <length>43.3</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 10 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>38</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="38 Dai 10 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>38 Dai 10 Ka - Mondai 3.mp3</original>
+    <mtime>1593293498</mtime>
+    <size>19858</size>
+    <md5>26cc307d27460b694a0d550c0518bb68</md5>
+    <crc32>9a15f02d</crc32>
+    <sha1>8e290fb02438f4531a15c673e271f3d838f2db74</sha1>
+  </file>
+  <file name="38 Dai 10 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>38 Dai 10 Ka - Mondai 3.mp3</original>
+    <mtime>1593293603</mtime>
+    <size>296927</size>
+    <md5>f393e001ca9ff3bda7a123c944ee22b0</md5>
+    <crc32>c172aa53</crc32>
+    <sha1>56bdfeafaeb7cd982239fba4fa5481e6f44d777e</sha1>
+  </file>
+  <file name="39 Dai 11 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>39 Dai 11 Ka - Kaiwa.mp3</original>
+    <mtime>1593293972</mtime>
+    <size>7832</size>
+    <md5>8134cb7a53ff5d70844c25c06cd9c66e</md5>
+    <crc32>d7c5b8f3</crc32>
+    <sha1>f74ec1660f9238e8d2991b56a370c3f8e367cb32</sha1>
+  </file>
+  <file name="39 Dai 11 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292412</mtime>
+    <size>1825135</size>
+    <md5>cdd205b86e266b21d70b95ff1689c654</md5>
+    <crc32>fa567a5b</crc32>
+    <sha1>bfe9a4af8d29f7ab9f40bb85ec78920a01ebcf0a</sha1>
+    <format>VBR MP3</format>
+    <length>45.6</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 11 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>39</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="39 Dai 11 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>39 Dai 11 Ka - Kaiwa.mp3</original>
+    <mtime>1593293494</mtime>
+    <size>20922</size>
+    <md5>4bb175a36e4fa446154d24acdcf82719</md5>
+    <crc32>754463f2</crc32>
+    <sha1>1af3813292d1319e3f0d3a73a474de60b3ede356</sha1>
+  </file>
+  <file name="39 Dai 11 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>39 Dai 11 Ka - Kaiwa.mp3</original>
+    <mtime>1593293684</mtime>
+    <size>303961</size>
+    <md5>0b1a533d23fdbdd19490d776aea72816</md5>
+    <crc32>ea8f311c</crc32>
+    <sha1>ad819a3b9e448eeb5c3aab203c3a76ef244b2011</sha1>
+  </file>
+  <file name="40 Dai 11 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>40 Dai 11 Ka - Mondai 1.mp3</original>
+    <mtime>1593293976</mtime>
+    <size>4704</size>
+    <md5>70783efa681fc4cae48bf3427281fb71</md5>
+    <crc32>a45a2645</crc32>
+    <sha1>f06e8df7ec8a77e2cb8d42ac4f67cae9316beb7d</sha1>
+  </file>
+  <file name="40 Dai 11 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292437</mtime>
+    <size>1344178</size>
+    <md5>1d64dd97617155843c51ab80a5267d17</md5>
+    <crc32>0b2367f0</crc32>
+    <sha1>aca420a8aefe5b5c10b0fd85303c5ddd49680d76</sha1>
+    <format>VBR MP3</format>
+    <length>33.58</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 11 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>40</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="40 Dai 11 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>40 Dai 11 Ka - Mondai 1.mp3</original>
+    <mtime>1593293490</mtime>
+    <size>18217</size>
+    <md5>0df84c726a23dc84441e0a470abb40f4</md5>
+    <crc32>321cd089</crc32>
+    <sha1>7900413e78222047d07313e481a15afc94c51d16</sha1>
+  </file>
+  <file name="40 Dai 11 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>40 Dai 11 Ka - Mondai 1.mp3</original>
+    <mtime>1593293755</mtime>
+    <size>283191</size>
+    <md5>28d22d14ee3d31d5e730a3a0b6dba9fe</md5>
+    <crc32>eac643e6</crc32>
+    <sha1>5a6204cea2d915591dbc9671560e197d7b99dde7</sha1>
+  </file>
+  <file name="41 Dai 11 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>41 Dai 11 Ka - Mondai 2.mp3</original>
+    <mtime>1593293979</mtime>
+    <size>3048</size>
+    <md5>bc5dca48e9d9dc08c23004acecb6a2ac</md5>
+    <crc32>7cd02f04</crc32>
+    <sha1>c41c55cf81b8905d11fbe887b85b222e24259eb9</sha1>
+  </file>
+  <file name="41 Dai 11 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292450</mtime>
+    <size>829618</size>
+    <md5>d2b5e8136dd405293a19884f2f4319de</md5>
+    <crc32>3b6099bc</crc32>
+    <sha1>2bf68743ab6fb9b1e6032eb1add0a6dd780eb2c7</sha1>
+    <format>VBR MP3</format>
+    <length>20.71</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 11 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>41</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="41 Dai 11 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>41 Dai 11 Ka - Mondai 2.mp3</original>
+    <mtime>1593293484</mtime>
+    <size>18216</size>
+    <md5>dfb6776d4a3960252763a1c833cd7e10</md5>
+    <crc32>630ef6a1</crc32>
+    <sha1>f6178c62592bd7ce31aeeac4b868cc5247896e13</sha1>
+  </file>
+  <file name="41 Dai 11 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>41 Dai 11 Ka - Mondai 2.mp3</original>
+    <mtime>1593293731</mtime>
+    <size>296897</size>
+    <md5>6471b6768ae727e8391208d8728a7a4b</md5>
+    <crc32>78175f90</crc32>
+    <sha1>ac04786760581bce09b8702d988868339b38d9d6</sha1>
+  </file>
+  <file name="42 Dai 11 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>42 Dai 11 Ka - Mondai 3.mp3</original>
+    <mtime>1593293958</mtime>
+    <size>9352</size>
+    <md5>80afa91c056ba50ceda41c32f82d7472</md5>
+    <crc32>d8216c09</crc32>
+    <sha1>58be7ff2200f3c5ba57408c3b7b05e73daa8d04f</sha1>
+  </file>
+  <file name="42 Dai 11 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292456</mtime>
+    <size>2422258</size>
+    <md5>e5d6f918d029afbff28b3deb4eef835c</md5>
+    <crc32>1ab6317c</crc32>
+    <sha1>4fb5c3431952626eca8079a06a354e1a049e49c7</sha1>
+    <format>VBR MP3</format>
+    <length>60.53</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 11 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>42</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="42 Dai 11 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>42 Dai 11 Ka - Mondai 3.mp3</original>
+    <mtime>1593293479</mtime>
+    <size>21668</size>
+    <md5>41acea7308f73ece94b7e26cb1e52920</md5>
+    <crc32>57d899c7</crc32>
+    <sha1>a4c57f73a0b270563047cdd13d6182b3a4d5e387</sha1>
+  </file>
+  <file name="42 Dai 11 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>42 Dai 11 Ka - Mondai 3.mp3</original>
+    <mtime>1593293694</mtime>
+    <size>292536</size>
+    <md5>e37d041a4f603e7f3bd91dba1f128cd7</md5>
+    <crc32>ba48cd46</crc32>
+    <sha1>78032d4711436a9d449af040fbaf21e721814463</sha1>
+  </file>
+  <file name="43 Dai 12 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>43 Dai 12 Ka - Kaiwa.mp3</original>
+    <mtime>1593293949</mtime>
+    <size>6136</size>
+    <md5>ce9a89d17f411e390214bcce6c4df6fe</md5>
+    <crc32>9c885c10</crc32>
+    <sha1>7ab977205a5206e0114da033aa4cbd5035e4b61f</sha1>
+  </file>
+  <file name="43 Dai 12 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292462</mtime>
+    <size>1424815</size>
+    <md5>6fb354ee68ad8581c38e8762de95005d</md5>
+    <crc32>38706f16</crc32>
+    <sha1>cb174e69e2311971e7df431be2538fd6649a5c4b</sha1>
+    <format>VBR MP3</format>
+    <length>35.59</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 12 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>43</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="43 Dai 12 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>43 Dai 12 Ka - Kaiwa.mp3</original>
+    <mtime>1593293474</mtime>
+    <size>22079</size>
+    <md5>390aec0fedca56d31966258bc753e8e3</md5>
+    <crc32>b4068321</crc32>
+    <sha1>a69d75ad56c06654b96a3be7fecc51d10b09cecc</sha1>
+  </file>
+  <file name="43 Dai 12 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>43 Dai 12 Ka - Kaiwa.mp3</original>
+    <mtime>1593293586</mtime>
+    <size>303573</size>
+    <md5>0906170ab2a29dff51091e9e729aeab9</md5>
+    <crc32>b936fae5</crc32>
+    <sha1>4f364be561d3e65499bd5b327abdfba1f414ab7e</sha1>
+  </file>
+  <file name="44 Dai 12 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>44 Dai 12 Ka - Mondai 1.mp3</original>
+    <mtime>1593293892</mtime>
+    <size>4688</size>
+    <md5>fda881efa31358d908dda0bf689ae1da</md5>
+    <crc32>bbfd5317</crc32>
+    <sha1>29a1720d663f82a8d5ea84f75b818e7c644dec91</sha1>
+  </file>
+  <file name="44 Dai 12 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292470</mtime>
+    <size>1288498</size>
+    <md5>eaf81357544d7d1005d6d7e4cacf4c2b</md5>
+    <crc32>279d840a</crc32>
+    <sha1>a30077a719905660d55a68477455d2ba7b5bf8fa</sha1>
+    <format>VBR MP3</format>
+    <length>32.18</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 12 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>44</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="44 Dai 12 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>44 Dai 12 Ka - Mondai 1.mp3</original>
+    <mtime>1593293468</mtime>
+    <size>18043</size>
+    <md5>a3178f254ce546fbbe4b8f03394312e6</md5>
+    <crc32>0d87c34d</crc32>
+    <sha1>cb20cb078738f7b5ea15e99eb3311fd0128ae5be</sha1>
+  </file>
+  <file name="44 Dai 12 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>44 Dai 12 Ka - Mondai 1.mp3</original>
+    <mtime>1593293784</mtime>
+    <size>283222</size>
+    <md5>616a06113baf6bb2125604a649c643b6</md5>
+    <crc32>fb58fdce</crc32>
+    <sha1>d627d71e5cbd3736ccc85f86e68f7c33597a3fa3</sha1>
+  </file>
+  <file name="45 Dai 12 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>45 Dai 12 Ka - Mondai 2.mp3</original>
+    <mtime>1593293842</mtime>
+    <size>15512</size>
+    <md5>c01a522af35c3decafe92c820e84c29a</md5>
+    <crc32>8c8f9141</crc32>
+    <sha1>ee4cb7d39d6238a07b050aee6eae823d0bf068b5</sha1>
+  </file>
+  <file name="45 Dai 12 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292475</mtime>
+    <size>4043698</size>
+    <md5>c73930b9ed3480c09353fca0de9e8d37</md5>
+    <crc32>dbcd0dda</crc32>
+    <sha1>73bce5e96c9a59f3ff94c3cc75389c9814298841</sha1>
+    <format>VBR MP3</format>
+    <length>101.06</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 12 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>45</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="45 Dai 12 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>45 Dai 12 Ka - Mondai 2.mp3</original>
+    <mtime>1593293562</mtime>
+    <size>25241</size>
+    <md5>c132cfa8a1f453f2a1804dcb2843a49b</md5>
+    <crc32>69e6205d</crc32>
+    <sha1>397c29db01d060345d51bcedb76f0fc0bcbad0b2</sha1>
+  </file>
+  <file name="45 Dai 12 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>45 Dai 12 Ka - Mondai 2.mp3</original>
+    <mtime>1593293782</mtime>
+    <size>292322</size>
+    <md5>ebdf6902881ba766e4c4296758c47a21</md5>
+    <crc32>f9ba7be6</crc32>
+    <sha1>c8065283841450b2fd9a7f92ea8b27d6c1f61146</sha1>
+  </file>
+  <file name="46 Dai 13 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>46 Dai 13 Ka - Kaiwa.mp3</original>
+    <mtime>1593293888</mtime>
+    <size>9576</size>
+    <md5>3336f2904825c14a9d5e5f4b6aa1e43b</md5>
+    <crc32>4469793a</crc32>
+    <sha1>4d1218d0af633d7bf651cc3e37fc55e0c28f3340</sha1>
+  </file>
+  <file name="46 Dai 13 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292482</mtime>
+    <size>2329135</size>
+    <md5>8fa066f33d760c0127e685a4978a1a67</md5>
+    <crc32>2f0fa88b</crc32>
+    <sha1>e2c5d60aa7a8f57c0af9d172eb651071a5e10aed</sha1>
+    <format>VBR MP3</format>
+    <length>58.2</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 13 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>46</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="46 Dai 13 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>46 Dai 13 Ka - Kaiwa.mp3</original>
+    <mtime>1593293515</mtime>
+    <size>20761</size>
+    <md5>37c42bdfb4ac891273360e6db50edf9f</md5>
+    <crc32>ac09c9f9</crc32>
+    <sha1>298c83459899bbacb907f299a3c098a4b0a9dbfa</sha1>
+  </file>
+  <file name="46 Dai 13 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>46 Dai 13 Ka - Kaiwa.mp3</original>
+    <mtime>1593293714</mtime>
+    <size>300750</size>
+    <md5>a2c408065caa78a39a83c6d19bb2c362</md5>
+    <crc32>b793aca6</crc32>
+    <sha1>d0f0899933987be4e64e528a23ff3e206737df1d</sha1>
+  </file>
+  <file name="47 Dai 13 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>47 Dai 13 Ka - Mondai 1.mp3</original>
+    <mtime>1593293802</mtime>
+    <size>4600</size>
+    <md5>0f721621bcf7cddcd312a15dc9ec6c9d</md5>
+    <crc32>31558339</crc32>
+    <sha1>7f2593fa54a432f1aaefd7a09ad0d0e72c37b43d</sha1>
+  </file>
+  <file name="47 Dai 13 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292487</mtime>
+    <size>1342258</size>
+    <md5>1651f22d80264c3d7c517856b46593f2</md5>
+    <crc32>c898591e</crc32>
+    <sha1>57f0904f9b6a0d21b001bfc2d9f368988604ea68</sha1>
+    <format>VBR MP3</format>
+    <length>33.53</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 13 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>47</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="47 Dai 13 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>47 Dai 13 Ka - Mondai 1.mp3</original>
+    <mtime>1593293580</mtime>
+    <size>17830</size>
+    <md5>3ac7382bdfc8997b6d436522a8ac4977</md5>
+    <crc32>a9e3da87</crc32>
+    <sha1>768db2c5edbb2efafa01738251e5572e45648c1c</sha1>
+  </file>
+  <file name="47 Dai 13 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>47 Dai 13 Ka - Mondai 1.mp3</original>
+    <mtime>1593293703</mtime>
+    <size>283656</size>
+    <md5>7a2ebf26195f650d0eff9f7daa658618</md5>
+    <crc32>de67d60f</crc32>
+    <sha1>b2469ba85d7c70fdda76fc41807c200c7463a89f</sha1>
+  </file>
+  <file name="48 Dai 13 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>48 Dai 13 Ka - Mondai 2.mp3</original>
+    <mtime>1593293985</mtime>
+    <size>16464</size>
+    <md5>44c0c74f1f2c0f94fc1871192a07a724</md5>
+    <crc32>ae669a66</crc32>
+    <sha1>ed497e62e6b59f9ca7a116b80566db15f43c2c60</sha1>
+  </file>
+  <file name="48 Dai 13 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292493</mtime>
+    <size>4056178</size>
+    <md5>141737ca7a25a06901211000cd4103e0</md5>
+    <crc32>c37a3350</crc32>
+    <sha1>ef80c5615c1a88944a76969854fa065bc7cdb7d2</sha1>
+    <format>VBR MP3</format>
+    <length>101.38</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 13 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>48</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="48 Dai 13 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>48 Dai 13 Ka - Mondai 2.mp3</original>
+    <mtime>1593293507</mtime>
+    <size>26230</size>
+    <md5>8539f2276dd0719d0ed7b51f948e1dee</md5>
+    <crc32>62d581e3</crc32>
+    <sha1>f7aa2d894bde51f8dd8fd7eb9bd830ae9d87da15</sha1>
+  </file>
+  <file name="48 Dai 13 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>48 Dai 13 Ka - Mondai 2.mp3</original>
+    <mtime>1593293699</mtime>
+    <size>293320</size>
+    <md5>24f7f2456e53d20214ba19a7a4532000</md5>
+    <crc32>0486cda3</crc32>
+    <sha1>1d35e2d5c1f7c3312e35768030f9c296386ed369</sha1>
+  </file>
+  <file name="49 Dai 14 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>49 Dai 14 Ka - Kaiwa.mp3</original>
+    <mtime>1593293932</mtime>
+    <size>9792</size>
+    <md5>384b17981f44783e157d9aaa3acc5bb0</md5>
+    <crc32>4848427f</crc32>
+    <sha1>ebd4454bcf80a4edb92ac748817531b30be8d9e6</sha1>
+  </file>
+  <file name="49 Dai 14 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292502</mtime>
+    <size>2113135</size>
+    <md5>cc32592d619222c0ef2f9735d3a80ec2</md5>
+    <crc32>1d4cec8b</crc32>
+    <sha1>986c52266ba7f984cd9c7102a440cda807cf887b</sha1>
+    <format>VBR MP3</format>
+    <length>52.8</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 14 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>49</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="49 Dai 14 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>49 Dai 14 Ka - Kaiwa.mp3</original>
+    <mtime>1593293464</mtime>
+    <size>17107</size>
+    <md5>719e45e50ea1b36f2df0524839823e18</md5>
+    <crc32>2e0f9328</crc32>
+    <sha1>76b516070da5221cde442077d619325051325917</sha1>
+  </file>
+  <file name="49 Dai 14 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>49 Dai 14 Ka - Kaiwa.mp3</original>
+    <mtime>1593293692</mtime>
+    <size>292888</size>
+    <md5>c834d4f92c24acfe6fbda9349bafe1f3</md5>
+    <crc32>98e699e7</crc32>
+    <sha1>b2d6420cf6218e4f42fdd9065e00b2d9e3880bc4</sha1>
+  </file>
+  <file name="50 Dai 14 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>50 Dai 14 Ka - Mondai 1.mp3</original>
+    <mtime>1593293908</mtime>
+    <size>4200</size>
+    <md5>eada840d5318bb76a662aacdfbe2c387</md5>
+    <crc32>ace660e3</crc32>
+    <sha1>930635f5d3ac360e84344051b803ca4bc7998f0e</sha1>
+  </file>
+  <file name="50 Dai 14 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292510</mtime>
+    <size>1195378</size>
+    <md5>4db5c129aa9e2b2ebf94fe689d2f24cb</md5>
+    <crc32>b1e304ef</crc32>
+    <sha1>0cd2b8fb148e8c85f630122ef66e1789821baaad</sha1>
+    <format>VBR MP3</format>
+    <length>29.86</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 14 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>50</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="50 Dai 14 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>50 Dai 14 Ka - Mondai 1.mp3</original>
+    <mtime>1593293557</mtime>
+    <size>15626</size>
+    <md5>8767edc23fb834418595af56131a8530</md5>
+    <crc32>08777cc4</crc32>
+    <sha1>d002a012eb6c80ff2724129a306104fdaab8c3a5</sha1>
+  </file>
+  <file name="50 Dai 14 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>50 Dai 14 Ka - Mondai 1.mp3</original>
+    <mtime>1593293760</mtime>
+    <size>280787</size>
+    <md5>ca7422675bff160b74f67290875f81c5</md5>
+    <crc32>00eda5e9</crc32>
+    <sha1>f22183005adc5e2f68e6e32f95704f94bccf00eb</sha1>
+  </file>
+  <file name="51 Dai 14 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>51 Dai 14 Ka - Mondai 2.mp3</original>
+    <mtime>1593293912</mtime>
+    <size>4152</size>
+    <md5>805d3ecfa4bcaac8a120731aa04d1d31</md5>
+    <crc32>57c5db69</crc32>
+    <sha1>4e9faf28fd75b476798e469cdea0781e25dbfd0c</sha1>
+  </file>
+  <file name="51 Dai 14 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292527</mtime>
+    <size>1072498</size>
+    <md5>f9a0bb2aa58c92d40cd8343aeea0f12a</md5>
+    <crc32>8393335e</crc32>
+    <sha1>5e7e290111b418c90b948fdf834a3c2f02ff2768</sha1>
+    <format>VBR MP3</format>
+    <length>26.78</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 14 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>51</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="51 Dai 14 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>51 Dai 14 Ka - Mondai 2.mp3</original>
+    <mtime>1593293553</mtime>
+    <size>20600</size>
+    <md5>8fc306a94dbf7220bb82ce0f156ca0b6</md5>
+    <crc32>42babf18</crc32>
+    <sha1>5e1b16c17f1dd60996a46e42a710b1eb244504ff</sha1>
+  </file>
+  <file name="51 Dai 14 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>51 Dai 14 Ka - Mondai 2.mp3</original>
+    <mtime>1593293765</mtime>
+    <size>295891</size>
+    <md5>87b5f0b67341f5148269ef28186bdb3e</md5>
+    <crc32>c5a8f603</crc32>
+    <sha1>ddaf15ec7bb15c27529a493ca35c9a6021a72bf5</sha1>
+  </file>
+  <file name="52 Dai 14 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>52 Dai 14 Ka - Mondai 3.mp3</original>
+    <mtime>1593293917</mtime>
+    <size>8624</size>
+    <md5>fe6fcb63ce0becdb765adad323000fa2</md5>
+    <crc32>ec4adf29</crc32>
+    <sha1>79eaa8da01c79e34836f94559528d1ff7e7f9386</sha1>
+  </file>
+  <file name="52 Dai 14 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292560</mtime>
+    <size>2441458</size>
+    <md5>2224f92ee6e8c365cf9d1d5dfabbf4cd</md5>
+    <crc32>b34e076f</crc32>
+    <sha1>4e06a904396ca014a23f4187fb12acd74667021f</sha1>
+    <format>VBR MP3</format>
+    <length>61.01</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 14 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>52</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="52 Dai 14 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>52 Dai 14 Ka - Mondai 3.mp3</original>
+    <mtime>1593293549</mtime>
+    <size>22760</size>
+    <md5>42c97679bc52280c2724306d8cb5bccb</md5>
+    <crc32>7a8054ee</crc32>
+    <sha1>76cc92c10d7497674d56c3fbe77c97335466072f</sha1>
+  </file>
+  <file name="52 Dai 14 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>52 Dai 14 Ka - Mondai 3.mp3</original>
+    <mtime>1593293646</mtime>
+    <size>297350</size>
+    <md5>f8b961876d473be6c3cb2e16594bc150</md5>
+    <crc32>213b4497</crc32>
+    <sha1>3ac2dc81f79368831af1ab9d7c24dd8920338261</sha1>
+  </file>
+  <file name="53 Dai 15 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>53 Dai 15 Ka - Kaiwa.mp3</original>
+    <mtime>1593293922</mtime>
+    <size>6072</size>
+    <md5>91ebee4b76b8bbd89c8eac22ccaa1611</md5>
+    <crc32>2f1bc9d8</crc32>
+    <sha1>027735d836cf7711a4ba979ea10cdcc83faa3659</sha1>
+  </file>
+  <file name="53 Dai 15 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292570</mtime>
+    <size>1455535</size>
+    <md5>8d8d31325a1f772de5b8b378ce80023d</md5>
+    <crc32>4005ea9c</crc32>
+    <sha1>af71acccd2dad3d804c7b9abb900ab304c668623</sha1>
+    <format>VBR MP3</format>
+    <length>36.36</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 15 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>53</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="53 Dai 15 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>53 Dai 15 Ka - Kaiwa.mp3</original>
+    <mtime>1593293544</mtime>
+    <size>22801</size>
+    <md5>a890a5f3fb4e80143e3717da8c8a4612</md5>
+    <crc32>38bf7e68</crc32>
+    <sha1>14b807d1893dd39c37d6b41a380b0e30350a492d</sha1>
+  </file>
+  <file name="53 Dai 15 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>53 Dai 15 Ka - Kaiwa.mp3</original>
+    <mtime>1593293644</mtime>
+    <size>303540</size>
+    <md5>14a08c891036cec7bc605479b0324cb4</md5>
+    <crc32>8b78d4ee</crc32>
+    <sha1>6e85c1db35965f2e800b5f94182c4661c333e47e</sha1>
+  </file>
+  <file name="54 Dai 15 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>54 Dai 15 Ka - Mondai 1.mp3</original>
+    <mtime>1593293926</mtime>
+    <size>4608</size>
+    <md5>acf7812b2b1f2bca6194b0f9737ff217</md5>
+    <crc32>18696e15</crc32>
+    <sha1>08df2d1101a8c9567aaba6f52ac5c0b7e74b03a9</sha1>
+  </file>
+  <file name="54 Dai 15 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292575</mtime>
+    <size>1276978</size>
+    <md5>cf800d9350d504af3dfef334817c992e</md5>
+    <crc32>3681126e</crc32>
+    <sha1>c79bd54ecc00d6a20c802786e99c76f9baca333f</sha1>
+    <format>VBR MP3</format>
+    <length>31.9</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 15 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>54</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="54 Dai 15 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>54 Dai 15 Ka - Mondai 1.mp3</original>
+    <mtime>1593293540</mtime>
+    <size>17501</size>
+    <md5>36cf7672a44196bf1160bd49c893ced8</md5>
+    <crc32>7c93e71d</crc32>
+    <sha1>22c507008120b97de163d91713f651d113039685</sha1>
+  </file>
+  <file name="54 Dai 15 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>54 Dai 15 Ka - Mondai 1.mp3</original>
+    <mtime>1593293654</mtime>
+    <size>283229</size>
+    <md5>c0e950c4f46b2cb11a26447f818c34ac</md5>
+    <crc32>6d6f1282</crc32>
+    <sha1>e5e6d79707f6bdc8920b3f4b105ce966e89f1657</sha1>
+  </file>
+  <file name="55 Dai 15 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>55 Dai 15 Ka - Mondai 2.mp3</original>
+    <mtime>1593294152</mtime>
+    <size>13832</size>
+    <md5>d7afb4cfcb5f8364873a2bef0775545e</md5>
+    <crc32>a7cf2553</crc32>
+    <sha1>4fc58fc9c29b5f096ac0f693991ca8e818e38c43</sha1>
+  </file>
+  <file name="55 Dai 15 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292582</mtime>
+    <size>3712498</size>
+    <md5>9df67e33a9c914147f781d0b90ece430</md5>
+    <crc32>d6d70120</crc32>
+    <sha1>7ef21158f10a026e4dbbb9ced200667d61c9b5ce</sha1>
+    <format>VBR MP3</format>
+    <length>92.78</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 15 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>55</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="55 Dai 15 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>55 Dai 15 Ka - Mondai 2.mp3</original>
+    <mtime>1593293536</mtime>
+    <size>22795</size>
+    <md5>88206a62a5e1da9d38ddca8d3e31e961</md5>
+    <crc32>ce956d5a</crc32>
+    <sha1>5cea1782d186f36ce7ee13cac8cdd42b3b3e3223</sha1>
+  </file>
+  <file name="55 Dai 15 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>55 Dai 15 Ka - Mondai 2.mp3</original>
+    <mtime>1593293669</mtime>
+    <size>288211</size>
+    <md5>b6c93b14e03b162323a38349291b8286</md5>
+    <crc32>4890976f</crc32>
+    <sha1>3f0fe220a93d27a7116e967f4a25fba88e38f240</sha1>
+  </file>
+  <file name="56 Dai 16 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>56 Dai 16 Ka - Kaiwa.mp3</original>
+    <mtime>1593293936</mtime>
+    <size>7192</size>
+    <md5>94609ea306aa2a8b6cf8cfd0d2df10f2</md5>
+    <crc32>0e8d6ebe</crc32>
+    <sha1>b3a9e44ad3d9686280add82c4d7711b60b8ddedc</sha1>
+  </file>
+  <file name="56 Dai 16 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292587</mtime>
+    <size>1682095</size>
+    <md5>edf6f0281c6750bfa14c89feb321a3f0</md5>
+    <crc32>368262ed</crc32>
+    <sha1>6a02fc3673d840f5ff9b34e15d7b0aa542f0663b</sha1>
+    <format>VBR MP3</format>
+    <length>42.02</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 16 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>56</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="56 Dai 16 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>56 Dai 16 Ka - Kaiwa.mp3</original>
+    <mtime>1593293531</mtime>
+    <size>22845</size>
+    <md5>90c6fda9367e4991a3ebf33f83bd4f4c</md5>
+    <crc32>2f8e5866</crc32>
+    <sha1>68ed4582102215e4a0f07461b4534f47c62ea683</sha1>
+  </file>
+  <file name="56 Dai 16 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>56 Dai 16 Ka - Kaiwa.mp3</original>
+    <mtime>1593293592</mtime>
+    <size>300719</size>
+    <md5>24c7342612dd78f2756cf3e40918810f</md5>
+    <crc32>8f108e95</crc32>
+    <sha1>449e17c73afec5f7f12a9673551d747145b283f0</sha1>
+  </file>
+  <file name="57 Dai 16 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>57 Dai 16 Ka - Mondai 1.mp3</original>
+    <mtime>1593293940</mtime>
+    <size>4192</size>
+    <md5>5f5c164d66f29c15d2b59ad8f5dd4494</md5>
+    <crc32>04fff841</crc32>
+    <sha1>aba8a61ee97d4b5dd1182f428a3c86a437b0801f</sha1>
+  </file>
+  <file name="57 Dai 16 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292593</mtime>
+    <size>1273138</size>
+    <md5>1a2fbc2529ecbf3b3a559a650ec405d1</md5>
+    <crc32>4ef4f4ca</crc32>
+    <sha1>3504c4a8d008ed128b2d9ffa3cb9a26ca4680d6e</sha1>
+    <format>VBR MP3</format>
+    <length>31.8</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 16 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>57</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="57 Dai 16 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>57 Dai 16 Ka - Mondai 1.mp3</original>
+    <mtime>1593293527</mtime>
+    <size>18475</size>
+    <md5>a1bcd9cf272c4572b7baa45f84c375e6</md5>
+    <crc32>01cbef55</crc32>
+    <sha1>67dba4445566b66af849af68bfd2e19d24ae2c3e</sha1>
+  </file>
+  <file name="57 Dai 16 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>57 Dai 16 Ka - Mondai 1.mp3</original>
+    <mtime>1593293594</mtime>
+    <size>282977</size>
+    <md5>a77ee65b20d2698fdd0a738d519f9d29</md5>
+    <crc32>d732bf97</crc32>
+    <sha1>14987534254770b34885f27233d2cc625f6bc374</sha1>
+  </file>
+  <file name="58 Dai 16 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>58 Dai 16 Ka - Mondai 2.mp3</original>
+    <mtime>1593293904</mtime>
+    <size>4496</size>
+    <md5>694ce2f4fc0f9c5363452c69642ad42b</md5>
+    <crc32>2bee97b5</crc32>
+    <sha1>d89ed6961b62e2108a447bf07f3aa63dc33fd70e</sha1>
+  </file>
+  <file name="58 Dai 16 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292601</mtime>
+    <size>1228978</size>
+    <md5>c9cacd46248d6e92a377c57935161366</md5>
+    <crc32>dc14e5d5</crc32>
+    <sha1>87ab60ce6a94010bdbf241b186d7f4eed2d95c5b</sha1>
+    <format>VBR MP3</format>
+    <length>30.7</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 16 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>58</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="58 Dai 16 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>58 Dai 16 Ka - Mondai 2.mp3</original>
+    <mtime>1593293523</mtime>
+    <size>21067</size>
+    <md5>eae133cbe2720fb829f3372d4981f1eb</md5>
+    <crc32>ab2e5400</crc32>
+    <sha1>f052726a87727d02abf23385302687caaca8f6d4</sha1>
+  </file>
+  <file name="58 Dai 16 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>58 Dai 16 Ka - Mondai 2.mp3</original>
+    <mtime>1593293615</mtime>
+    <size>299700</size>
+    <md5>1903737f24cd7ee580b7c715df34342d</md5>
+    <crc32>257a1f38</crc32>
+    <sha1>ac0ab276b185964d085779ce83b09a460ae6c295</sha1>
+  </file>
+  <file name="59 Dai 16 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>59 Dai 16 Ka - Mondai 3.mp3</original>
+    <mtime>1593293945</mtime>
+    <size>9568</size>
+    <md5>2f76aef043d8c1cabc5b86d36aaac752</md5>
+    <crc32>7c7fbe34</crc32>
+    <sha1>9300c4ff9cc2e12000be52f2ac3773ce453f85cd</sha1>
+  </file>
+  <file name="59 Dai 16 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292609</mtime>
+    <size>2578738</size>
+    <md5>0b2e7903f6e534defdd7a143c3b3f967</md5>
+    <crc32>8e474895</crc32>
+    <sha1>2cab297bf762d218e78bb4e3d0c043708ee9bcdf</sha1>
+    <format>VBR MP3</format>
+    <length>64.44</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 16 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>59</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="59 Dai 16 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>59 Dai 16 Ka - Mondai 3.mp3</original>
+    <mtime>1593293519</mtime>
+    <size>23957</size>
+    <md5>e2d7307c6e2e9de5990a920559bc78d9</md5>
+    <crc32>9e45a67b</crc32>
+    <sha1>c8a33e6de8526469780dbe80e313700be184f048</sha1>
+  </file>
+  <file name="59 Dai 16 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>59 Dai 16 Ka - Mondai 3.mp3</original>
+    <mtime>1593293740</mtime>
+    <size>297199</size>
+    <md5>b6418d3a7d1a173b57e350ac634f96e7</md5>
+    <crc32>5d588770</crc32>
+    <sha1>02f8679fe5f2d9b0f624b2d3b5b6e03d3e0880d7</sha1>
+  </file>
+  <file name="60 Dai 17 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>60 Dai 17 Ka - Kaiwa.mp3</original>
+    <mtime>1593293953</mtime>
+    <size>6968</size>
+    <md5>560f623f378f3c078f089bd4107d99f3</md5>
+    <crc32>3e3a4f50</crc32>
+    <sha1>c53844e64ed51b93faade2c1ba3730953cab80ba</sha1>
+  </file>
+  <file name="60 Dai 17 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292617</mtime>
+    <size>1656175</size>
+    <md5>83be12cd8cf9bd50bdd04796eddf1a67</md5>
+    <crc32>2500d0c4</crc32>
+    <sha1>7f63b8f5363ded911a1de51947798d86359548df</sha1>
+    <format>VBR MP3</format>
+    <length>41.38</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 17 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>60</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="60 Dai 17 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>60 Dai 17 Ka - Kaiwa.mp3</original>
+    <mtime>1593293511</mtime>
+    <size>21460</size>
+    <md5>cb8bd168a0bd0e6cc27e8942f09cb591</md5>
+    <crc32>2cc3bcb4</crc32>
+    <sha1>9e4bf3065425393a0dbd2f990702bfe90a8b871d</sha1>
+  </file>
+  <file name="60 Dai 17 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>60 Dai 17 Ka - Kaiwa.mp3</original>
+    <mtime>1593293738</mtime>
+    <size>298914</size>
+    <md5>a1969bc6a2450b81d9c3b8ac05f38be9</md5>
+    <crc32>fc7a26cf</crc32>
+    <sha1>1b16baf92772c3daa34853467f02b7abeb7fc09b</sha1>
+  </file>
+  <file name="61 Dai 17 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>61 Dai 17 Ka - Mondai 1.mp3</original>
+    <mtime>1593293806</mtime>
+    <size>5376</size>
+    <md5>2e9a2cde3f370a8f1eb5404c2b47f4b7</md5>
+    <crc32>c1a04a0e</crc32>
+    <sha1>fc5e332d0d19883010c54b9a797029fe5865b7d0</sha1>
+  </file>
+  <file name="61 Dai 17 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292631</mtime>
+    <size>1396978</size>
+    <md5>2c812ec367f5f909f68de07638319e19</md5>
+    <crc32>566a8afd</crc32>
+    <sha1>fb1bb75726e9bbe4fb397dac18ed1debf283ea42</sha1>
+    <format>VBR MP3</format>
+    <length>34.9</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 17 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>61</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="61 Dai 17 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>61 Dai 17 Ka - Mondai 1.mp3</original>
+    <mtime>1593293502</mtime>
+    <size>18411</size>
+    <md5>55570a62fce16f2cd9c0c05c4410f93a</md5>
+    <crc32>a840ca05</crc32>
+    <sha1>69efbcf2ac206637a77bc590d870fb4b97ee4018</sha1>
+  </file>
+  <file name="61 Dai 17 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>61 Dai 17 Ka - Mondai 1.mp3</original>
+    <mtime>1593293742</mtime>
+    <size>283547</size>
+    <md5>7767a87e0b5b9809146d32f0e533298c</md5>
+    <crc32>f0275685</crc32>
+    <sha1>fc773501f192aa46daeebddc1594185b02878b7b</sha1>
+  </file>
+  <file name="62 Dai 17 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>62 Dai 17 Ka - Mondai 2.mp3</original>
+    <mtime>1593293811</mtime>
+    <size>16880</size>
+    <md5>b6da63bf2b47270ff0d6bd0677713721</md5>
+    <crc32>b06118fd</crc32>
+    <sha1>16c062fc96e1e0ab7c7b3f679703204354ac35fa</sha1>
+  </file>
+  <file name="62 Dai 17 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292639</mtime>
+    <size>4301938</size>
+    <md5>62c42361f0af2a5c8dc4fdd8b9de2587</md5>
+    <crc32>9a1108f7</crc32>
+    <sha1>fa96e5f6939883f1cd3c9d98e64614149f94fcf6</sha1>
+    <format>VBR MP3</format>
+    <length>107.52</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 17 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>62</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="62 Dai 17 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>62 Dai 17 Ka - Mondai 2.mp3</original>
+    <mtime>1593293207</mtime>
+    <size>26328</size>
+    <md5>ff43214e2f519e1f99f3b5454e34d07b</md5>
+    <crc32>c6aa3e99</crc32>
+    <sha1>a775873632509ff7cae4da6df3054f871418f867</sha1>
+  </file>
+  <file name="62 Dai 17 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>62 Dai 17 Ka - Mondai 2.mp3</original>
+    <mtime>1593293711</mtime>
+    <size>294828</size>
+    <md5>a0b4fa1e790218b844e59eb7bd8a4914</md5>
+    <crc32>a31a2c1d</crc32>
+    <sha1>e10b6471178fff3c496822e1e01ed38ae03d35f7</sha1>
+  </file>
+  <file name="63 Dai 18 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>63 Dai 18 Ka - Kaiwa.mp3</original>
+    <mtime>1593293989</mtime>
+    <size>6608</size>
+    <md5>f53cec037f8f2902a179fb1873d8b1b2</md5>
+    <crc32>6bc852e6</crc32>
+    <sha1>b182648b7fff8e5e9f83e25e66e6875c9ddcb2c7</sha1>
+  </file>
+  <file name="63 Dai 18 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292645</mtime>
+    <size>1450735</size>
+    <md5>75db2683cc8dcbd98cb68c7783019006</md5>
+    <crc32>44098154</crc32>
+    <sha1>f0665c20715f53dba1ad26ec26486ae76de5dc6e</sha1>
+    <format>VBR MP3</format>
+    <length>36.24</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 18 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>63</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="63 Dai 18 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>63 Dai 18 Ka - Kaiwa.mp3</original>
+    <mtime>1593293200</mtime>
+    <size>24190</size>
+    <md5>0c6ba1dc5acf2c846fa18bc56000012b</md5>
+    <crc32>de1d1655</crc32>
+    <sha1>e63f164e930e3bbac642e9010456923079def812</sha1>
+  </file>
+  <file name="63 Dai 18 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>63 Dai 18 Ka - Kaiwa.mp3</original>
+    <mtime>1593293690</mtime>
+    <size>306086</size>
+    <md5>400d5f9d9f3a13c71e90a415705259fd</md5>
+    <crc32>3c42b710</crc32>
+    <sha1>0dfcf8e1a4159692fd692a95c12f3df443ac6ee3</sha1>
+  </file>
+  <file name="64 Dai 18 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>64 Dai 18 Ka - Mondai 1.mp3</original>
+    <mtime>1593293896</mtime>
+    <size>4232</size>
+    <md5>b9e9e699d2fba46e851378d5cd44c566</md5>
+    <crc32>8a43e02e</crc32>
+    <sha1>b6b73644e21c582509ed2c6441d401ca8e9c2801</sha1>
+  </file>
+  <file name="64 Dai 18 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292651</mtime>
+    <size>1271218</size>
+    <md5>88b3f25f764310a93037fd0c0125c023</md5>
+    <crc32>b948f1a4</crc32>
+    <sha1>44152372b52bf50fe134e571762bde13454202d9</sha1>
+    <format>VBR MP3</format>
+    <length>31.75</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 18 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>64</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="64 Dai 18 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>64 Dai 18 Ka - Mondai 1.mp3</original>
+    <mtime>1593293195</mtime>
+    <size>17656</size>
+    <md5>66ced110bf3c511b83d9b59ae2f8da76</md5>
+    <crc32>27995221</crc32>
+    <sha1>b82aee66adf930666d0cd6acea37a1f634a83281</sha1>
+  </file>
+  <file name="64 Dai 18 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>64 Dai 18 Ka - Mondai 1.mp3</original>
+    <mtime>1593293705</mtime>
+    <size>283350</size>
+    <md5>312044216608fd3e1685eaeb0d5c9455</md5>
+    <crc32>10b3ff9d</crc32>
+    <sha1>c545d96cc80784f3f0c0bb3aed3eef89f89749be</sha1>
+  </file>
+  <file name="65 Dai 18 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>65 Dai 18 Ka - Mondai 2.mp3</original>
+    <mtime>1593293995</mtime>
+    <size>18312</size>
+    <md5>da6e9ebf50801d07c1a26ca0a33e2904</md5>
+    <crc32>0cc2423f</crc32>
+    <sha1>6460e2b31a7551697bb8ba5c32c05b19b9cefa71</sha1>
+  </file>
+  <file name="65 Dai 18 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292657</mtime>
+    <size>4691698</size>
+    <md5>9f7c1dec0902b23132d5b691985d85d7</md5>
+    <crc32>ee5a1664</crc32>
+    <sha1>7e579fbfb06066f016fde414529ca3f0985744d3</sha1>
+    <format>VBR MP3</format>
+    <length>117.26</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 18 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>65</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="65 Dai 18 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>65 Dai 18 Ka - Mondai 2.mp3</original>
+    <mtime>1593293187</mtime>
+    <size>24302</size>
+    <md5>9adc9309cd2067aa9f5d0555998d044e</md5>
+    <crc32>b3595011</crc32>
+    <sha1>665049268c96d2bad33fd44c82bb1f5c52fe1620</sha1>
+  </file>
+  <file name="65 Dai 18 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>65 Dai 18 Ka - Mondai 2.mp3</original>
+    <mtime>1593293721</mtime>
+    <size>294265</size>
+    <md5>c3a525d2311737061606e22aa72a61ad</md5>
+    <crc32>27d24c51</crc32>
+    <sha1>b751d8815b3ec92b43e0fdd3e86c1b6c5acf5098</sha1>
+  </file>
+  <file name="65-dai-18-ka-mondai-2_archive.torrent" source="metadata">
+    <btih>37ce02ea0fdf7903334f4149f42587d1e1c7a18a</btih>
+    <mtime>1725556939</mtime>
+    <size>73218</size>
+    <md5>1e5a31cbbeeb2ebbdb3084585ef96a02</md5>
+    <crc32>90e53204</crc32>
+    <sha1>c98ae83ca193b26fb4ffaf9ece31953266ed2d5a</sha1>
+    <format>Archive BitTorrent</format>
+  </file>
+  <file name="65-dai-18-ka-mondai-2_files.xml" source="original">
+    <format>Metadata</format>
+    <md5>02b0017c30bd58134a326aa587baf5ef</md5>
+    <summation>md5</summation>
+  </file>
+  <file name="65-dai-18-ka-mondai-2_meta.sqlite" source="original">
+    <mtime>1593292850</mtime>
+    <size>150528</size>
+    <md5>f0249cb53baf608e0e08d178388498d3</md5>
+    <crc32>b1f2fec6</crc32>
+    <sha1>4bd3f72d5709c582d1b8d7af392efa5857b384a6</sha1>
+    <format>Metadata</format>
+  </file>
+  <file name="65-dai-18-ka-mondai-2_meta.xml" source="original">
+    <mtime>1613154988</mtime>
+    <size>762</size>
+    <md5>b3eaea505604aa57fa11e34bdf0bb36e</md5>
+    <crc32>fbb716d8</crc32>
+    <sha1>4bfc1e6a8c56409d9b5279ffe012248fd9d13466</sha1>
+    <format>Metadata</format>
+  </file>
+  <file name="65-dai-18-ka-mondai-2_reviews.xml" source="original">
+    <mtime>1725556934</mtime>
+    <size>1169</size>
+    <md5>229d01d0de6b6f86b9822ae474188446</md5>
+    <crc32>eaed1484</crc32>
+    <sha1>42f242152507f6b3ede9447117911302dd405de7</sha1>
+    <format>Metadata</format>
+  </file>
+  <file name="66 Dai 19 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>66 Dai 19 Ka - Kaiwa.mp3</original>
+    <mtime>1593294102</mtime>
+    <size>8104</size>
+    <md5>5e78d402caf60cff0976afae8323dc82</md5>
+    <crc32>734b4d55</crc32>
+    <sha1>f705f85f52af959422a9c5e6f3c21a5b6be3f1cd</sha1>
+  </file>
+  <file name="66 Dai 19 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292666</mtime>
+    <size>1873135</size>
+    <md5>55216ca28dc46372588914647e27fe11</md5>
+    <crc32>351bc0a1</crc32>
+    <sha1>d9b37a759626f09bb46bfc8247bcae01f4c82d70</sha1>
+    <format>VBR MP3</format>
+    <length>46.8</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 19 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>66</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="66 Dai 19 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>66 Dai 19 Ka - Kaiwa.mp3</original>
+    <mtime>1593293181</mtime>
+    <size>22124</size>
+    <md5>4851d341e6f5769b9b1904e130e85851</md5>
+    <crc32>d3aa942a</crc32>
+    <sha1>9a20b9c9d649ecd429c203a449a8e372fa7e651e</sha1>
+  </file>
+  <file name="66 Dai 19 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>66 Dai 19 Ka - Kaiwa.mp3</original>
+    <mtime>1593293729</mtime>
+    <size>309573</size>
+    <md5>6e58e5a3daf95c61c89b4840eee0a639</md5>
+    <crc32>47cf0fea</crc32>
+    <sha1>04bda699ff5e056d43a93b15d6b85dbad270f8be</sha1>
+  </file>
+  <file name="67 Dai 19 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>67 Dai 19 Ka - Mondai 1.mp3</original>
+    <mtime>1593294110</mtime>
+    <size>3328</size>
+    <md5>56ff7e5936f8baaded03caf803d2d115</md5>
+    <crc32>aa36eff3</crc32>
+    <sha1>8e3f33ab7c4b23d34905d62a54ef88cbfcc97cd7</sha1>
+  </file>
+  <file name="67 Dai 19 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292678</mtime>
+    <size>1040818</size>
+    <md5>e9f4eb89fe112e6da579d7c1268fde54</md5>
+    <crc32>e164ec8e</crc32>
+    <sha1>b5f93ffafd8f9476ef002b3d9cce8b8a4402d987</sha1>
+    <format>VBR MP3</format>
+    <length>25.99</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 19 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>67</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="67 Dai 19 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>67 Dai 19 Ka - Mondai 1.mp3</original>
+    <mtime>1593293174</mtime>
+    <size>17969</size>
+    <md5>ee5d6a362a17a3ed8de4b15a0c8ba664</md5>
+    <crc32>2f1eaa06</crc32>
+    <sha1>772a85817dbd95a2cbcca9c986673c4bc5d98af7</sha1>
+  </file>
+  <file name="67 Dai 19 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>67 Dai 19 Ka - Mondai 1.mp3</original>
+    <mtime>1593293771</mtime>
+    <size>284495</size>
+    <md5>5605cb5289aea88a6b2dca06a0d072f8</md5>
+    <crc32>fd76aa79</crc32>
+    <sha1>e2b867c37815d1124aabf1c1d5b83056eb6942b3</sha1>
+  </file>
+  <file name="68 Dai 19 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>68 Dai 19 Ka - Mondai 2.mp3</original>
+    <mtime>1593293883</mtime>
+    <size>15424</size>
+    <md5>b0e2d5a4f6a1937566b2bb7161990268</md5>
+    <crc32>361dedca</crc32>
+    <sha1>c7a88f55c280ea39c87e2605d4f59ec877cf48e6</sha1>
+  </file>
+  <file name="68 Dai 19 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292685</mtime>
+    <size>4118578</size>
+    <md5>8ae85f5f8b39f021300a8f577c32d627</md5>
+    <crc32>6189a2ee</crc32>
+    <sha1>d3d84e910379ce5b1d9e09a3eef958c6198fe4d5</sha1>
+    <format>VBR MP3</format>
+    <length>102.94</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 19 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>68</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="68 Dai 19 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>68 Dai 19 Ka - Mondai 2.mp3</original>
+    <mtime>1593293162</mtime>
+    <size>24940</size>
+    <md5>f426cac6f2d700f16945e3d1ab3e7681</md5>
+    <crc32>cf9a6098</crc32>
+    <sha1>21c30391f3f9563a456c62f558283f86649afa3d</sha1>
+  </file>
+  <file name="68 Dai 19 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>68 Dai 19 Ka - Mondai 2.mp3</original>
+    <mtime>1593293590</mtime>
+    <size>295720</size>
+    <md5>c84579b24586993975e3e5c48c3ad540</md5>
+    <crc32>85e1fe07</crc32>
+    <sha1>96a9b7c428f229f03e3e9c08459dffba6ea41d05</sha1>
+  </file>
+  <file name="69 Dai 20 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>69 Dai 20 Ka - Kaiwa.mp3</original>
+    <mtime>1593294115</mtime>
+    <size>5336</size>
+    <md5>06c8102dd71b5b6881751c0562009dd8</md5>
+    <crc32>af67b40e</crc32>
+    <sha1>fe4a9e13fc2c46e2feddf1def8ab975823f00768</sha1>
+  </file>
+  <file name="69 Dai 20 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292691</mtime>
+    <size>1283695</size>
+    <md5>015b8870b97f3909ca58dc8d84732154</md5>
+    <crc32>27ac3508</crc32>
+    <sha1>25333dd985df23d8fc70f07a06269cda7f7e47db</sha1>
+    <format>VBR MP3</format>
+    <length>32.06</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 20 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>69</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="69 Dai 20 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>69 Dai 20 Ka - Kaiwa.mp3</original>
+    <mtime>1593293149</mtime>
+    <size>20547</size>
+    <md5>b1dc5930f1a4ddf9676f259144460d88</md5>
+    <crc32>2c009cc2</crc32>
+    <sha1>707b1aa1a63af5c9219a8097e221694e727ff7f3</sha1>
+  </file>
+  <file name="69 Dai 20 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>69 Dai 20 Ka - Kaiwa.mp3</original>
+    <mtime>1593293775</mtime>
+    <size>300110</size>
+    <md5>7e5f85ae743fc6b8307274d08a63a193</md5>
+    <crc32>ec9317e1</crc32>
+    <sha1>896fd66688a5850fd45a4267825d475086a02f77</sha1>
+  </file>
+  <file name="70 Dai 20 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>70 Dai 20 Ka - Mondai 1.mp3</original>
+    <mtime>1593294118</mtime>
+    <size>3784</size>
+    <md5>7aa64f20d606b253e6c8c8de66cb3cfb</md5>
+    <crc32>2fab690c</crc32>
+    <sha1>b702fdc1d8569e8d972b8180f8d9a361fe39a676</sha1>
+  </file>
+  <file name="70 Dai 20 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292703</mtime>
+    <size>1213618</size>
+    <md5>554dec202a5871f9e8492159e7e024ed</md5>
+    <crc32>342a612a</crc32>
+    <sha1>aeaae906ffcffd691323a80732d273edc2c8e21a</sha1>
+    <format>VBR MP3</format>
+    <length>30.31</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 20 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>70</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="70 Dai 20 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>70 Dai 20 Ka - Mondai 1.mp3</original>
+    <mtime>1593293142</mtime>
+    <size>15651</size>
+    <md5>06f21814d4acd7adebaabd0a1f98c379</md5>
+    <crc32>949e7b42</crc32>
+    <sha1>5242308a6550e456b039cff882c77cba35c3eb86</sha1>
+  </file>
+  <file name="70 Dai 20 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>70 Dai 20 Ka - Mondai 1.mp3</original>
+    <mtime>1593293658</mtime>
+    <size>279709</size>
+    <md5>1d5517fa83d58cf9df2011e418aed8bd</md5>
+    <crc32>70961837</crc32>
+    <sha1>76ef89063ac6302ad236ca86e5871d8d2b04059b</sha1>
+  </file>
+  <file name="71 Dai 20 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>71 Dai 20 Ka - Mondai 2.mp3</original>
+    <mtime>1593294124</mtime>
+    <size>15088</size>
+    <md5>b6cf1b542e3b5d1b9c1b3ad83f0cc697</md5>
+    <crc32>e0534aea</crc32>
+    <sha1>9d69458c0f26bca89c8e6bc64b6ad7cbbdff6ec1</sha1>
+  </file>
+  <file name="71 Dai 20 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292714</mtime>
+    <size>4064818</size>
+    <md5>6415cb0edb330c84a75b7d4505ecc3f5</md5>
+    <crc32>a253bb33</crc32>
+    <sha1>2e46ff401dd9ab163022b87f5d8441b6fb809610</sha1>
+    <format>VBR MP3</format>
+    <length>101.59</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 20 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>71</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="71 Dai 20 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>71 Dai 20 Ka - Mondai 2.mp3</original>
+    <mtime>1593293125</mtime>
+    <size>23496</size>
+    <md5>b46f9b03dda821bb5f2392f83f67d24c</md5>
+    <crc32>afebd913</crc32>
+    <sha1>4072b00e43bdfd50a9889b6695e6c784d55b5cb7</sha1>
+  </file>
+  <file name="71 Dai 20 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>71 Dai 20 Ka - Mondai 2.mp3</original>
+    <mtime>1593293640</mtime>
+    <size>294490</size>
+    <md5>06ad5c60ea266a9c0daa75c015fb7147</md5>
+    <crc32>6c9b85ae</crc32>
+    <sha1>b4616db7f47269b9ebff68df9c3779ae8a6be232</sha1>
+  </file>
+  <file name="72 Dai 21 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>72 Dai 21 Ka - Kaiwa.mp3</original>
+    <mtime>1593294128</mtime>
+    <size>8080</size>
+    <md5>d2c6f8c6ddaa0831f61855d01de54418</md5>
+    <crc32>cb6df713</crc32>
+    <sha1>da4a796f2d04b21359b3eec1815911d9f45e1d32</sha1>
+  </file>
+  <file name="72 Dai 21 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292719</mtime>
+    <size>2007535</size>
+    <md5>fbbd28bd51fbefd252e2bb8b9270452a</md5>
+    <crc32>c2485639</crc32>
+    <sha1>fb8a3567f146abe550939e33c964ff3c56d756c1</sha1>
+    <format>VBR MP3</format>
+    <length>50.16</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 21 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>72</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="72 Dai 21 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>72 Dai 21 Ka - Kaiwa.mp3</original>
+    <mtime>1593293113</mtime>
+    <size>22319</size>
+    <md5>a1740c83b1f7007b4f6de4f4c3bf6733</md5>
+    <crc32>f07e6621</crc32>
+    <sha1>b58f5276d52b1a2f36baf6d6b6cf97ccc9ff54f9</sha1>
+  </file>
+  <file name="72 Dai 21 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>72 Dai 21 Ka - Kaiwa.mp3</original>
+    <mtime>1593293677</mtime>
+    <size>308035</size>
+    <md5>54676f942c0df39dd5578a2525eaac15</md5>
+    <crc32>323a16d9</crc32>
+    <sha1>d0f185ba5299966c7fe588d1331b89c0ea2d1ef9</sha1>
+  </file>
+  <file name="73 Dai 21 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>73 Dai 21 Ka - Mondai 1.mp3</original>
+    <mtime>1593294132</mtime>
+    <size>4640</size>
+    <md5>c0af697007a93befd5304436bf7a3f07</md5>
+    <crc32>1fd93f05</crc32>
+    <sha1>34eecd778b3b60379cec221b49b2b1b3e1e50db1</sha1>
+  </file>
+  <file name="73 Dai 21 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292723</mtime>
+    <size>1319218</size>
+    <md5>dcde55390315eddb1cd3e3ecacf14783</md5>
+    <crc32>3eb9f07d</crc32>
+    <sha1>85f752c2b605be2d0a9ad0ea476805a2dcd37a45</sha1>
+    <format>VBR MP3</format>
+    <length>32.95</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 21 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>73</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="73 Dai 21 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>73 Dai 21 Ka - Mondai 1.mp3</original>
+    <mtime>1593293101</mtime>
+    <size>18087</size>
+    <md5>15e7693e5f25fcfd8ab0757285b3c459</md5>
+    <crc32>e87a5a9d</crc32>
+    <sha1>f02c3a12cd9dda177a1a6d73aee1bd39ab095d1e</sha1>
+  </file>
+  <file name="73 Dai 21 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>73 Dai 21 Ka - Mondai 1.mp3</original>
+    <mtime>1593293751</mtime>
+    <size>284033</size>
+    <md5>f24722985bf9290f83539dd43bee2bb6</md5>
+    <crc32>4586a236</crc32>
+    <sha1>526d35c6bfa327d127ba79f74baf99d1b443c3dc</sha1>
+  </file>
+  <file name="74 Dai 21 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>74 Dai 21 Ka - Mondai 2.mp3</original>
+    <mtime>1593294138</mtime>
+    <size>17000</size>
+    <md5>bf24dff6fc3679153712f1df3ad33f0e</md5>
+    <crc32>ae92ea96</crc32>
+    <sha1>9cc1d8b4a0c2828a3e460cf75ec9b46364eea1c4</sha1>
+  </file>
+  <file name="74 Dai 21 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292735</mtime>
+    <size>4388338</size>
+    <md5>f64310e972a66808344c59dfd1b1a043</md5>
+    <crc32>632766df</crc32>
+    <sha1>2a2595bfdea61be4697fe3341e8db3e15ac3c021</sha1>
+    <format>VBR MP3</format>
+    <length>109.68</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 21 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>74</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="74 Dai 21 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>74 Dai 21 Ka - Mondai 2.mp3</original>
+    <mtime>1593293054</mtime>
+    <size>23964</size>
+    <md5>e2bc3d5ca1c055d0ffbe064ade6a398a</md5>
+    <crc32>e9bc151c</crc32>
+    <sha1>5e82cfdc0e473f88934999114d0d233a410fedc5</sha1>
+  </file>
+  <file name="74 Dai 21 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>74 Dai 21 Ka - Mondai 2.mp3</original>
+    <mtime>1593293680</mtime>
+    <size>295624</size>
+    <md5>f10c6a4cd744547e16e6942f9db65c1f</md5>
+    <crc32>dbb8dc8e</crc32>
+    <sha1>df63c4b9f15651a95c769f11f1d7058faaea4835</sha1>
+  </file>
+  <file name="75 Dai 22 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>75 Dai 22 Ka - Kaiwa.mp3</original>
+    <mtime>1593293876</mtime>
+    <size>7016</size>
+    <md5>d0fbf5d5191662ac46e9d169e9aaa5c1</md5>
+    <crc32>9146e9c1</crc32>
+    <sha1>0b98bb2ee21e39b1ea7db395c2401f0df3f164cb</sha1>
+  </file>
+  <file name="75 Dai 22 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292742</mtime>
+    <size>1729135</size>
+    <md5>7e2eab471c22e8eb0e5bd9ceff22a2b7</md5>
+    <crc32>cc996955</crc32>
+    <sha1>1ec71601b7d87a342e10567a3776b082f4654c05</sha1>
+    <format>VBR MP3</format>
+    <length>43.2</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 21 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>75</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="75 Dai 22 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>75 Dai 22 Ka - Kaiwa.mp3</original>
+    <mtime>1593293260</mtime>
+    <size>23318</size>
+    <md5>7bb7ecf3a9fc626bb53b0466557b71b1</md5>
+    <crc32>518c987c</crc32>
+    <sha1>bedd1ab05574146c3cf1d6f122212f6f368d8c81</sha1>
+  </file>
+  <file name="75 Dai 22 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>75 Dai 22 Ka - Kaiwa.mp3</original>
+    <mtime>1593293617</mtime>
+    <size>303584</size>
+    <md5>67b487e82f4e0a8821be330ed399b2f5</md5>
+    <crc32>f35d16d3</crc32>
+    <sha1>1695d8b22fad414b18489297b268e6ed070e0bad</sha1>
+  </file>
+  <file name="76 Dai 22 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>76 Dai 22 Ka - Mondai 1.mp3</original>
+    <mtime>1593293871</mtime>
+    <size>4968</size>
+    <md5>df257748d725ab0a0f1a776b37292ad0</md5>
+    <crc32>13b1d1d3</crc32>
+    <sha1>062ae7c2862e6c2f8250238fa5e77958bed1fe9e</sha1>
+  </file>
+  <file name="76 Dai 22 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292748</mtime>
+    <size>1369138</size>
+    <md5>f01de5da4145791d186f40775c7e2720</md5>
+    <crc32>2c48bddf</crc32>
+    <sha1>5c375c39af112ace93e917bc2de7cc782aa3839a</sha1>
+    <format>VBR MP3</format>
+    <length>34.2</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 22 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>76</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="76 Dai 22 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>76 Dai 22 Ka - Mondai 1.mp3</original>
+    <mtime>1593293584</mtime>
+    <size>20589</size>
+    <md5>70ac1e991467b15c116d89015ec4b672</md5>
+    <crc32>56910e9a</crc32>
+    <sha1>021c7e46be511143810b60713d610da7ad28914c</sha1>
+  </file>
+  <file name="76 Dai 22 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>76 Dai 22 Ka - Mondai 1.mp3</original>
+    <mtime>1593293753</mtime>
+    <size>284227</size>
+    <md5>f3d62ca1d648c1d47deb9f5d61844d72</md5>
+    <crc32>56b5bb65</crc32>
+    <sha1>79fb911c5523b8bbf1c4700a742c499fa3de9d3c</sha1>
+  </file>
+  <file name="77 Dai 22 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>77 Dai 22 Ka - Mondai 2.mp3</original>
+    <mtime>1593293820</mtime>
+    <size>14288</size>
+    <md5>6064d01111d508fa8d1eab2e0e9d7abb</md5>
+    <crc32>24d1927b</crc32>
+    <sha1>44066132e38bdeb1c471a04f2d69744df70deb77</sha1>
+  </file>
+  <file name="77 Dai 22 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292758</mtime>
+    <size>3849778</size>
+    <md5>dc8ce780d0a56e174455473de0e00997</md5>
+    <crc32>5992f314</crc32>
+    <sha1>60025f3ecaecbac2425d190a718ea1731b70d073</sha1>
+    <format>VBR MP3</format>
+    <length>96.22</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 22 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>77</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="77 Dai 22 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>77 Dai 22 Ka - Mondai 2.mp3</original>
+    <mtime>1593293571</mtime>
+    <size>23693</size>
+    <md5>5d7ddc9b838eccd18e1bc8b605d7c909</md5>
+    <crc32>184257b7</crc32>
+    <sha1>d3cfff018eb74e5d10c12d9786ac9d5d183b51cc</sha1>
+  </file>
+  <file name="77 Dai 22 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>77 Dai 22 Ka - Mondai 2.mp3</original>
+    <mtime>1593293629</mtime>
+    <size>291563</size>
+    <md5>0684487676af7845d93f928172e9088c</md5>
+    <crc32>334224ea</crc32>
+    <sha1>ac51ad31afd04bffa2ba4035c4fcc16bb13310e1</sha1>
+  </file>
+  <file name="78 Dai 23 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>78 Dai 23 Ka - Kaiwa.mp3</original>
+    <mtime>1593293824</mtime>
+    <size>8016</size>
+    <md5>53a609ca9a92cdb7d5c3b68019d16164</md5>
+    <crc32>1d0dea48</crc32>
+    <sha1>40b13d9c43e2b28021bf49257042a2d13b297077</sha1>
+  </file>
+  <file name="78 Dai 23 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292763</mtime>
+    <size>1906735</size>
+    <md5>374ee6b1880ccbe91a76f7a7aeb53853</md5>
+    <crc32>716da951</crc32>
+    <sha1>e70c23532ffe245d2dabba7267b014b7fa7f3323</sha1>
+    <format>VBR MP3</format>
+    <length>47.64</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 23 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>78</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="78 Dai 23 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>78 Dai 23 Ka - Kaiwa.mp3</original>
+    <mtime>1593293459</mtime>
+    <size>24470</size>
+    <md5>d399a8547fbcd8face4830c057366d1e</md5>
+    <crc32>518f022d</crc32>
+    <sha1>d25f91c32e6149c49bb4b607a9d6e4b9a25c921f</sha1>
+  </file>
+  <file name="78 Dai 23 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>78 Dai 23 Ka - Kaiwa.mp3</original>
+    <mtime>1593293631</mtime>
+    <size>303549</size>
+    <md5>d9545e3b191e8e4bf5dff19692af40a4</md5>
+    <crc32>0fcd5e51</crc32>
+    <sha1>19415300c31591117393614825b620e31343aaa3</sha1>
+  </file>
+  <file name="79 Dai 23 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>79 Dai 23 Ka - Mondai 1.mp3</original>
+    <mtime>1593293829</mtime>
+    <size>4536</size>
+    <md5>56580eab37c64cb9f9aed21e22c8fa5b</md5>
+    <crc32>2669af6f</crc32>
+    <sha1>f65f1f8b594c1c3949febb03b73c3c879e5c58d4</sha1>
+  </file>
+  <file name="79 Dai 23 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292768</mtime>
+    <size>1326898</size>
+    <md5>ee8fe95f6ae69c63a36b7f260ef0be55</md5>
+    <crc32>92e34e6e</crc32>
+    <sha1>1ebd89c00f60eb3b0555ceab6eebe037cc612330</sha1>
+    <format>VBR MP3</format>
+    <length>33.14</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 23 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>79</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="79 Dai 23 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>79 Dai 23 Ka - Mondai 1.mp3</original>
+    <mtime>1593293284</mtime>
+    <size>18664</size>
+    <md5>d11130d35f0f2b2b8bee63b5eee3b767</md5>
+    <crc32>cedf35b3</crc32>
+    <sha1>a3becfa8ec801398b273ef88cf7434173bccc323</sha1>
+  </file>
+  <file name="79 Dai 23 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>79 Dai 23 Ka - Mondai 1.mp3</original>
+    <mtime>1593293642</mtime>
+    <size>284467</size>
+    <md5>2a650e2cbc911965b48e04719a74b916</md5>
+    <crc32>a9601937</crc32>
+    <sha1>7837035aa5ef421867e4929b33c119d4e128d081</sha1>
+  </file>
+  <file name="80 Dai 23 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>80 Dai 23 Ka - Mondai 2.mp3</original>
+    <mtime>1593293832</mtime>
+    <size>6112</size>
+    <md5>9fcb7077de0cd6223bda7f79c1fbd3a8</md5>
+    <crc32>c03d85ee</crc32>
+    <sha1>23ed53d6afc49ae966db5f3494986c80991376d6</sha1>
+  </file>
+  <file name="80 Dai 23 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292777</mtime>
+    <size>1520818</size>
+    <md5>284ee29a920ad4646321e4869851a7f1</md5>
+    <crc32>b85196b5</crc32>
+    <sha1>926ea48a6bc46a9cf8665fe5be245417e472557b</sha1>
+    <format>VBR MP3</format>
+    <length>37.99</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 23 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>80</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="80 Dai 23 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>80 Dai 23 Ka - Mondai 2.mp3</original>
+    <mtime>1593293450</mtime>
+    <size>22350</size>
+    <md5>f6bb31d9851bae56b678e48303fd2454</md5>
+    <crc32>5feec10b</crc32>
+    <sha1>4201fd5bab1e91513c8ef86d16b0df89c4ca00b1</sha1>
+  </file>
+  <file name="80 Dai 23 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>80 Dai 23 Ka - Mondai 2.mp3</original>
+    <mtime>1593293664</mtime>
+    <size>307229</size>
+    <md5>fc414569cc0ab6aca83077e17d377a04</md5>
+    <crc32>41bf755c</crc32>
+    <sha1>b14e399a67d966ffaa1797db0d5d1a70e4e23c42</sha1>
+  </file>
+  <file name="81 Dai 23 Ka - Mondai 3.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>81 Dai 23 Ka - Mondai 3.mp3</original>
+    <mtime>1593293798</mtime>
+    <size>10560</size>
+    <md5>34b0436f00181dbe51a468c9fa9001fb</md5>
+    <crc32>b544cdde</crc32>
+    <sha1>8f7317b9a97c8f08550065098358a169dab20c1b</sha1>
+  </file>
+  <file name="81 Dai 23 Ka - Mondai 3.mp3" source="original">
+    <mtime>1593292787</mtime>
+    <size>2758258</size>
+    <md5>f8310ebff3d4e8965b8c6849a595539c</md5>
+    <crc32>d1b2a801</crc32>
+    <sha1>5b753c54de13c49c3a0d877313d8da6f52b9905d</sha1>
+    <format>VBR MP3</format>
+    <length>68.93</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 23 Ka - Mondai 3</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>81</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="81 Dai 23 Ka - Mondai 3.png" source="derivative">
+    <format>PNG</format>
+    <original>81 Dai 23 Ka - Mondai 3.mp3</original>
+    <mtime>1593293575</mtime>
+    <size>23495</size>
+    <md5>3660596badc02d4041c27cdce6182708</md5>
+    <crc32>21b9bb11</crc32>
+    <sha1>cff15cabad5fa651f20d2460d80af16427d607a0</sha1>
+  </file>
+  <file name="81 Dai 23 Ka - Mondai 3_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>81 Dai 23 Ka - Mondai 3.mp3</original>
+    <mtime>1593293608</mtime>
+    <size>297326</size>
+    <md5>68d637528aae9efe93c488e91d5b5cdd</md5>
+    <crc32>85e30f42</crc32>
+    <sha1>a0c0760befa6c2ca2751a8f87eef19ab51b250b0</sha1>
+  </file>
+  <file name="82 Dai 24 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>82 Dai 24 Ka - Kaiwa.mp3</original>
+    <mtime>1593293837</mtime>
+    <size>6768</size>
+    <md5>e0579b9783f9ffc1405a5d22916da97c</md5>
+    <crc32>94bdb602</crc32>
+    <sha1>7800c69b3c51ce3d0f93a41ca7933854b6a57683</sha1>
+  </file>
+  <file name="82 Dai 24 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292795</mtime>
+    <size>1532335</size>
+    <md5>3ef3e180cfdc5c6766d7f389ff4bf919</md5>
+    <crc32>1d0ba509</crc32>
+    <sha1>76450b683eb8a113b6facf4afe6df9efee89ac24</sha1>
+    <format>VBR MP3</format>
+    <length>38.28</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 24 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>82</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="82 Dai 24 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>82 Dai 24 Ka - Kaiwa.mp3</original>
+    <mtime>1593293252</mtime>
+    <size>22392</size>
+    <md5>fe8539c1d258aef4cbaac08b0d2c9b4c</md5>
+    <crc32>e69655e2</crc32>
+    <sha1>345fddf51c708660e5b78baf54fa48610a23ff72</sha1>
+  </file>
+  <file name="82 Dai 24 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>82 Dai 24 Ka - Kaiwa.mp3</original>
+    <mtime>1593293612</mtime>
+    <size>304742</size>
+    <md5>a4bca3e102575c849c477e5c952cf110</md5>
+    <crc32>53044035</crc32>
+    <sha1>54c768367b7a9de5a8f118a83df365cef083c5f9</sha1>
+  </file>
+  <file name="83 Dai 24 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>83 Dai 24 Ka - Mondai 1.mp3</original>
+    <mtime>1593293847</mtime>
+    <size>5816</size>
+    <md5>b4713ffbe27ae8aaed979a157d72ffe1</md5>
+    <crc32>d0b1cff6</crc32>
+    <sha1>871fa24185f36181e07ba1c506b3c6f0fd35d23c</sha1>
+  </file>
+  <file name="83 Dai 24 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292802</mtime>
+    <size>1547698</size>
+    <md5>b33ca18ade6a5c8df24e5e43d847cc2b</md5>
+    <crc32>afaf9741</crc32>
+    <sha1>4852cc3ce26172d0a046bd92c3d65042ad5a604e</sha1>
+    <format>VBR MP3</format>
+    <length>38.66</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 24 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>83</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="83 Dai 24 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>83 Dai 24 Ka - Mondai 1.mp3</original>
+    <mtime>1593293245</mtime>
+    <size>20935</size>
+    <md5>30a02b19c5b4ae66550526e7ef07e378</md5>
+    <crc32>6848f787</crc32>
+    <sha1>5b03f5e70c0f00813d548bd6f929647b69c02096</sha1>
+  </file>
+  <file name="83 Dai 24 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>83 Dai 24 Ka - Mondai 1.mp3</original>
+    <mtime>1593293601</mtime>
+    <size>285692</size>
+    <md5>ffcd493f919b8ee6fe5ec558c8b14754</md5>
+    <crc32>fa4c9b4d</crc32>
+    <sha1>6c810cacbcce9fe41375d1d63e7adf1280d70689</sha1>
+  </file>
+  <file name="84 Dai 24 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>84 Dai 24 Ka - Mondai 2.mp3</original>
+    <mtime>1593293852</mtime>
+    <size>17072</size>
+    <md5>0e2eca6b1f3c6dc8667fbe8d67f3296d</md5>
+    <crc32>9a273432</crc32>
+    <sha1>d27cdc1b8a7a826483a340465f40e6bc34349866</sha1>
+  </file>
+  <file name="84 Dai 24 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292808</mtime>
+    <size>4334578</size>
+    <md5>54ef968d272f06796ebfbf618d6ac895</md5>
+    <crc32>7b821d0c</crc32>
+    <sha1>5dc6f65b4f56c7e39ba4d45a03538be61d90c714</sha1>
+    <format>VBR MP3</format>
+    <length>108.34</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 24 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>84</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="84 Dai 24 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>84 Dai 24 Ka - Mondai 2.mp3</original>
+    <mtime>1593293230</mtime>
+    <size>23988</size>
+    <md5>ee6ba5beb1f195b4d40cfcc1a48f4061</md5>
+    <crc32>f835e069</crc32>
+    <sha1>23aaf4b81603d67cf0025369c3c8b1e577f7ca3b</sha1>
+  </file>
+  <file name="84 Dai 24 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>84 Dai 24 Ka - Mondai 2.mp3</original>
+    <mtime>1593293624</mtime>
+    <size>295765</size>
+    <md5>033c6a4bf99e784484c3b9e4fbe1f670</md5>
+    <crc32>883db59e</crc32>
+    <sha1>c0f6f6cb1f6aebf763ddcbc82659f6e0ab4b4482</sha1>
+  </file>
+  <file name="85 Dai 25 Ka - Kaiwa.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>85 Dai 25 Ka - Kaiwa.mp3</original>
+    <mtime>1593293857</mtime>
+    <size>7344</size>
+    <md5>eca7fd2ce7d5064e4f74002597c99eb3</md5>
+    <crc32>8911be19</crc32>
+    <sha1>c5f8506bdd9192bcff60645d53c6064ec08c3cb2</sha1>
+  </file>
+  <file name="85 Dai 25 Ka - Kaiwa.mp3" source="original">
+    <mtime>1593292812</mtime>
+    <size>1701295</size>
+    <md5>27cff39d1214357e98b96dd40839ebff</md5>
+    <crc32>6a71419c</crc32>
+    <sha1>b7f6ad5a01310c251d55dd3594f28ae6cd831abc</sha1>
+    <format>VBR MP3</format>
+    <length>42.5</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 25 Ka - Kaiwa</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>85</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="85 Dai 25 Ka - Kaiwa.png" source="derivative">
+    <format>PNG</format>
+    <original>85 Dai 25 Ka - Kaiwa.mp3</original>
+    <mtime>1593293223</mtime>
+    <size>25878</size>
+    <md5>707696ad060389e7435002c6727ec405</md5>
+    <crc32>8b36a9e0</crc32>
+    <sha1>ec2d2f07c05bea42dfc16c1ae392404f9f46f046</sha1>
+  </file>
+  <file name="85 Dai 25 Ka - Kaiwa_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>85 Dai 25 Ka - Kaiwa.mp3</original>
+    <mtime>1593293621</mtime>
+    <size>306798</size>
+    <md5>e553378040e4005a05edd3ce71baa512</md5>
+    <crc32>44a6a4b6</crc32>
+    <sha1>10fe59fb2c178913f962b452c397828e84d57f01</sha1>
+  </file>
+  <file name="86 Dai 25 Ka - Mondai 1.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>86 Dai 25 Ka - Mondai 1.mp3</original>
+    <mtime>1593293861</mtime>
+    <size>4872</size>
+    <md5>3d030764afc1e40d3dfc956e3c2a2ff1</md5>
+    <crc32>665b282d</crc32>
+    <sha1>fef75a4b906759917e446492cb59c942b9063cd7</sha1>
+  </file>
+  <file name="86 Dai 25 Ka - Mondai 1.mp3" source="original">
+    <mtime>1593292816</mtime>
+    <size>1388338</size>
+    <md5>4290606e4cafa6cc833b02cf6fa1a7ee</md5>
+    <crc32>f8af155d</crc32>
+    <sha1>33669b6f5087a7c309df4a10447ba738f34fbcdb</sha1>
+    <format>VBR MP3</format>
+    <length>34.68</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 25 Ka - Mondai 1</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>86</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="86 Dai 25 Ka - Mondai 1.png" source="derivative">
+    <format>PNG</format>
+    <original>86 Dai 25 Ka - Mondai 1.mp3</original>
+    <mtime>1593293215</mtime>
+    <size>19194</size>
+    <md5>4f358f5a90cf86c39a3c77143d78ff07</md5>
+    <crc32>f85281d5</crc32>
+    <sha1>517e04d79f0b0ededc683aa95a42e0d76988e9ae</sha1>
+  </file>
+  <file name="86 Dai 25 Ka - Mondai 1_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>86 Dai 25 Ka - Mondai 1.mp3</original>
+    <mtime>1593293648</mtime>
+    <size>284877</size>
+    <md5>fd683533145417c09ad69cf836e653ff</md5>
+    <crc32>e5335ee8</crc32>
+    <sha1>7d0fb21fe248a74cb8ca5332eb00254d1102518f</sha1>
+  </file>
+  <file name="87 Dai 25 Ka - Mondai 2.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>87 Dai 25 Ka - Mondai 2.mp3</original>
+    <mtime>1593293867</mtime>
+    <size>17528</size>
+    <md5>2069ded34b8789adcb45b189898b03d2</md5>
+    <crc32>0c21453f</crc32>
+    <sha1>38cd1e5a10456930f9dd7bc3728030ba32502458</sha1>
+  </file>
+  <file name="87 Dai 25 Ka - Mondai 2.mp3" source="original">
+    <mtime>1593292829</mtime>
+    <size>4488178</size>
+    <md5>f6daf2593733cd788b6776aee3c15659</md5>
+    <crc32>d8d5666e</crc32>
+    <sha1>19687a8f188607055cede906996f33600588ce59</sha1>
+    <format>VBR MP3</format>
+    <length>112.18</length>
+    <height>0</height>
+    <width>0</width>
+    <title>Dai 25 Ka - Mondai 2</title>
+    <creator>3A Network</creator>
+    <album>Minna no Nihongo Shokyu I 2nd Edition</album>
+    <track>87</track>
+    <artist>3A Network</artist>
+  </file>
+  <file name="87 Dai 25 Ka - Mondai 2.png" source="derivative">
+    <format>PNG</format>
+    <original>87 Dai 25 Ka - Mondai 2.mp3</original>
+    <mtime>1593293086</mtime>
+    <size>25991</size>
+    <md5>a3b04c82e34f9a04767790839baa34cf</md5>
+    <crc32>16b85748</crc32>
+    <sha1>c5594c882a0feae9590d0d89003ebcceb4660229</sha1>
+  </file>
+  <file name="87 Dai 25 Ka - Mondai 2_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>87 Dai 25 Ka - Mondai 2.mp3</original>
+    <mtime>1593293666</mtime>
+    <size>297250</size>
+    <md5>13ddda468be87fe5f812a05f1eeca81a</md5>
+    <crc32>7d22fc6f</crc32>
+    <sha1>10e0ff4e720ee47fa357bf39412660b19863ab3e</sha1>
+  </file>
+  <file name="__ia_thumb.jpg" source="original">
+    <mtime>1613154989</mtime>
+    <size>3375</size>
+    <md5>1f146b0aca7f5c3b9734b29a0dcaf6c1</md5>
+    <crc32>b3fee2ce</crc32>
+    <sha1>2492b764cf4fc125f2d0e1628b4d271367c371c5</sha1>
+    <format>Item Tile</format>
+    <rotation>0</rotation>
+  </file>
+</files>

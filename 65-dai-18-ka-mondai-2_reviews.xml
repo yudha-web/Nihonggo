@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviews itemIdentifier="65-dai-18-ka-mondai-2">
+  <review>
+    <reviewtitle>Useful</reviewtitle>
+    <reviewbody>amazing</reviewbody>
+    <stars>5</stars>
+    <reviewer>Batchuluun Amintsetseg</reviewer>
+    <reviewdate>2024-06-17 06:03:15</reviewdate>
+    <createdate>2024-06-17 06:03:15</createdate>
+    <reviewer_itemname>@batchuluun_amintsetseg</reviewer_itemname>
+  </review>
+  <review>
+    <reviewtitle>SUPER HELPFUL</reviewtitle>
+    <reviewbody>Thank you alot!</reviewbody>
+    <stars>5</stars>
+    <reviewer>Quỳnh Phương</reviewer>
+    <reviewdate>2024-06-21 14:46:19</reviewdate>
+    <createdate>2024-06-21 14:46:19</createdate>
+    <reviewer_itemname>@qu_nh_ph_ng</reviewer_itemname>
+  </review>
+  <review>
+    <reviewtitle>Most Helpful</reviewtitle>
+    <reviewbody>すごい</reviewbody>
+    <stars>5</stars>
+    <reviewer>MD SELIM MIAH</reviewer>
+    <reviewdate>2024-09-05 17:22:08</reviewdate>
+    <createdate>2024-09-05 17:22:08</createdate>
+    <reviewer_itemname>@md_selim_miah</reviewer_itemname>
+  </review>
+  <info>
+    <num_reviews>3</num_reviews>
+    <avg_rating>5.00</avg_rating>
+  </info>
+</reviews>
