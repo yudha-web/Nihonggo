@@ -137,7 +137,8 @@
     }
 
     /* Progress Bar */
-    .progress{height:8px;background:rgba(255,255,255,0.08);border-radius:999px;cursor:pointer;position:relative; margin-bottom: 8px; margin-top: 15px;}
+    /* Pastikan Progress bar bisa disentuh/diklik dengan mudah */
+    .progress{height:12px;background:rgba(255,255,255,0.08);border-radius:999px;cursor:pointer;position:relative; margin-bottom: 8px; margin-top: 15px; padding: 2px 0;}
     .progress > .bar{height:100%;width:0;background:var(--accent);border-radius:999px}
     /* Waktu dan Durasi diletakkan di bawah progress bar */
     .time{display:flex;justify-content:space-between;font-size:12px;color:var(--muted); margin-bottom: 10px;}
@@ -714,16 +715,75 @@
     vol.addEventListener('input', ()=>{ audio.volume = vol.value; });
     speed.addEventListener('change', ()=>{ audio.playbackRate = speed.value; });
 
-    // Progress bar click (to seek)
-    progress.addEventListener('click', (e) => {
-      if (!isNaN(audio.duration)) {
-        const rect = progress.getBoundingClientRect();
-        const offsetX = e.clientX - rect.left;
-        const width = rect.width;
-        const seekTime = (offsetX / width) * audio.duration;
-        audio.currentTime = seekTime;
+    
+    // =========================================================
+    // BARU: FUNGSI SLIDE-SLIDE/DRAG PROGRESS BAR (SEEKING)
+    // =========================================================
+
+    // Fungsi Pembantu untuk menghitung waktu seek
+    function seekTo(e) {
+      if (!audio.duration || isNaN(audio.duration)) return;
+      
+      const rect = progress.getBoundingClientRect();
+      // Mendukung sentuhan (touches) dan mouse (clientX)
+      const clientX = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : null);
+      
+      if (clientX === null) return;
+      
+      // Hitung posisi relatif X
+      const offsetX = clientX - rect.left;
+      const width = rect.width;
+      
+      // Pastikan offset di dalam batas 0 dan lebar
+      const safeOffsetX = Math.max(0, Math.min(offsetX, width));
+
+      const seekTime = (safeOffsetX / width) * audio.duration;
+      audio.currentTime = seekTime;
+    }
+
+    let isSeeking = false;
+
+    // MOUSE DOWN: Mulai mencari
+    progress.addEventListener('mousedown', (e) => {
+      isSeeking = true;
+      seekTo(e);
+      e.preventDefault(); 
+    });
+
+    // TOUCH START: Mulai mencari (untuk perangkat seluler)
+    progress.addEventListener('touchstart', (e) => {
+        isSeeking = true;
+        seekTo(e);
+        e.preventDefault(); // Mencegah scrolling saat drag
+    });
+    
+    // MOUSE MOVE: Lanjutkan mencari
+    document.addEventListener('mousemove', (e) => {
+      if (isSeeking) {
+        seekTo(e);
       }
     });
+
+    // TOUCH MOVE: Lanjutkan mencari (untuk perangkat seluler)
+    document.addEventListener('touchmove', (e) => {
+        if (isSeeking) {
+            seekTo(e);
+        }
+        e.preventDefault(); 
+    });
+
+    // MOUSE UP / TOUCH END: Hentikan mencari
+    document.addEventListener('mouseup', () => {
+      isSeeking = false;
+    });
+
+    document.addEventListener('touchend', () => {
+        isSeeking = false;
+    });
+    
+    // =========================================================
+    // AKHIR DARI FUNGSI SLIDE-SLIDE
+    // =========================================================
 
     // Format waktu
     function formatTime(sec){
