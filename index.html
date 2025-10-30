@@ -2,59 +2,139 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nihongo Audio Player</title>
+  <title>Nihonggo Audio Player</title>
   <style>
-    body { font-family: sans-serif; background: #f5f5f5; color: #333; padding: 20px; }
-    h1 { text-align: center; }
-    .audio { background: white; padding: 10px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    audio { width: 100%; outline: none; }
+    body {
+      font-family: sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .player {
+      background: #fff;
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    audio {
+      width: 100%;
+      margin-top: 6px;
+    }
   </style>
 </head>
 <body>
-  <h1>📘 Nihongo Audio Player</h1>
-  <p>Putar audio pelajaran langsung tanpa download.</p>
-  <div id="list"></div>
+  <h1>🎧 Nihonggo Audio Player</h1>
+  <div id="audio-list"></div>
 
   <script>
     const files = [
-      "01 Dai 1 Ka - Kaiwa.mp3","02 Dai 1 Ka - Mondai 1.mp3","03 Dai 1 Ka - Mondai 2.mp3",
-      "04 Dai 1 Ka - Mondai 3.mp3","05 Dai 2 Ka - Kaiwa.mp3","06 Dai 2 Ka - Mondai 1.mp3",
-      "07 Dai 2 Ka - Mondai 2.mp3","08 Dai 2 Ka - Mondai 3.mp3","09 Dai 3 Ka - Kaiwa.mp3",
-      "10 Dai 3 Ka - Mondai 1.mp3","11 Dai 3 Ka - Mondai 2.mp3","12 Dai 4 Ka - Kaiwa.mp3",
-      "13 Dai 4 Ka - Mondai 1.mp3","14 Dai 4 Ka - Mondai 2.mp3","15 Dai 4 Ka - Mondai 3.mp3",
-      "16 Dai 4 Ka - Mondai 4.mp3","17 Dai 5 Ka - Kaiwa.mp3","18 Dai 5 Ka - Mondai 1.mp3",
-      "19 Dai 5 Ka - Mondai 2.mp3","20 Dai 5 Ka - Mondai 3.mp3","21 Dai 6 Ka - Kaiwa.mp3",
-      "22 Dai 6 Ka - Mondai 1.mp3","23 Dai 6 Ka - Mondai 2.mp3","24 Dai 7 Ka - Kaiwa.mp3",
-      "25 Dai 7 Ka - Mondai 1.mp3","26 Dai 7 Ka - Mondai 2.mp3","27 Dai 7 Ka - Mondai 3.mp3",
-      "28 Dai 8 Ka - Kaiwa.mp3","29 Dai 8 Ka - Mondai 1.mp3","30 Dai 8 Ka - Mondai 2.mp3",
-      "31 Dai 8 Ka - Mondai 3.mp3","32 Dai 9 Ka - Kaiwa.mp3","33 Dai 9 Ka - Mondai 1.mp3",
-      "34 Dai 9 Ka - Mondai 2.mp3","35 Dai 10 Ka - Kaiwa.mp3","36 Dai 10 Ka - Mondai 1.mp3",
-      "37 Dai 10 Ka - Mondai 2.mp3","38 Dai 10 Ka - Mondai 3.mp3","39 Dai 11 Ka - Kaiwa.mp3",
-      "40 Dai 11 Ka - Mondai 1.mp3","41 Dai 11 Ka - Mondai 2.mp3","42 Dai 11 Ka - Mondai 3.mp3",
-      "43 Dai 12 Ka - Kaiwa.mp3","44 Dai 12 Ka - Mondai 1.mp3","45 Dai 12 Ka - Mondai 2.mp3",
-      "46 Dai 13 Ka - Kaiwa.mp3","47 Dai 13 Ka - Mondai 1.mp3","48 Dai 13 Ka - Mondai 2.mp3",
-      "49 Dai 14 Ka - Kaiwa.mp3","50 Dai 14 Ka - Mondai 1.mp3","51 Dai 14 Ka - Mondai 2.mp3",
-      "52 Dai 14 Ka - Mondai 3.mp3","53 Dai 15 Ka - Kaiwa.mp3","54 Dai 15 Ka - Mondai 1.mp3",
-      "55 Dai 15 Ka - Mondai 2.mp3","56 Dai 16 Ka - Kaiwa.mp3","57 Dai 16 Ka - Mondai 1.mp3",
-      "58 Dai 16 Ka - Mondai 2.mp3","59 Dai 16 Ka - Mondai 3.mp3","60 Dai 17 Ka - Kaiwa.mp3",
-      "61 Dai 17 Ka - Mondai 1.mp3","62 Dai 17 Ka - Mondai 2.mp3","63 Dai 18 Ka - Kaiwa.mp3",
-      "64 Dai 18 Ka - Mondai 1.mp3","65 Dai 18 Ka - Mondai 2.mp3","66 Dai 19 Ka - Kaiwa.mp3",
-      "67 Dai 19 Ka - Mondai 1.mp3","68 Dai 19 Ka - Mondai 2.mp3","69 Dai 20 Ka - Kaiwa.mp3",
-      "70 Dai 20 Ka - Mondai 1.mp3","71 Dai 20 Ka - Mondai 2.mp3","72 Dai 21 Ka - Kaiwa.mp3",
-      "73 Dai 21 Ka - Mondai 1.mp3","74 Dai 21 Ka - Mondai 2.mp3","75 Dai 22 Ka - Kaiwa.mp3",
-      "76 Dai 22 Ka - Mondai 1.mp3","77 Dai 22 Ka - Mondai 2.mp3","78 Dai 23 Ka - Kaiwa.mp3",
-      "79 Dai 23 Ka - Mondai 1.mp3","80 Dai 23 Ka - Mondai 2.mp3","81 Dai 23 Ka - Mondai 3.mp3",
-      "82 Dai 24 Ka - Kaiwa.mp3","83 Dai 24 Ka - Mondai 1.mp3","84 Dai 24 Ka - Mondai 2.mp3",
-      "85 Dai 25 Ka - Kaiwa.mp3","86 Dai 25 Ka - Mondai 1.mp3","87 Dai 25 Ka - Mondai 2.mp3"
+      "01 Dai 1 Ka - Kaiwa.mp3",
+      "02 Dai 1 Ka - Mondai 1.mp3",
+      "03 Dai 1 Ka - Mondai 2.mp3",
+      "04 Dai 1 Ka - Mondai 3.mp3",
+      "05 Dai 2 Ka - Kaiwa.mp3",
+      "06 Dai 2 Ka - Mondai 1.mp3",
+      "07 Dai 2 Ka - Mondai 2.mp3",
+      "08 Dai 2 Ka - Mondai 3.mp3",
+      "09 Dai 3 Ka - Kaiwa.mp3",
+      "10 Dai 3 Ka - Mondai 1.mp3",
+      "11 Dai 3 Ka - Mondai 2.mp3",
+      "12 Dai 4 Ka - Kaiwa.mp3",
+      "13 Dai 4 Ka - Mondai 1.mp3",
+      "14 Dai 4 Ka - Mondai 2.mp3",
+      "15 Dai 4 Ka - Mondai 3.mp3",
+      "16 Dai 4 Ka - Mondai 4.mp3",
+      "17 Dai 5 Ka - Kaiwa.mp3",
+      "18 Dai 5 Ka - Mondai 1.mp3",
+      "19 Dai 5 Ka - Mondai 2.mp3",
+      "20 Dai 5 Ka - Mondai 3.mp3",
+      "21 Dai 6 Ka - Kaiwa.mp3",
+      "22 Dai 6 Ka - Mondai 1.mp3",
+      "23 Dai 6 Ka - Mondai 2.mp3",
+      "24 Dai 7 Ka - Kaiwa.mp3",
+      "25 Dai 7 Ka - Mondai 1.mp3",
+      "26 Dai 7 Ka - Mondai 2.mp3",
+      "27 Dai 7 Ka - Mondai 3.mp3",
+      "28 Dai 8 Ka - Kaiwa.mp3",
+      "29 Dai 8 Ka - Mondai 1.mp3",
+      "30 Dai 8 Ka - Mondai 2.mp3",
+      "31 Dai 8 Ka - Mondai 3.mp3",
+      "32 Dai 9 Ka - Kaiwa.mp3",
+      "33 Dai 9 Ka - Mondai 1.mp3",
+      "34 Dai 9 Ka - Mondai 2.mp3",
+      "35 Dai 10 Ka - Kaiwa.mp3",
+      "36 Dai 10 Ka - Mondai 1.mp3",
+      "37 Dai 10 Ka - Mondai 2.mp3",
+      "38 Dai 10 Ka - Mondai 3.mp3",
+      "39 Dai 11 Ka - Kaiwa.mp3",
+      "40 Dai 11 Ka - Mondai 1.mp3",
+      "41 Dai 11 Ka - Mondai 2.mp3",
+      "42 Dai 11 Ka - Mondai 3.mp3",
+      "43 Dai 12 Ka - Kaiwa.mp3",
+      "44 Dai 12 Ka - Mondai 1.mp3",
+      "45 Dai 12 Ka - Mondai 2.mp3",
+      "46 Dai 13 Ka - Kaiwa.mp3",
+      "47 Dai 13 Ka - Mondai 1.mp3",
+      "48 Dai 13 Ka - Mondai 2.mp3",
+      "49 Dai 14 Ka - Kaiwa.mp3",
+      "50 Dai 14 Ka - Mondai 1.mp3",
+      "51 Dai 14 Ka - Mondai 2.mp3",
+      "52 Dai 14 Ka - Mondai 3.mp3",
+      "53 Dai 15 Ka - Kaiwa.mp3",
+      "54 Dai 15 Ka - Mondai 1.mp3",
+      "55 Dai 15 Ka - Mondai 2.mp3",
+      "56 Dai 16 Ka - Kaiwa.mp3",
+      "57 Dai 16 Ka - Mondai 1.mp3",
+      "58 Dai 16 Ka - Mondai 2.mp3",
+      "59 Dai 16 Ka - Mondai 3.mp3",
+      "60 Dai 17 Ka - Kaiwa.mp3",
+      "61 Dai 17 Ka - Mondai 1.mp3",
+      "62 Dai 17 Ka - Mondai 2.mp3",
+      "63 Dai 18 Ka - Kaiwa.mp3",
+      "64 Dai 18 Ka - Mondai 1.mp3",
+      "65 Dai 18 Ka - Mondai 2.mp3",
+      "66 Dai 19 Ka - Kaiwa.mp3",
+      "67 Dai 19 Ka - Mondai 1.mp3",
+      "68 Dai 19 Ka - Mondai 2.mp3",
+      "69 Dai 20 Ka - Kaiwa.mp3",
+      "70 Dai 20 Ka - Mondai 1.mp3",
+      "71 Dai 20 Ka - Mondai 2.mp3",
+      "72 Dai 21 Ka - Kaiwa.mp3",
+      "73 Dai 21 Ka - Mondai 1.mp3",
+      "74 Dai 21 Ka - Mondai 2.mp3",
+      "75 Dai 22 Ka - Kaiwa.mp3",
+      "76 Dai 22 Ka - Mondai 1.mp3",
+      "77 Dai 22 Ka - Mondai 2.mp3",
+      "78 Dai 23 Ka - Kaiwa.mp3",
+      "79 Dai 23 Ka - Mondai 1.mp3",
+      "80 Dai 23 Ka - Mondai 2.mp3",
+      "81 Dai 23 Ka - Mondai 3.mp3",
+      "82 Dai 24 Ka - Kaiwa.mp3",
+      "83 Dai 24 Ka - Mondai 1.mp3",
+      "84 Dai 24 Ka - Mondai 2.mp3",
+      "85 Dai 25 Ka - Kaiwa.mp3",
+      "86 Dai 25 Ka - Mondai 1.mp3",
+      "87 Dai 25 Ka - Mondai 2.mp3"
     ];
 
-    const list = document.getElementById("list");
-    files.forEach(file => {
-      const div = document.createElement("div");
-      div.className = "audio";
-      div.innerHTML = `<strong>${file}</strong><br><audio controls src="${file}"></audio>`;
-      list.appendChild(div);
+    const container = document.getElementById('audio-list');
+    files.forEach(name => {
+      const div = document.createElement('div');
+      div.className = 'player';
+      div.innerHTML = `
+        <strong>${name}</strong>
+        <audio controls>
+          <source src="${encodeURIComponent(name)}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      `;
+      container.appendChild(div);
     });
   </script>
 </body>
