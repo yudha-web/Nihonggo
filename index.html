@@ -509,12 +509,15 @@
     const ffwBtn = document.getElementById('ffw');
     
     // Player State
-    let current = 0;
+    let current = 0; // Index file saat ini di array `files`
     let isPlaying = false;
     let isLoop = false;
     let isShuffle = false;
-    let isSeeking = false; // State untuk drag/slide progress bar
-    let order = files.map((_,i)=>i);
+    let isSeeking = false;
+    // Array `order` menyimpan indeks file. Awalnya [0, 1, 2, 3, ...]
+    let order = files.map((_,i)=>i); 
+    // Indeks saat ini di dalam array `order`. Awalnya 0.
+    let currentOrderIndex = 0;
 
     // Web Audio API State
     let audioContext;
@@ -546,6 +549,7 @@
     }
     
     function setSource(i){
+      // i adalah index di array 'files'
       current = i; 
       const path = encodeURI(files[i]);
       audio.src = path; 
@@ -555,8 +559,17 @@
     }
 
     function playIndex(i){
-      current = i;
-      setSource(current);
+      // i adalah index di array 'files'
+      
+      // Update currentOrderIndex
+      currentOrderIndex = order.indexOf(i);
+      if (currentOrderIndex === -1) {
+          // Kasus fallback jika index 'i' tidak ditemukan di 'order' (misal baru di-shuffle)
+          // Cari ulang index lagu saat ini di array 'files' dan set currentOrderIndex
+          currentOrderIndex = files.indexOf(files[i]);
+      }
+      
+      setSource(i);
       setupAudioContext(); 
       if (audioContext.state === 'suspended') {
           audioContext.resume();
@@ -571,7 +584,11 @@
     }
 
     function togglePlay(){
-        if(!audio.src){ setSource(current); }
+        if(!audio.src){ 
+            // Jika audio belum pernah diset, set ke track pertama (sesuai order)
+            playIndex(order[currentOrderIndex]); 
+            return;
+        }
       
         setupAudioContext();
         
@@ -634,15 +651,18 @@
         const fileNameWithoutExtension = f.replace(/\.mp3$/, '');
         const equalizerIcon = `<div class="equalizer-icon"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>`;
         tr.innerHTML = `<div class="num">${trackNumber}</div><div class="name">${fileNameWithoutExtension}</div>${equalizerIcon}`;
+        // Ketika track diklik, langsung memutar index di array 'files'
         tr.onclick = ()=>{ playIndex(i); };
         playlistEl.appendChild(tr);
       });
       highlight();
     }
 
-    // Visualizer real-time update
     function drawVisualizer() {
-        if (!audioContext) return; 
+        if (!audioContext || !isPlaying) {
+            // Hentikan visualizer jika tidak ada konteks audio atau tidak sedang diputar
+            return;
+        }
         
         requestAnimationFrame(drawVisualizer);
         
@@ -670,12 +690,12 @@
     // Core Controls
     playBtn.onclick = togglePlay;
     document.getElementById('prev').onclick = ()=>{ 
-        current = (current - 1 + files.length) % files.length; 
-        playIndex(current); 
+        currentOrderIndex = (currentOrderIndex - 1 + files.length) % files.length;
+        playIndex(order[currentOrderIndex]);
     };
     document.getElementById('next').onclick = ()=>{ 
-        current = (current + 1) % files.length; 
-        playIndex(current); 
+        currentOrderIndex = (currentOrderIndex + 1) % files.length;
+        playIndex(order[currentOrderIndex]);
     };
     rwdBtn.onclick = ()=>{ 
         if (!isNaN(audio.duration)) {
@@ -688,7 +708,9 @@
         }
     };
     document.getElementById('playAll').onclick = ()=>{ 
-      playIndex(isShuffle ? order[0] : 0); 
+      // Saat Play All, selalu mulai dari indeks 0 di array order saat ini
+      currentOrderIndex = 0;
+      playIndex(order[currentOrderIndex]); 
     };
     
     // Loop/Shuffle Toggle
@@ -697,15 +719,41 @@
         loopBtn.classList.toggle('active-control', isLoop); 
         audio.loop = isLoop;
     };
+    
     shuffleBtn.onclick = ()=>{ 
         isShuffle = !isShuffle; 
         shuffleBtn.classList.toggle('active-control', isShuffle); 
+        
         if (isShuffle) {
+            // 1. Simpan index file yang sedang diputar
+            const currentlyPlayingFileIndex = current;
+            
+            // 2. Buat array urutan baru dan acak
             order = files.map((_,i)=>i); 
             shuffleArray(order);
+            
+            // 3. Pindahkan file yang sedang diputar ke posisi 0 di array order (agar tidak tiba-tiba berganti)
+            const oldIndexInNewOrder = order.indexOf(currentlyPlayingFileIndex);
+            if (oldIndexInNewOrder > 0) {
+                 order.splice(oldIndexInNewOrder, 1);
+                 order.unshift(currentlyPlayingFileIndex);
+            } else if (oldIndexInNewOrder === -1) {
+                // Kasus darurat, set lagu saat ini sebagai yang pertama
+                order.unshift(currentlyPlayingFileIndex);
+            }
+            
+            // 4. Set currentOrderIndex ke 0 (lagu yang sedang diputar)
+            currentOrderIndex = 0; 
+            
+
         } else {
+            // 1. Kembalikan array order ke urutan sequential
             order = files.map((_,i)=>i); 
+            // 2. Set currentOrderIndex sesuai indeks 'current' di urutan sequential
+            currentOrderIndex = current;
         }
+        
+        highlight(); // Update visual playlist jika perlu
     };
 
 
@@ -730,15 +778,19 @@
             playIndex(current);
             return; 
         }
-
-        let nextIndex = (current + 1) % files.length;
-
-        if (nextIndex === 0) {
-            setSource(0); 
+        
+        // Logika Next Track menggunakan currentOrderIndex dan array order
+        currentOrderIndex = (currentOrderIndex + 1) % files.length;
+        
+        // Cek apakah sudah kembali ke awal
+        if (currentOrderIndex === 0) {
+            // Jika sudah di track pertama (sesuai order), setSource ke track pertama dan berhenti memutar
+            setSource(order[0]); 
             return;
         }
 
-        playIndex(nextIndex); 
+        // Putar track berikutnya sesuai urutan (shuffle atau sequential)
+        playIndex(order[currentOrderIndex]); 
     });
 
     // Speed & Volume Controls
@@ -810,8 +862,8 @@
         playBtn.innerHTML = playIcon; 
         loopBtn.classList.toggle('active-control', isLoop); 
         shuffleBtn.classList.toggle('active-control', isShuffle);
-        vol.dispatchEvent(new Event('input')); // Update visual volume bar
-        visualBars.forEach(bar => bar.style.height = '6px'); // Set visualizer ke keadaan statis
+        vol.dispatchEvent(new Event('input')); 
+        visualBars.forEach(bar => bar.style.height = '6px'); 
     })();
 
   </script>
