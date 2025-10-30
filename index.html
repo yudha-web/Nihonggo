@@ -223,7 +223,27 @@
       padding:18px;
       border-radius:12px;
       box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light); 
+      /* Tambahan untuk Scroll */
+      display: flex; 
+      flex-direction: column; 
     }
+
+    /* BARU: Area yang dapat di-scroll */
+    .playlist-scroll-area {
+        max-height: 350px; /* TINGGI MAKSIMUM AREA SCROLL */
+        overflow-y: auto; 
+        padding-right: 5px; 
+    }
+    /* Style Scrollbar (Opsional) */
+    .playlist-scroll-area::-webkit-scrollbar {
+        width: 8px;
+    }
+    .playlist-scroll-area::-webkit-scrollbar-thumb {
+        background-color: rgba(29, 185, 84, 0.4); 
+        border-radius: 4px;
+    }
+
+
     .playlist-header {
       display: flex;
       justify-content: space-between;
@@ -428,7 +448,10 @@
         <strong>Playlist (87)</strong>
         <div style="font-size:13px;color:var(--muted)"><button id="playAll" class="smbtn" title="Play All">▶ All</button></div>
       </div>
-      <div class="playlist" id="playlist"></div>
+      
+      <div class="playlist-scroll-area">
+          <div class="playlist" id="playlist"></div>
+      </div>
     </aside>
   </div>
 
@@ -477,7 +500,6 @@
     const shuffleBtn = document.getElementById('shuffle');
     const playlistEl = document.getElementById('playlist');
     const audioVisualizer = document.getElementById('audioVisualizer');
-    // Tambahan elemen tombol rwd/ffw
     const rwdBtn = document.getElementById('rwd');
     const ffwBtn = document.getElementById('ffw');
 
@@ -509,7 +531,11 @@
       [...document.querySelectorAll('.track')].forEach(n=>n.classList.remove('active'));
       const el = document.querySelector('.track[data-index="'+current+'"]');
       if(el) el.classList.add('active');
-      if (el) {
+      
+      // Fokuskan scroll ke lagu yang sedang aktif
+      const scrollArea = document.querySelector('.playlist-scroll-area');
+      if (el && scrollArea) {
+        // scrollIntoView memastikan elemen terlihat dalam kontainer scroll-nya
         el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     }
