@@ -21,10 +21,20 @@
     h1{margin:0;font-size:20px}
     .meta{color:var(--muted);font-size:13px}
     .playerCard{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
-    .controls{display:flex;align-items:center;gap:10px;margin-top:10px}
+    /* Mengatur kontrol agar tombol ffw dan rwd bisa diletakkan di samping info */
+    .audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     .bigbtn{width:58px;height:58px;border-radius:12px;border:none;background:linear-gradient(180deg,var(--panel),#071426);color:white;font-size:18px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.5)}
-    .smbtn{width:42px;height:42px;border-radius:10px;border:none;background:var(--glass);color:var(--muted);cursor:pointer}
-    .info{margin-left:12px}
+    .smbtn{width:42px;height:42px;border-radius:10px;border:none;background:var(--glass);color:var(--muted);cursor:pointer; display: flex; align-items: center; justify-content: center;}
+    /* Ikon SVG di tengah tombol */
+    .smbtn svg, .bigbtn svg {
+      display: block;
+      margin: 0 auto;
+    }
+    .info{margin-left:12px; flex-grow: 1;}
     .title{font-weight:600}
     .sub{color:var(--muted);font-size:13px}
     .progress{height:8px;background:rgba(255,255,255,0.06);border-radius:999px;cursor:pointer;margin-top:14px;position:relative}
@@ -40,6 +50,16 @@
     .controlsBottom{display:flex;gap:8px;align-items:center;margin-top:12px}
     select,input[type="range"]{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:6px;border-radius:8px}
     .tiny{font-size:13px;color:var(--muted)}
+
+    /* CSS Tambahan untuk Tombol RWD/FFW */
+    .rwd-btn, .ffw-btn {
+      font-weight: 600;
+      font-size: 14px;
+      flex-shrink: 0; /* Mencegah tombol mengecil */
+    }
+    .vol-ctrl-group{ margin-left:10px; }
+    .vol-range{ width:120px; }
+
     @media(max-width:860px){.wrap{grid-template-columns:1fr;}.rightPanel{order:3}}
   </style>
 </head>
@@ -48,20 +68,30 @@
     <header>
       <div>
         <h1>Nihonggo — Modern Audio Player</h1>
-        <div class="meta">Semua audio bisa diputar langsung (streaming). Kontrol: speed, prev/next, seek, volume.</div>
+        <div class="meta">Semua audio bisa diputar langsung (streaming). Kontrol: speed, prev/next, seek, volume, dan langkah 10 detik.</div>
       </div>
     </header>
 
     <section class="playerCard">
-      <div style="display:flex;align-items:center">
-        <button id="prev" class="smbtn" title="Previous">⏮</button>
-        <button id="play" class="bigbtn" title="Play/Pause">►</button>
-        <button id="next" class="smbtn" title="Next">⏭</button>
+      <div class="audio-controls">
+        <button id="prev" class="smbtn" title="Previous">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 3.5A.5.5 0 0 1 1 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4-1a.5.5 0 0 1 .5.5v3.146L14.707 9.854a.5.5 0 0 1 .146.353v3.146a.5.5 0 0 1-.724.447l-7-4.5a.5.5 0 0 1-.01-.734l7-4.5A.5.5 0 0 1 14 3.25z"/></svg>
+        </button>
+        <button id="play" class="bigbtn" title="Play/Pause">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+        </button>
+        <button id="next" class="smbtn" title="Next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M15.5 3.5a.5.5 0 0 1 0 1v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zM11 4.5v7l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V2.846c0-.63.692-1.01 1.233-.696L11 4.5z"/></svg>
+        </button>
 
         <div class="info">
           <div class="title" id="nowTitle">— Pilih lagu —</div>
           <div class="sub" id="nowSub">Nihonggo collection</div>
         </div>
+        
+        <button id="rwd" class="smbtn rwd-btn" title="Rewind 10s">-10s</button>
+        
+        <button id="ffw" class="smbtn ffw-btn" title="Fast Forward 10s">+10s</button>
       </div>
 
       <div class="progress" id="progress">
@@ -72,15 +102,20 @@
       <div class="controlsBottom">
         <label class="tiny">Speed</label>
         <select id="speed">
+          <option value="0.25">0.25×</option>
+          <option value="0.5">0.5×</option>
           <option value="0.75">0.75×</option>
           <option value="1.0" selected>1×</option>
           <option value="1.25">1.25×</option>
           <option value="1.5">1.5×</option>
+          <option value="1.75">1.75×</option>
           <option value="2.0">2×</option>
+          <option value="2.5">2.5×</option>
+          <option value="3.0">3×</option>
         </select>
 
-        <label class="tiny" style="margin-left:10px">Volume</label>
-        <input id="vol" type="range" min="0" max="1" step="0.01" value="1" style="width:120px">
+        <label class="tiny vol-ctrl-group">Volume</label>
+        <input id="vol" type="range" min="0" max="1" step="0.01" value="1" class="vol-range">
 
         <button id="loop" class="smbtn" title="Toggle loop">🔁</button>
         <button id="shuffle" class="smbtn" title="Shuffle">🔀</button>
@@ -96,7 +131,6 @@
     </aside>
   </div>
 
-  <!-- audio element (hidden) -->
   <audio id="audio" preload="metadata"></audio>
 
   <script>
@@ -126,11 +160,17 @@
 "85 Dai 25 Ka - Kaiwa.mp3","86 Dai 25 Ka - Mondai 1.mp3","87 Dai 25 Ka - Mondai 2.mp3"
     ];
 
+    // Ikon SVG untuk tombol
+    const playIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>';
+    const pauseIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M5.5 3.5A.5.5 0 0 1 6 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4-1a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/></svg>';
+    
     // Elements
     const audio = document.getElementById('audio');
     const playBtn = document.getElementById('play');
     const prevBtn = document.getElementById('prev');
     const nextBtn = document.getElementById('next');
+    const rwdBtn = document.getElementById('rwd'); // Tombol Mundur 10s
+    const ffwBtn = document.getElementById('ffw'); // Tombol Maju 10s
     const nowTitle = document.getElementById('nowTitle');
     const nowSub = document.getElementById('nowSub');
     const bar = document.getElementById('bar');
@@ -172,7 +212,6 @@
     }
 
     function setSource(i){
-      // use relative path (GitHub Pages serves files from root)
       const path = encodeURI(files[i]);
       audio.src = path;
       nowTitle.textContent = files[i];
@@ -185,14 +224,22 @@
       setSource(current);
       audio.play().catch(()=>{});
       isPlaying = true;
-      playBtn.textContent = '❚❚';
+      playBtn.innerHTML = pauseIcon;
     }
 
     // controls
     playBtn.onclick = ()=>{
       if(!audio.src){ setSource(current); }
-      if(audio.paused){ audio.play(); playBtn.textContent = '❚❚'; isPlaying=true; }
-      else { audio.pause(); playBtn.textContent = '►'; isPlaying=false; }
+      if(audio.paused){ 
+        audio.play(); 
+        playBtn.innerHTML = pauseIcon; 
+        isPlaying=true; 
+      }
+      else { 
+        audio.pause(); 
+        playBtn.innerHTML = playIcon; 
+        isPlaying=false; 
+      }
     };
     prevBtn.onclick = ()=>{
       current = (current - 1 + files.length) % files.length;
@@ -203,6 +250,22 @@
       current = (current + 1) % files.length;
       setSource(current);
       audio.play();
+    };
+    
+    // Mundur 10 detik
+    rwdBtn.onclick = ()=>{
+      if (!isNaN(audio.duration)) {
+        // Kurangi 10 detik, pastikan tidak kurang dari 0
+        audio.currentTime = Math.max(audio.currentTime - 10, 0);
+      }
+    };
+    
+    // Maju 10 detik
+    ffwBtn.onclick = ()=>{
+      if (!isNaN(audio.duration)) {
+        // Tambah 10 detik, pastikan tidak melebihi durasi
+        audio.currentTime = Math.min(audio.currentTime + 10, audio.duration);
+      }
     };
 
     audio.addEventListener('timeupdate', ()=>{
@@ -236,7 +299,7 @@
     loopBtn.onclick = ()=>{ isLoop = !isLoop; loopBtn.style.background = isLoop ? 'rgba(29,185,84,0.14)' : 'var(--glass)'; };
     shuffleBtn.onclick = ()=>{ isShuffle = !isShuffle; shuffleBtn.style.background = isShuffle ? 'rgba(255,165,0,0.12)' : 'var(--glass)'; };
 
-    playAllBtn.onclick = ()=>{ current = 0; setSource(current); audio.play(); playBtn.textContent='❚❚'; };
+    playAllBtn.onclick = ()=>{ current = 0; setSource(current); audio.play(); playBtn.innerHTML = pauseIcon; };
 
     function formatTime(sec){
       if(!sec || isNaN(sec)) return '0:00';
@@ -248,17 +311,18 @@
     // keyboard shortcuts
     document.addEventListener('keydown',(e)=>{
       if(e.code==='Space'){ e.preventDefault(); playBtn.click(); }
-      if(e.code==='ArrowRight') nextBtn.click();
-      if(e.code==='ArrowLeft') prevBtn.click();
+      if(e.code==='ArrowRight') ffwBtn.click(); // Maju 10 detik dengan ArrowRight
+      if(e.code==='ArrowLeft') rwdBtn.click();  // Mundur 10 detik dengan ArrowLeft
       if(e.code==='KeyL') loopBtn.click();
       if(e.code==='KeyS') shuffleBtn.click();
     });
 
     // init
     buildList();
-    // preload first track metadata
     setSource(0);
     audio.load();
+    // Set ikon Play saat inisialisasi
+    playBtn.innerHTML = playIcon; 
   </script>
 </body>
 </html>
