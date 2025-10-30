@@ -8,41 +8,64 @@
     :root{
       --bg:#0f1720; --card:#0f1728; --muted:#9aa6b2; --accent:#1db954; --panel:#0b1220;
       --glass: rgba(255,255,255,0.03);
+      --main-text: #e6eef3;
     }
     *{box-sizing:border-box}
     body{
       margin:0; font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      background:linear-gradient(180deg,#071021 0%, #0b1220 100%); color:#e6eef3;
+      background:linear-gradient(180deg,#071021 0%, #0b1220 100%); color:var(--main-text);
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
       padding:28px;
     }
-    .wrap{max-width:500px; /* Lebar lebih kecil agar mirip tampilan HP */
-          margin:0 auto;
-          display:grid;
-          grid-template-columns:1fr; /* Hanya satu kolom di tampilan utama */
-          gap:22px}
+    .wrap{max-width:500px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:22px}
     
-    .playerCard{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    /* STYLE UNTUK VISUAL HEADER (Gaya Spotify) */
+    .visual-header {
+      background: linear-gradient(180deg, #1db954, #0f1720); /* Gradient hijau-hitam */
+      padding: 30px 18px 20px 18px;
+      border-radius: 12px 12px 0 0; /* Sudut tumpul di atas */
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .visual-header h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: -0.5px;
+        color: white; /* Kontras dengan latar belakang hijau */
+    }
+    .visual-header .meta {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 4px;
+    }
+
+    .playerCard{
+        background:var(--card);
+        padding:18px;
+        border-radius: 0 0 12px 12px; /* Sudut tumpul di bawah */
+        box-shadow:0 6px 30px rgba(0,0,0,0.6);
+        margin-top: -12px; /* Tarik ke atas agar menyambung dengan header */
+        position: relative;
+        z-index: 10;
+    }
     
-    /* Tampilan Kontrol Atas (Prev, Rwd, Play, Ffw, Next, Judul Lagu) */
+    /* Kontrol dan Elemen Player lainnya tetap sama seperti revisi terakhir */
     .controls-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 15px; /* Jarak ke progress bar */
+      margin-bottom: 15px;
     }
-
-    /* Group Tombol Navigasi */
     .main-nav-group {
       display: flex;
-      gap: 5px; /* Jarak antar tombol */
+      gap: 5px;
       align-items: center;
     }
 
     .bigbtn{width:50px;height:50px;border-radius:10px;border:none;background:linear-gradient(180deg,var(--panel),#071426);color:white;font-size:18px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,0.5)}
-    /* Tombol navigasi (Prev/Next/Rwd/Ffw) dibuat lebih kecil dan transparan */
     .smbtn{width:38px;height:38px;border-radius:8px;border:none;background:transparent;color:var(--muted);cursor:pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s;}
-    .smbtn:hover {background:var(--glass);} /* Hover effect */
+    .smbtn:hover {background:var(--glass);}
     .smbtn svg, .bigbtn svg {
       display: block;
       margin: 0 auto;
@@ -50,17 +73,15 @@
 
     .track-info{ 
       flex-grow: 1; 
-      text-align: center; /* Judul di tengah (mirip tampilan) */
+      text-align: center;
     } 
     .title{font-weight:600; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
     .sub{color:var(--muted);font-size:12px}
     
-    /* Progress Bar */
     .progress{height:6px;background:rgba(255,255,255,0.06);border-radius:999px;cursor:pointer;position:relative}
     .progress > .bar{height:100%;width:0;background:var(--accent);border-radius:999px}
     .time{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:4px; margin-bottom: 8px;}
     
-    /* Kontrol Bawah (Speed, Volume, Loop, Shuffle) */
     .controlsBottom{display:flex;gap:12px;align-items:center;justify-content: space-between; margin-top:12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);}
 
     .speed-control, .volume-control {
@@ -82,22 +103,20 @@
     }
     input[type="range"]{
       background:transparent;
-      border:none; /* Hilangkan border untuk slider */
+      border:none;
       flex-grow: 1;
     }
 
     .tiny{font-size:13px;color:var(--muted); white-space: nowrap;}
     
-    /* Kontrol Loop/Shuffle */
     .smbtn-icon {
       width:38px;
       height:38px;
       background: transparent !important;
       color:var(--muted);
-      font-size: 18px; /* Ukuran ikon loop/shuffle */
+      /* Font size dihapus karena sudah menggunakan SVG */
     }
 
-    /* Gaya Playlist */
     .playlist-card{
       background:var(--card);
       padding:18px;
@@ -122,6 +141,11 @@
 </head>
 <body>
   <div class="wrap">
+
+    <section class="visual-header">
+        <h1>Minna Nihonggo Audio</h1>
+        <div class="meta">87 Track | Pelajaran Tata Bahasa dan Percakapan</div>
+    </section>
     
     <section class="playerCard">
       
@@ -151,8 +175,12 @@
         </div>
 
         <div class="main-nav-group">
-          <button id="loop" class="smbtn smbtn-icon" title="Toggle loop">🔁</button>
-          <button id="shuffle" class="smbtn smbtn-icon" title="Shuffle">🔀</button>
+          <button id="loop" class="smbtn smbtn-icon" title="Toggle loop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 8a2 2 0 0 1 2-2h10.93l-3.65-3.65a.5.5 0 0 1 .707-.707l5.44 5.44a.5.5 0 0 1 0 .707l-5.44 5.44a.5.5 0 0 1-.707-.707l3.65-3.65H2a2 2 0 0 1-2-2z"/></svg>
+          </button>
+          <button id="shuffle" class="smbtn smbtn-icon" title="Shuffle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M12.43 1.25H3.57C1.57 1.25 0 2.82 0 4.82v6.36c0 2 1.57 3.57 3.57 3.57h8.86c2 0 3.57-1.57 3.57-3.57V4.82c0-2-1.57-3.57-3.57-3.57zm-6.14 7.64a.5.5 0 0 1 0-.707l2.828-2.828a.5.5 0 0 1 .707 0l2.828 2.828a.5.5 0 0 1 0 .707l-2.828 2.828a.5.5 0 0 1-.707 0l-2.828-2.828zM3.5 6.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/></svg>
+          </button>
         </div>
       </div>
 
@@ -261,7 +289,6 @@
         const tr = document.createElement('div');
         tr.className = 'track';
         tr.dataset.index = i;
-        // Menampilkan nomor lagu yang dimulai dari 1
         const trackNumber = String(i+1).padStart(2,'0'); 
         tr.innerHTML = `<div class="num">${trackNumber}</div><div class="name">${f}</div>`;
         tr.onclick = ()=>{ playIndex(i); };
@@ -360,6 +387,7 @@
     vol.oninput = ()=>{ audio.volume = parseFloat(vol.value); };
 
     // Warna background loop/shuffle saat aktif (sesuai accent color)
+    // NOTE: Perubahan SVG tidak memengaruhi logika JS ini.
     loopBtn.onclick = ()=>{ isLoop = !isLoop; loopBtn.style.color = isLoop ? 'var(--accent)' : 'var(--muted)'; };
     shuffleBtn.onclick = ()=>{ isShuffle = !isShuffle; shuffleBtn.style.color = isShuffle ? 'var(--accent)' : 'var(--muted)'; };
 
