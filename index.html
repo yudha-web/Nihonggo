@@ -16,8 +16,11 @@
       background:linear-gradient(180deg,#071021 0%, #0b1220 100%); color:var(--main-text);
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
       padding:28px;
+      display: flex; /* Untuk menempatkan footer di bawah */
+      flex-direction: column; /* Untuk menempatkan footer di bawah */
+      min-height: 100vh; /* Agar footer selalu di bawah */
     }
-    .wrap{max-width:500px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:22px}
+    .wrap{max-width:500px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:22px; flex-grow: 1; margin-bottom: 28px;}
     
     /* STYLE UNTUK VISUAL HEADER (Gaya Spotify) */
     .visual-header {
@@ -45,8 +48,6 @@
         padding:18px;
         border-radius: 0 0 12px 12px; /* Sudut tumpul di bawah */
         box-shadow:0 6px 30px rgba(0,0,0,0.6);
-        /* Hapus margin-top negatif karena border-radius akan menyatukan */
-        /* margin-top: -12px; */
         position: relative;
         z-index: 10;
     }
@@ -157,9 +158,6 @@
 
     .tiny{font-size:13px;color:var(--muted); white-space: nowrap;}
     
-    /* Kelas smbtn-icon tidak lagi diperlukan karena smbtn sudah menangani SVG */
-    /* .smbtn-icon { ... } */
-
     .playlist-card{
       background:var(--card);
       padding:18px;
@@ -193,6 +191,15 @@
     .track.active{background:rgba(29,185,84,0.1); color: #fff;}
     .track .num{width:20px;text-align:left;color:var(--muted);font-size:13px; font-weight: 500;}
     .track .name{flex:1;font-size:14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+    /* Styling untuk Footer */
+    footer {
+        text-align: center;
+        margin-top: 20px; /* Jarak dari konten di atasnya */
+        padding: 15px 20px;
+        color: var(--muted);
+        font-size: 12px;
+    }
   </style>
 </head>
 <body>
@@ -215,7 +222,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M12.793 11.207a.5.5 0 0 1 0-.708L14.6 9H10.5a.5.5 0 0 1 0-1h4.102l-1.808-1.499a.5.5 0 0 1 .374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5zM4.35 6.467a4.5 4.5 0 0 0 4.291 3.284 4.673 4.673 0 0 0 3.321-1.341A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H1.359l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 1.556 7.202z"/></svg>
           </button>
           <button id="play" class="bigbtn" title="Play/Pause">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
           </button>
           <button id="ffw" class="smbtn" title="Fast Forward 10s">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M3.207 4.793a.5.5 0 0 1 0 .708L1.4 7H5.5a.5.5 0 0 1 0 1H1.398l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 14.444 8.798l1.4-.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H4.641l-1.808-1.499a.5.5 0 0 1-.374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 14.444 8.798zM11.65 9.533a4.5 4.5 0 0 0-4.291-3.284 4.673 4.673 0 0 0-3.321 1.341A6 6 0 0 0 1.583 8.798l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1H14.641l-1.808-1.499a.5.5 0 0 1-.374-.827z"/></svg>
@@ -279,6 +286,10 @@
   </div>
 
   <audio id="audio" preload="metadata"></audio>
+
+  <footer>
+    &copy; 2023 Yudha. All rights reserved.
+  </footer>
 
   <script>
     // LIST: gunakan nama file persis seperti di repo (sudah kamu upload)
@@ -366,6 +377,7 @@
     }
 
     function setSource(i){
+      current = i; // Pastikan current diperbarui
       const path = encodeURI(files[i]);
       audio.src = path;
       const fileNameWithoutExtension = files[i].replace(/\.mp3$/, '');
@@ -439,25 +451,29 @@
 
     audio.addEventListener('ended', ()=>{
       if(isLoop){ audio.currentTime = 0; audio.play(); return; }
+      
+      let nextIndex;
       if(isShuffle){
-        // Acak order jika belum diacak, lalu pilih dari situ
+        // Acak order jika belum diacak, atau reset jika sudah diurutkan
+        // Pastikan order selalu merupakan array teracak dari indeks files
         if (order.length !== files.length || order.some((val, idx) => val !== idx)) {
-            order = files.map((_, i) => i); // Reset order
+             // Rebuild order from 0 to files.length-1 if it's not a proper shuffled list
+            order = Array.from({length: files.length}, (_, i) => i);
             for (let i = order.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [order[i], order[j]] = [order[j], order[i]];
             }
         }
-        // Cari posisi current track di order yang diacak
+        
+        // Cari indeks saat ini dalam array order yang diacak
         let currentOrderIndex = order.indexOf(current);
-        // Pindah ke track selanjutnya dalam order yang diacak
-        currentOrderIndex = (currentOrderIndex + 1) % order.length;
-        current = order[currentOrderIndex];
+        // Tentukan indeks berikutnya dalam array order
+        nextIndex = order[(currentOrderIndex + 1) % order.length];
 
       } else {
-        current = (current + 1) % files.length;
+        nextIndex = (current + 1) % files.length;
       }
-      setSource(current);
+      setSource(nextIndex);
       audio.play();
     });
 
@@ -473,7 +489,7 @@
       shuffleBtn.classList.toggle('active-control', isShuffle); 
       if (isShuffle) {
         // Ketika shuffle aktif, acak playlist untuk pertama kali
-        order = files.map((_, i) => i);
+        order = Array.from({length: files.length}, (_, i) => i);
         for (let i = order.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [order[i], order[j]] = [order[j], order[i]];
@@ -484,7 +500,17 @@
       }
     };
 
-    playAllBtn.onclick = ()=>{ current = 0; setSource(current); audio.play(); playBtn.innerHTML = pauseIcon; };
+    playAllBtn.onclick = ()=>{ 
+      current = 0; 
+      // Jika shuffle aktif, pastikan track pertama adalah yang pertama di array order yang sudah diacak
+      if (isShuffle) {
+        setSource(order[0]); 
+      } else {
+        setSource(0); 
+      }
+      audio.play(); 
+      playBtn.innerHTML = pauseIcon; 
+    };
 
     function formatTime(sec){
       if(!sec || isNaN(sec)) return '0:00';
@@ -508,6 +534,9 @@
     audio.load();
     // Set ikon Play saat inisialisasi
     playBtn.innerHTML = playIcon; 
+    // Perbarui status tombol loop dan shuffle saat inisialisasi
+    loopBtn.classList.toggle('active-control', isLoop); 
+    shuffleBtn.classList.toggle('active-control', isShuffle);
   </script>
 </body>
 </html>
