@@ -56,13 +56,15 @@
         padding: 0 22px;
     }
     .main-controls-group {
+      /* Tombol Shuffle dan Loop sudah dipindahkan, jadi ini hanya menampung tombol utama */
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 5px;
+      justify-content: center; /* Posisikan tombol utama di tengah */
+      gap: 16px; 
       margin-bottom: 25px;
     }
     .main-controls-center-group { 
+        /* Grup ini dihilangkan/ditinggalkan karena tidak diperlukan lagi, tetapi saya biarkan sebagai container flex */
         display: flex;
         align-items: center;
         gap: 16px;
@@ -153,11 +155,31 @@
     .progress > .bar{height:100%;width:0;background:var(--accent);border-radius:999px}
     .time{display:flex;justify-content:space-between;font-size:12px;color:var(--muted); margin-bottom: 20px;}
     
-    /* Bottom Controls (Speed & Volume) */
+    /* Bottom Controls (Shuffle, Loop, Speed, Volume) */
     .controlsBottom{
-        display:flex; gap:15px; align-items:center; justify-content: space-between; 
-        padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 10px; margin-bottom: 20px; 
+        display:flex; 
+        align-items:center; 
+        justify-content: space-between; 
+        padding-top: 20px; 
+        border-top: 1px solid rgba(255,255,255,0.05); 
+        margin-top: 10px; 
+        margin-bottom: 20px; 
+        flex-wrap: wrap; /* Pastikan tidak terpotong di layar super sempit */
+        gap: 15px;
     }
+    /* Grup Kontrol di Bawah (Shuffle + Loop) */
+    .controlsBottom .auxiliary-controls {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    /* Grup Pengaturan di Bawah (Speed + Volume) */
+    .controlsBottom .settings-group {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
     .controlsBottom .label {
         font-size: 12px;
         color: var(--muted);
@@ -165,23 +187,25 @@
         display: block;
     }
 
-    /* FIX: SPEED DROPDOWN WHITE COLOR */
+    /* FIX: STYLE DROPDOWN SPEED AGAR GELAP */
     #speed {
-        /* Memaksa warna latar belakang gelap dan teks terang */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         background-color: var(--card); 
         color: var(--main-text); 
         border: 1px solid rgba(255,255,255,0.1);
         padding: 5px 10px;
         border-radius: 6px;
-        appearance: none; /* Menghilangkan style default browser */
         cursor: pointer;
     }
     #speed:focus {
         outline: 1px solid var(--accent);
     }
-    /* FIX: VOLUME THUMB SHADOW (Neumorphism) */
+    /* FIX: VOLUME THUMB SHADOW */
     .volume-control input[type="range"]::-webkit-slider-thumb {
         box-shadow: 0 0 0 3px var(--card), 0 0 0 5px var(--shadow-light); 
+        transition: all 0.1s;
     }
     .volume-control input[type="range"]:focus::-webkit-slider-thumb {
         box-shadow: 0 0 0 3px var(--accent); 
@@ -204,7 +228,7 @@
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* FIX: PLAYLIST ITEM RAPI + EQUALIZER */
+    /* FIX: PLAYLIST ITEM RAPI + NOMOR URUT */
     .track {
         display: flex;
         align-items: center;
@@ -220,7 +244,7 @@
         background: rgba(255,255,255,0.05);
     }
     .track .num {
-        width: 30px;
+        width: 30px; 
         font-weight: 300;
         color: var(--muted);
         flex-shrink: 0;
@@ -253,7 +277,7 @@
         flex-shrink: 0;
     }
     .track.active .equalizer-icon {
-        display: flex; /* Hanya tampil saat aktif */
+        display: flex; 
     }
     .equalizer-icon .eq-bar {
         width: 3px;
@@ -304,12 +328,8 @@
       </div>
       
       <div class="player-controls-area">
+        
         <div class="main-controls-group">
-          <button id="shuffle" class="smbtn" title="Shuffle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.43 1.25H3.57C1.57 1.25 0 2.82 0 4.82v6.36c0 2 1.57 3.57 3.57 3.57h8.86c2 0 3.57-1.57 3.57-3.57V4.82c0-2-1.57-3.57-3.57-3.57zm-6.14 7.64a.5.5 0 0 1 0-.707l2.828-2.828a.5.5 0 0 1 .707 0l2.828 2.828a.5.5 0 0 1 0 .707l-2.828 2.828a.5.5 0 0 1-.707 0l-2.828-2.828zM3.5 6.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/></svg>
-          </button>
-          
-          <div class="main-controls-center-group">
             <button id="prev" class="smbtn" title="Previous">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 3.5A.5.5 0 0 1 1 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4-1a.5.5 0 0 1 .5.5v3.146L14.707 9.854a.5.5 0 0 1 .146.353v3.146a.5.5 0 0 1-.724.447l-7-4.5a.5.5 0 0 1-.01-.734l7-4.5A.5.5 0 0 1 14 3.25z"/></svg>
             </button>
@@ -325,10 +345,6 @@
             <button id="next" class="smbtn" title="Next">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M15.5 3.5a.5.5 0 0 1 0 1v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zM11 4.5v7l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V2.846c0-.63.692-1.01 1.233-.696L11 4.5z"/></svg>
             </button>
-          </div>
-          <button id="loop" class="smbtn" title="Toggle loop">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 8a2 2 0 0 1 2-2h10.93l-3.65-3.65a.5.5 0 0 1 .707-.707l5.44 5.44a.5.5 0 0 1 0 .707l-5.44 5.44a.5.5 0 0 1-.707-.707l3.65-3.65H2a2 2 0 0 1-2-2z"/></svg>
-          </button>
         </div>
         
         <div class="track-info">
@@ -353,25 +369,36 @@
         <div class="time"><span id="current">0:00</span><span id="duration">0:00</span></div>
 
         <div class="controlsBottom">
-          <div class="speed-control">
-            <span class="label">Speed</span>
-            <select id="speed">
-              <option value="0.25">0.25×</option>
-              <option value="0.5">0.5×</option>
-              <option value="0.75">0.75×</option>
-              <option value="1.0" selected>1×</option>
-              <option value="1.25">1.25×</option>
-              <option value="1.5">1.5×</option>
-              <option value="1.75">1.75×</option>
-              <option value="2.0">2×</option>
-              <option value="2.5">2.5×</option>
-              <option value="3.0">3×</option>
-            </select>
+          <div class="auxiliary-controls">
+            <button id="shuffle" class="smbtn" title="Shuffle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.43 1.25H3.57C1.57 1.25 0 2.82 0 4.82v6.36c0 2 1.57 3.57 3.57 3.57h8.86c2 0 3.57-1.57 3.57-3.57V4.82c0-2-1.57-3.57-3.57-3.57zm-6.14 7.64a.5.5 0 0 1 0-.707l2.828-2.828a.5.5 0 0 1 .707 0l2.828 2.828a.5.5 0 0 1 0 .707l-2.828 2.828a.5.5 0 0 1-.707 0l-2.828-2.828zM3.5 6.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/></svg>
+            </button>
+            <button id="loop" class="smbtn" title="Toggle loop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 8a2 2 0 0 1 2-2h10.93l-3.65-3.65a.5.5 0 0 1 .707-.707l5.44 5.44a.5.5 0 0 1 0 .707l-5.44 5.44a.5.5 0 0 1-.707-.707l3.65-3.65H2a2 2 0 0 1-2-2z"/></svg>
+            </button>
           </div>
 
-          <div class="volume-control">
-            <span class="label">Volume</span>
-            <input id="vol" type="range" min="0" max="1" step="0.01" value="1">
+          <div class="settings-group">
+            <div class="speed-control">
+              <span class="label">Speed</span>
+              <select id="speed">
+                <option value="0.25">0.25×</option>
+                <option value="0.5">0.5×</option>
+                <option value="0.75">0.75×</option>
+                <option value="1.0" selected>1×</option>
+                <option value="1.25">1.25×</option>
+                <option value="1.5">1.5×</option>
+                <option value="1.75">1.75×</option>
+                <option value="2.0">2×</option>
+                <option value="2.5">2.5×</option>
+                <option value="3.0">3×</option>
+              </select>
+            </div>
+
+            <div class="volume-control">
+              <span class="label">Volume</span>
+              <input id="vol" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
           </div>
         </div>
 
@@ -453,7 +480,7 @@
     let isShuffle = false;
     let order = files.map((_,i)=>i);
 
-    // build playlist UI
+    // build playlist UI (Perbaikan Playlist)
     function buildList(){
       playlistEl.innerHTML = '';
       files.forEach((f,i)=>{
@@ -461,9 +488,10 @@
         tr.className = 'track';
         tr.dataset.index = i;
         const trackNumber = String(i+1).padStart(2,'0'); 
+        // Hapus .mp3 dari nama file
         const fileNameWithoutExtension = f.replace(/\.mp3$/, '');
-        // Tambahkan ikon equalizer ke track
         const equalizerIcon = `<div class="equalizer-icon"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>`;
+        // Pastikan nomor track berada di div dengan class="num"
         tr.innerHTML = `<div class="num">${trackNumber}</div><div class="name">${fileNameWithoutExtension}</div>${equalizerIcon}`;
         tr.onclick = ()=>{ playIndex(i); };
         playlistEl.appendChild(tr);
@@ -495,7 +523,6 @@
       current = i;
       setSource(current);
       audio.play().catch(error => {
-        // Tangani jika pemutaran gagal (misalnya karena belum ada interaksi pengguna atau file tidak ditemukan)
         console.error("Gagal memutar audio:", error);
       });
       isPlaying = true;
@@ -513,7 +540,7 @@
         [...audioVisualizer.querySelectorAll('.bar-item')].forEach(bar => {
             bar.classList.toggle('active', playing);
             if (playing) {
-                bar.style.height = (Math.random() * 8 + 4) + 'px'; // 4px to 12px
+                bar.style.height = (Math.random() * 8 + 4) + 'px';
             } else {
                  bar.style.height = '6px';
             }
@@ -537,6 +564,7 @@
     };
 
     document.getElementById('prev').onclick = ()=>{ 
+        // Jika sudah berjalan lebih dari 3 detik, kembali ke awal lagu, jika tidak, ke lagu sebelumnya
         if (!isNaN(audio.duration) && audio.currentTime > 3) {
             audio.currentTime = 0;
             return;
@@ -570,9 +598,10 @@
         isShuffle = !isShuffle; 
         shuffleBtn.classList.toggle('active-control', isShuffle); 
         if (isShuffle) {
+            order = files.map((_,i)=>i); // Buat ulang array urutan
             shuffleArray(order);
         } else {
-            order = files.map((_,i)=>i);
+            order = files.map((_,i)=>i); // Kembalikan ke urutan normal
         }
     };
 
@@ -592,7 +621,8 @@
     // Audio Events
     audio.addEventListener('ended', ()=>{
         if (isLoop) {
-            return;
+            // Jika loop aktif, audio akan diputar ulang oleh 'audio.loop = true' di JS/Browser
+            return; 
         }
         
         let nextIndex = (current + 1) % files.length;
@@ -602,7 +632,7 @@
             isPlaying = false;
             playBtn.innerHTML = playIcon; 
             updateVisualizer(false);
-            setSource(0);
+            setSource(0); // Kembali ke lagu pertama
             return;
         }
         
