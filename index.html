@@ -55,19 +55,19 @@
         z-index: 10;
         padding: 0 22px;
     }
-    /* KONTROL UTAMA (REVISI: Shuffle/Loop kembali ke sini, lebih kecil) */
     .main-controls-group {
+      /* Tombol Shuffle dan Loop sudah dipindahkan, jadi ini hanya menampung tombol utama */
       display: flex;
       align-items: center;
-      justify-content: space-between; /* Untuk memposisikan semua kontrol dengan rapi */
+      justify-content: center; /* Posisikan tombol utama di tengah */
       gap: 16px; 
       margin-bottom: 25px;
     }
     .main-controls-center-group { 
-        /* Grup khusus untuk 5 tombol di tengah: Prev, Rwd, Play, Ffw, Next */
+        /* Grup ini dihilangkan/ditinggalkan karena tidak diperlukan lagi, tetapi saya biarkan sebagai container flex */
         display: flex;
         align-items: center;
-        gap: 12px; /* Jarak antar tombol tengah lebih rapat */
+        gap: 16px;
     }
 
     /* Tombol Style */
@@ -84,7 +84,6 @@
     .bigbtn svg {width: 28px; height: 28px;}
 
     .smbtn{
-      /* Ukuran tombol kecil standar */
       width:44px; height:44px; border-radius:999px; border:none;
       background:var(--card);
       color:var(--muted);
@@ -93,31 +92,17 @@
       transition: all 0.2s;
       box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light); 
     }
-    
-    /* Tombol Shuffle dan Loop yang diperkecil */
-    .xsbtn{
-        width: 38px; height: 38px; /* Lebih kecil dari smbtn */
-        border-radius: 999px; border: none;
-        background: var(--card);
-        color: var(--muted);
-        cursor: pointer; display: flex; align-items: center; justify-content: center; 
-        flex-shrink: 0; 
-        transition: all 0.2s;
-        box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light); 
-    }
-    .xsbtn svg { width: 18px; height: 18px; } /* Ikon juga diperkecil */
-    
-    /* Hover/Active States */
-    .smbtn:hover, .xsbtn:hover {
+    .smbtn:hover {
         background:var(--glass); 
         color: var(--main-text); 
         box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-light); 
     }
-    .smbtn:active, .xsbtn:active {
+    .smbtn:active {
         box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light); 
         transform: scale(0.98);
     }
-    .smbtn.active-control, .xsbtn.active-control { 
+    .smbtn svg {width: 22px; height: 22px;}
+    .smbtn.active-control { 
         color: var(--accent); 
     }
     
@@ -128,7 +113,6 @@
     } 
     .title{font-weight:600; font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 6px;}
     
-    /* Visualizer - Tidak ada perubahan */
     .audio-visualizer {
         display: flex;
         justify-content: center;
@@ -171,19 +155,28 @@
     .progress > .bar{height:100%;width:0;background:var(--accent);border-radius:999px}
     .time{display:flex;justify-content:space-between;font-size:12px;color:var(--muted); margin-bottom: 20px;}
     
-    /* Bottom Controls (Hanya Speed dan Volume) - REVISI MINIMALIS */
+    /* Bottom Controls (Shuffle, Loop, Speed, Volume) */
     .controlsBottom{
         display:flex; 
         align-items:center; 
         justify-content: space-between; 
         padding-top: 20px; 
+        border-top: 1px solid rgba(255,255,255,0.05); 
         margin-top: 10px; 
-        margin-bottom: 10px; 
+        margin-bottom: 20px; 
+        flex-wrap: wrap; /* Pastikan tidak terpotong di layar super sempit */
+        gap: 15px;
     }
-    
-    .controlsBottom .setting-item {
+    /* Grup Kontrol di Bawah (Shuffle + Loop) */
+    .controlsBottom .auxiliary-controls {
         display: flex;
-        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    /* Grup Pengaturan di Bawah (Speed + Volume) */
+    .controlsBottom .settings-group {
+        display: flex;
+        gap: 20px;
         align-items: center;
     }
 
@@ -192,10 +185,9 @@
         color: var(--muted);
         margin-bottom: 5px;
         display: block;
-        text-align: center;
     }
 
-    /* FIX: STYLE DROPDOWN SPEED */
+    /* FIX: STYLE DROPDOWN SPEED AGAR GELAP */
     #speed {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -206,18 +198,107 @@
         padding: 5px 10px;
         border-radius: 6px;
         cursor: pointer;
+    }
+    #speed:focus {
+        outline: 1px solid var(--accent);
+    }
+    /* FIX: VOLUME THUMB SHADOW */
+    .volume-control input[type="range"]::-webkit-slider-thumb {
+        box-shadow: 0 0 0 3px var(--card), 0 0 0 5px var(--shadow-light); 
+        transition: all 0.1s;
+    }
+    .volume-control input[type="range"]:focus::-webkit-slider-thumb {
+        box-shadow: 0 0 0 3px var(--accent); 
+    }
+
+
+    /*=== PLAYLIST CARD ===*/
+    .playlist-card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light); 
+    }
+    .playlist-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* FIX: PLAYLIST ITEM RAPI + NOMOR URUT */
+    .track {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
         font-size: 14px;
-        min-width: 65px;
-        text-align: center;
+        line-height: 1.2;
     }
-    /* FIX: VOLUME INPUT */
-    .volume-control input[type="range"] {
-        width: 120px; /* Lebar slider yang lebih wajar di HP */
+    .track:hover {
+        background: rgba(255,255,255,0.05);
     }
-    /* ... volume styling lainnya tetap ... */
+    .track .num {
+        width: 30px; 
+        font-weight: 300;
+        color: var(--muted);
+        flex-shrink: 0;
+    }
+    .track .name {
+        flex-grow: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 10px;
+    }
+    .track.active{
+        background:rgba(29,185,84,0.1); 
+        color: #fff; 
+        font-weight: 500;
+    }
+    .track.active .num {
+        color: var(--accent);
+        font-weight: 500;
+    }
+
+    /* Equalizer Icon di Playlist */
+    .equalizer-icon {
+        display: none; 
+        width: 15px;
+        height: 15px;
+        align-items: flex-end;
+        gap: 2px;
+        margin-left: 10px;
+        flex-shrink: 0;
+    }
+    .track.active .equalizer-icon {
+        display: flex; 
+    }
+    .equalizer-icon .eq-bar {
+        width: 3px;
+        background-color: var(--accent);
+        border-radius: 1px;
+        animation: eq-animate 1.2s ease-in-out infinite alternate;
+    }
+    .equalizer-icon .eq-bar:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .equalizer-icon .eq-bar:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    @keyframes eq-animate {
+        0% { height: 3px; }
+        50% { height: 12px; }
+        100% { height: 3px; }
+    }
     
     /* FOOTER/COPYRIGHT */
-    .copyright-area {
+    .main-player-card .copyright {
         text-align: center;
         padding-top: 15px; 
         border-top: 1px solid rgba(255,255,255,0.03); 
@@ -235,15 +316,6 @@
     .instagram-link a:hover {
         color: var(--accent);
     }
-    
-    /*=== PLAYLIST CARD === (Tidak ada perubahan) */
-    .playlist-card{
-      background:var(--card);
-      padding:18px;
-      border-radius:12px;
-      box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light); 
-    }
-    /* ... playlist item styling lainnya tetap ... */
   </style>
 </head>
 <body>
@@ -258,30 +330,20 @@
       <div class="player-controls-area">
         
         <div class="main-controls-group">
-            <button id="shuffle" class="xsbtn" title="Shuffle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.43 1.25H3.57C1.57 1.25 0 2.82 0 4.82v6.36c0 2 1.57 3.57 3.57 3.57h8.86c2 0 3.57-1.57 3.57-3.57V4.82c0-2-1.57-3.57-3.57-3.57zm-6.14 7.64a.5.5 0 0 1 0-.707l2.828-2.828a.5.5 0 0 1 .707 0l2.828 2.828a.5.5 0 0 1 0 .707l-2.828 2.828a.5.5 0 0 1-.707 0l-2.828-2.828zM3.5 6.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/></svg>
+            <button id="prev" class="smbtn" title="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 3.5A.5.5 0 0 1 1 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4-1a.5.5 0 0 1 .5.5v3.146L14.707 9.854a.5.5 0 0 1 .146.353v3.146a.5.5 0 0 1-.724.447l-7-4.5a.5.5 0 0 1-.01-.734l7-4.5A.5.5 0 0 1 14 3.25z"/></svg>
             </button>
-            
-            <div class="main-controls-center-group">
-                <button id="prev" class="smbtn" title="Previous">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 3.5A.5.5 0 0 1 1 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4-1a.5.5 0 0 1 .5.5v3.146L14.707 9.854a.5.5 0 0 1 .146.353v3.146a.5.5 0 0 1-.724.447l-7-4.5a.5.5 0 0 1-.01-.734l7-4.5A.5.5 0 0 1 14 3.25z"/></svg>
-                </button>
-                <button id="rwd" class="smbtn" title="Rewind 10s">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/></svg>
-                </button>
-                <button id="play" class="bigbtn" title="Play/Pause">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
-                </button>
-                <button id="ffw" class="smbtn" title="Fast Forward 10s">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
-                </button>
-                <button id="next" class="smbtn" title="Next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M15.5 3.5a.5.5 0 0 1 0 1v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zM11 4.5v7l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V2.846c0-.63.692-1.01 1.233-.696L11 4.5z"/></svg>
-                </button>
-            </div>
-            
-            <button id="loop" class="xsbtn" title="Toggle loop">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 8a2 2 0 0 1 2-2h10.93l-3.65-3.65a.5.5 0 0 1 .707-.707l5.44 5.44a.5.5 0 0 1 0 .707l-5.44 5.44a.5.5 0 0 1-.707-.707l3.65-3.65H2a2 2 0 0 1-2-2z"/></svg>
+            <button id="rwd" class="smbtn" title="Rewind 10s">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.793 11.207a.5.5 0 0 1 0-.708L14.6 9H10.5a.5.5 0 0 1 0-1h4.102l-1.808-1.499a.5.5 0 0 1 .374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5zM4.35 6.467a4.5 4.5 0 0 0 4.291 3.284 4.673 4.673 0 0 0 3.321-1.341A6 6 0 0 0 1.556 7.202l-1.4.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H1.359l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 1.556 7.202z"/></svg>
+            </button>
+            <button id="play" class="bigbtn" title="Play/Pause">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+            </button>
+            <button id="ffw" class="smbtn" title="Fast Forward 10s">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M3.207 4.793a.5.5 0 0 1 0 .708L1.4 7H5.5a.5.5 0 0 1 0 1H1.398l1.808 1.499a.5.5 0 0 1-.374.827 4.5 4.5 0 0 0 4.502 3.878 4.673 4.673 0 0 0 3.321-1.34A6 6 0 0 0 14.444 8.798l1.4-.7A7 7 0 0 1 8 16a7 7 0 0 1-6.841-5.485l-1.096.949A.5.5 0 0 1 0 10.5v-5A.5.5 0 0 1 .5 5.5h5a.5.5 0 0 1 0 1H4.641l-1.808-1.499a.5.5 0 0 1-.374-.827 4.5 4.5 0 0 0-4.502-3.878 4.673 4.673 0 0 0-3.321 1.34A6 6 0 0 0 14.444 8.798zM11.65 9.533a4.5 4.5 0 0 0-4.291-3.284 4.673 4.673 0 0 0-3.321 1.341A6 6 0 0 0 1.583 8.798l-1.4.7A7 7 0 0 1 8 0a7 7 0 0 1 6.841 5.485l1.096-.949A.5.5 0 0 1 16 5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1H14.641l-1.808-1.499a.5.5 0 0 1-.374-.827z"/></svg>
+            </button>
+            <button id="next" class="smbtn" title="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M15.5 3.5a.5.5 0 0 1 0 1v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zM11 4.5v7l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V2.846c0-.63.692-1.01 1.233-.696L11 4.5z"/></svg>
             </button>
         </div>
         
@@ -307,41 +369,51 @@
         <div class="time"><span id="current">0:00</span><span id="duration">0:00</span></div>
 
         <div class="controlsBottom">
-          <div class="setting-item speed-control">
-            <span class="label">Kecepatan</span>
-            <select id="speed">
-              <option value="0.25">0.25×</option>
-              <option value="0.5">0.5×</option>
-              <option value="0.75">0.75×</option>
-              <option value="1.0" selected>1×</option>
-              <option value="1.25">1.25×</option>
-              <option value="1.5">1.5×</option>
-              <option value="1.75">1.75×</option>
-              <option value="2.0">2×</option>
-              <option value="2.5">2.5×</option>
-              <option value="3.0">3×</option>
-            </select>
+          <div class="auxiliary-controls">
+            <button id="shuffle" class="smbtn" title="Shuffle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.43 1.25H3.57C1.57 1.25 0 2.82 0 4.82v6.36c0 2 1.57 3.57 3.57 3.57h8.86c2 0 3.57-1.57 3.57-3.57V4.82c0-2-1.57-3.57-3.57-3.57zm-6.14 7.64a.5.5 0 0 1 0-.707l2.828-2.828a.5.5 0 0 1 .707 0l2.828 2.828a.5.5 0 0 1 0 .707l-2.828 2.828a.5.5 0 0 1-.707 0l-2.828-2.828zM3.5 6.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/></svg>
+            </button>
+            <button id="loop" class="smbtn" title="Toggle loop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 8a2 2 0 0 1 2-2h10.93l-3.65-3.65a.5.5 0 0 1 .707-.707l5.44 5.44a.5.5 0 0 1 0 .707l-5.44 5.44a.5.5 0 0 1-.707-.707l3.65-3.65H2a2 2 0 0 1-2-2z"/></svg>
+            </button>
           </div>
 
-          <div class="setting-item volume-control">
-            <span class="label">Volume</span>
-            <input id="vol" type="range" min="0" max="1" step="0.01" value="1">
-          </div>
-        </div>
-        
-        <div class="copyright-area">
-          &copy; 2025 Yudha. All rights reserved.
-          <div class="instagram-link">
-              <a href="https://www.instagram.com/isal_yud" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.269.087 3.85.048 4.703.01 5.555 0 5.827 0 8s.01 2.444.048 3.297c.04.852.174 1.433.372 1.942.205.526.478.96.923 1.417.444.445.877.718 1.417.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372a3.927 3.927 0 0 0 1.417-.923c.445-.444.718-.877.923-1.417.198-.51.333-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.444-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.917 3.917 0 0 0-.923-1.417A3.927 3.927 0 0 0 13.24 0.42c-.51-.198-1.09-.333-1.942-.372C10.445.01 10.173 0 8 0zm0 2.16c2.115 0 2.385.008 3.232.046.78.035 1.204.166 1.486.275.373.145.64.318.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.038.843.046 1.113.046 3.233 0 2.115-.008 2.385-.046 3.232-.035.78-.166 1.204-.275 1.486a2.59 2.59 0 0 1-.599.92c-.28.28-.546.453-.92.598-.281.11-.705.24-1.485.275-.843.038-1.113.046-3.233.046-2.115 0-2.385-.008-3.232-.046-.78-.035-1.204-.166-1.486-.275a2.59 2.59 0 0 1-.92-.599c-.28-.28-.546-.453-.598-.92-.11-.281-.24-.705-.275-1.485C2.16 10.445 2.152 10.173 2.152 8s.008-2.444.046-3.297c.035-.78.166-1.204.275-1.486.145-.373.318-.64.599-.92.28-.28.546-.453.598-.92.11-.281.24-.705.275-1.485C5.555 2.16 5.827 2.152 8 2.152zm0 3.654a4.111 4.111 0 1 0 0 8.222 4.111 4.111 0 0 0 0-8.222zM8 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5.725-4.522a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
-                  </svg>
-                  isal_yud
-              </a>
+          <div class="settings-group">
+            <div class="speed-control">
+              <span class="label">Speed</span>
+              <select id="speed">
+                <option value="0.25">0.25×</option>
+                <option value="0.5">0.5×</option>
+                <option value="0.75">0.75×</option>
+                <option value="1.0" selected>1×</option>
+                <option value="1.25">1.25×</option>
+                <option value="1.5">1.5×</option>
+                <option value="1.75">1.75×</option>
+                <option value="2.0">2×</option>
+                <option value="2.5">2.5×</option>
+                <option value="3.0">3×</option>
+              </select>
+            </div>
+
+            <div class="volume-control">
+              <span class="label">Volume</span>
+              <input id="vol" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
           </div>
         </div>
 
       </div> 
+      <div class="copyright">
+        &copy; 2025 Yudha. All rights reserved.
+        <div class="instagram-link">
+            <a href="https://www.instagram.com/isal_yud" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.269.087 3.85.048 4.703.01 5.555 0 5.827 0 8s.01 2.444.048 3.297c.04.852.174 1.433.372 1.942.205.526.478.96.923 1.417.444.445.877.718 1.417.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372a3.927 3.927 0 0 0 1.417-.923c.445-.444.718-.877.923-1.417.198-.51.333-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.444-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.917 3.917 0 0 0-.923-1.417A3.927 3.927 0 0 0 13.24 0.42c-.51-.198-1.09-.333-1.942-.372C10.445.01 10.173 0 8 0zm0 2.16c2.115 0 2.385.008 3.232.046.78.035 1.204.166 1.486.275.373.145.64.318.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.038.843.046 1.113.046 3.233 0 2.115-.008 2.385-.046 3.232-.035.78-.166 1.204-.275 1.486a2.59 2.59 0 0 1-.599.92c-.28.28-.546.453-.92.598-.281.11-.705.24-1.485.275-.843.038-1.113.046-3.233.046-2.115 0-2.385-.008-3.232-.046-.78-.035-1.204-.166-1.486-.275a2.59 2.59 0 0 1-.92-.599c-.28-.28-.546-.453-.598-.92-.11-.281-.24-.705-.275-1.485C2.16 10.445 2.152 10.173 2.152 8s.008-2.444.046-3.297c.035-.78.166-1.204.275-1.486.145-.373.318-.64.599-.92.28-.28.546-.453.598-.92.11-.281.24-.705.275-1.485C5.555 2.16 5.827 2.152 8 2.152zm0 3.654a4.111 4.111 0 1 0 0 8.222 4.111 4.111 0 0 0 0-8.222zM8 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5.725-4.522a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
+                </svg>
+                isal_yud
+            </a>
+        </div>
+      </div>
     </section>
 
     <aside class="playlist-card">
@@ -504,7 +576,6 @@
         current = (current + 1) % files.length; 
         playIndex(current); 
     };
-    // REVISI: Tetap 10 detik, tetapi ikon panah lebih minimalis
     document.getElementById('rwd').onclick = ()=>{ if (!isNaN(audio.duration)) { audio.currentTime = Math.max(audio.currentTime - 10, 0); } };
     document.getElementById('ffw').onclick = ()=>{ if (!isNaN(audio.duration)) { audio.currentTime = Math.min(audio.currentTime + 10, audio.duration); } };
     document.getElementById('playAll').onclick = ()=>{ playIndex(isShuffle ? order[0] : 0); playBtn.innerHTML = pauseIcon; updateVisualizer(true);};
@@ -517,7 +588,7 @@
         }
     }
     
-    // Shuffle/Loop clicks
+    // Re-bind shuffle/loop clicks
     loopBtn.onclick = ()=>{ 
         isLoop = !isLoop; 
         loopBtn.classList.toggle('active-control', isLoop); 
