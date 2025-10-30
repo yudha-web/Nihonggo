@@ -335,13 +335,23 @@
       <div class="player-controls-area">
 
         <div class="main-controls-group">
-            <button id="prev" class="smbtn" title="Previous/Rewind">
+            <button id="prev" class="smbtn" title="Previous Track">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 3.5A.5.5 0 0 1 1 4v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4-1a.5.5 0 0 1 .5.5v3.146L14.707 9.854a.5.5 0 0 1 .146.353v3.146a.5.5 0 0 1-.724.447l-7-4.5a.5.5 0 0 1-.01-.734l7-4.5A.5.5 0 0 1 14 3.25z"/></svg>
             </button>
+
+            <button id="rwd" class="smbtn" title="Rewind 10s">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M10.828 2.5a.5.5 0 0 0-1 0V3h-5V2.5a.5.5 0 0 0-1 0V6a.5.5 0 0 0 .5.5h5V6H5v-2h4.5v2.5a.5.5 0 0 0 1 0v-5z"/><path d="M5 6.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5zm10-5.5a.5.5 0 0 0 0 1h-2a.5.5 0 0 0 0-1h2z"/><path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm.5-4a.5.5 0 0 1 .5.5v1.793l.854.853a.5.5 0 0 1-.708.707L7.5 10.707V8.5a.5.5 0 0 1 .5-.5z"/></svg>
+            </button>
+
             <button id="play" class="bigbtn" title="Play/Pause">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
             </button>
-            <button id="next" class="smbtn" title="Next">
+
+            <button id="ffw" class="smbtn" title="Forward 10s">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M5.172 13.5a.5.5 0 0 0 1 0V13h5v.5a.5.5 0 0 0 1 0V10a.5.5 0 0 0-.5-.5h-5V10h5v-2.5a.5.5 0 0 0-1 0V7H5.5a.5.5 0 0 0-.5.5v5.5z"/><path d="M1 13.5a.5.5 0 0 0 0-1h2a.5.5 0 0 0 0 1H1z"/><path d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-.5 4a.5.5 0 0 1 .5-.5h1.793l.853-.854a.5.5 0 1 1 .708.708L10.707 9.5H8.5a.5.5 0 0 1-.5-.5z"/></svg>
+            </button>
+
+            <button id="next" class="smbtn" title="Next Track">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M15.5 3.5a.5.5 0 0 1 0 1v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zM11 4.5v7l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V2.846c0-.63.692-1.01 1.233-.696L11 4.5z"/></svg>
             </button>
         </div>
@@ -467,6 +477,9 @@
     const shuffleBtn = document.getElementById('shuffle');
     const playlistEl = document.getElementById('playlist');
     const audioVisualizer = document.getElementById('audioVisualizer');
+    // Tambahan elemen tombol rwd/ffw
+    const rwdBtn = document.getElementById('rwd');
+    const ffwBtn = document.getElementById('ffw');
 
     // state
     let current = 0;
@@ -555,20 +568,32 @@
       updateVisualizer(isPlaying);
     };
 
+    // Tombol Previous Track
     document.getElementById('prev').onclick = ()=>{ 
-        // Jika sudah berjalan lebih dari 3 detik, kembali ke awal lagu, jika tidak, ke lagu sebelumnya
-        if (!isNaN(audio.duration) && audio.currentTime > 3) {
-            audio.currentTime = 0;
-            return;
-        }
         current = (current - 1 + files.length) % files.length; 
         playIndex(current); 
     };
+
+    // Tombol Rewind 10s
+    rwdBtn.onclick = ()=>{ 
+        if (!isNaN(audio.duration)) {
+            audio.currentTime = Math.max(0, audio.currentTime - 10);
+        }
+    };
+    
+    // Tombol Forward 10s
+    ffwBtn.onclick = ()=>{ 
+        if (!isNaN(audio.duration)) {
+            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+        }
+    };
+    
+    // Tombol Next Track
     document.getElementById('next').onclick = ()=>{ 
         current = (current + 1) % files.length; 
         playIndex(current); 
     };
-    // Tombol rwd/ffw 10s dihilangkan dari HTML
+
     document.getElementById('playAll').onclick = ()=>{ playIndex(isShuffle ? order[0] : 0); playBtn.innerHTML = pauseIcon; updateVisualizer(true);};
 
     // Fungsi tambahan untuk menangani shuffle
