@@ -359,7 +359,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M12.5 3.25L5.75 8l6.75 4.75V3.25zM3.25 12.75V3.25h1.5v9.5h-1.5z"/></svg>
             </button>
 
-            <button id="rwd" class="smbtn" title="Rewind 10s">
+            <button id="rwd" class="smbtn" title="Rewind 5s">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M10.828 2.5a.5.5 0 0 0-1 0V3h-5V2.5a.5.5 0 0 0-1 0V6a.5.5 0 0 0 .5.5h5V6H5v-2h4.5v2.5a.5.5 0 0 0 1 0v-5z"/><path d="M5 6.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5zm10-5.5a.5.5 0 0 0 0 1h-2a.5.5 0 0 0 0-1h2z"/><path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm.5-4a.5.5 0 0 1 .5.5v1.793l.854.853a.5.5 0 0 1-.708.707L7.5 10.707V8.5a.5.5 0 0 1 .5-.5z"/></svg>
             </button>
 
@@ -367,7 +367,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 16 16"><path d="M10.824 8.697l-6.363 3.692C4.015 12.607 3 12.185 3 11.231V4.769c0-.954 1.015-1.376 1.46-.867l6.363 3.692a1.002 1.002 0 0 1 0 1.393z"/></svg>
             </button>
 
-            <button id="ffw" class="smbtn" title="Forward 10s">
+            <button id="ffw" class="smbtn" title="Forward 5s">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M5.172 13.5a.5.5 0 0 0 1 0V13h5v.5a.5.5 0 0 0 1 0V10a.5.5 0 0 0-.5-.5h-5V10h5v-2.5a.5.5 0 0 0-1 0V7H5.5a.5.5 0 0 0-.5.5v5.5z"/><path d="M1 13.5a.5.5 0 0 0 0-1h2a.5.5 0 0 0 0 1H1z"/><path d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-.5 4a.5.5 0 0 1 .5-.5h1.793l.853-.854a.5.5 0 1 1 .708.708L10.707 9.5H8.5a.5.5 0 0 1-.5-.5z"/></svg>
             </button>
 
@@ -697,16 +697,21 @@
         currentOrderIndex = (currentOrderIndex + 1) % files.length;
         playIndex(order[currentOrderIndex]);
     };
+    
+    // PERUBAHAN UTAMA DI SINI (rwd dan ffw):
     rwdBtn.onclick = ()=>{ 
         if (!isNaN(audio.duration)) {
-            audio.currentTime = Math.max(0, audio.currentTime - 10);
+            // Mundur 5 detik
+            audio.currentTime = Math.max(0, audio.currentTime - 5); 
         }
     };
     ffwBtn.onclick = ()=>{ 
         if (!isNaN(audio.duration)) {
-            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+            // Maju 5 detik
+            audio.currentTime = Math.min(audio.duration, audio.currentTime + 5);
         }
     };
+    
     document.getElementById('playAll').onclick = ()=>{ 
       // Saat Play All, selalu mulai dari indeks 0 di array order saat ini
       currentOrderIndex = 0;
