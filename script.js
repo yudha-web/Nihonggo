@@ -92,12 +92,6 @@ const files = [
 
 ];
 
-
-
-// =======================
-// ELEMENT
-// =======================
-
 const audio =
 document.getElementById("audio");
 
@@ -113,15 +107,18 @@ document.getElementById("bar");
 const playlist =
 document.getElementById("playlist");
 
-// =======================
-// STATE
-// =======================
+const current =
+document.getElementById("current");
+
+const duration =
+document.getElementById("duration");
+
+const progress =
+document.querySelector(".progress");
 
 let index = 0;
 
-// =======================
-// LOAD AUDIO
-// =======================
+/* LOAD */
 
 function load(i){
 
@@ -136,9 +133,7 @@ function load(i){
   highlight();
 }
 
-// =======================
-// PLAY / PAUSE
-// =======================
+/* PLAY */
 
 function toggle(){
 
@@ -152,10 +147,6 @@ function toggle(){
   }
 }
 
-// =======================
-// PLAY ICON
-// =======================
-
 audio.onplay = ()=>{
 
   play.textContent = "⏸";
@@ -166,9 +157,7 @@ audio.onpause = ()=>{
   play.textContent = "▶";
 };
 
-// =======================
-// NEXT
-// =======================
+/* NEXT */
 
 function next(){
 
@@ -184,9 +173,7 @@ function next(){
   audio.play();
 }
 
-// =======================
-// PREV
-// =======================
+/* PREV */
 
 function prev(){
 
@@ -203,18 +190,7 @@ function prev(){
   audio.play();
 }
 
-// =======================
-// AUTO NEXT
-// =======================
-
-audio.onended = ()=>{
-
-  next();
-};
-
-// =======================
-// PROGRESS BAR
-// =======================
+/* TIME UPDATE */
 
 audio.addEventListener(
 "timeupdate",
@@ -230,18 +206,71 @@ audio.addEventListener(
 
   bar.style.width =
   p + "%";
+
+  // CURRENT
+
+  let cmin =
+  Math.floor(
+  audio.currentTime / 60
+  );
+
+  let csec =
+  Math.floor(
+  audio.currentTime % 60
+  );
+
+  if(csec < 10){
+
+    csec =
+    "0" + csec;
+  }
+
+  current.textContent =
+  cmin + ":" + csec;
+
+  // DURATION
+
+  let dmin =
+  Math.floor(
+  audio.duration / 60
+  );
+
+  let dsec =
+  Math.floor(
+  audio.duration % 60
+  );
+
+  if(dsec < 10){
+
+    dsec =
+    "0" + dsec;
+  }
+
+  duration.textContent =
+  dmin + ":" + dsec;
 });
 
-// =======================
-// SKIP 5 DETIK
-// =======================
+/* SEEK */
 
-document
-.getElementById("rwd")
-.onclick = ()=>{
+progress.addEventListener(
+"click",
+(e)=>{
 
-  audio.currentTime -= 5;
-};
+  let width =
+  progress.clientWidth;
+
+  let clickX =
+  e.offsetX;
+
+  let duration =
+  audio.duration;
+
+  audio.currentTime =
+  (clickX / width)
+  * duration;
+});
+
+/* SKIP */
 
 document
 .getElementById("ffw")
@@ -250,9 +279,14 @@ document
   audio.currentTime += 5;
 };
 
-// =======================
-// BUTTON EVENT
-// =======================
+document
+.getElementById("rwd")
+.onclick = ()=>{
+
+  audio.currentTime -= 5;
+};
+
+/* BUTTON */
 
 play.onclick = toggle;
 
@@ -264,9 +298,7 @@ document
 .getElementById("prev")
 .onclick = prev;
 
-// =======================
-// PLAYLIST
-// =======================
+/* PLAYLIST */
 
 files.forEach((f,i)=>{
 
@@ -276,11 +308,7 @@ files.forEach((f,i)=>{
   div.className =
   "track";
 
-  div.textContent =
-  f;
-
-  div.dataset.i =
-  i;
+  div.textContent = f;
 
   div.onclick = ()=>{
 
@@ -289,38 +317,42 @@ files.forEach((f,i)=>{
     audio.play();
   };
 
+  div.dataset.i = i;
+
   playlist.appendChild(div);
 });
 
-// =======================
-// ACTIVE TRACK
-// =======================
+/* HIGHLIGHT */
 
 function highlight(){
 
   document
   .querySelectorAll(".track")
-  .forEach(e=>{
-
-    e.classList
-    .remove("active");
-  });
+  .forEach(e=>
+    e.classList.remove(
+    "active"
+  ));
 
   let el =
-
   document.querySelector(
   `[data-i="${index}"]`
   );
 
   if(el){
 
-    el.classList
-    .add("active");
+    el.classList.add(
+    "active"
+    );
   }
 }
 
-// =======================
-// START
-// =======================
+/* AUTO NEXT */
+
+audio.onended = ()=>{
+
+  next();
+};
+
+/* INIT */
 
 load(0);
