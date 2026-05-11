@@ -92,6 +92,12 @@ const files = [
 
 ];
 
+
+
+// =======================
+// ELEMENT
+// =======================
+
 const audio =
 document.getElementById("audio");
 
@@ -107,7 +113,15 @@ document.getElementById("bar");
 const playlist =
 document.getElementById("playlist");
 
+// =======================
+// STATE
+// =======================
+
 let index = 0;
+
+// =======================
+// LOAD AUDIO
+// =======================
 
 function load(i){
 
@@ -118,7 +132,13 @@ function load(i){
 
   title.textContent =
   files[i];
+
+  highlight();
 }
+
+// =======================
+// PLAY / PAUSE
+// =======================
 
 function toggle(){
 
@@ -132,6 +152,10 @@ function toggle(){
   }
 }
 
+// =======================
+// PLAY ICON
+// =======================
+
 audio.onplay = ()=>{
 
   play.textContent = "⏸";
@@ -141,6 +165,10 @@ audio.onpause = ()=>{
 
   play.textContent = "▶";
 };
+
+// =======================
+// NEXT
+// =======================
 
 function next(){
 
@@ -155,6 +183,10 @@ function next(){
 
   audio.play();
 }
+
+// =======================
+// PREV
+// =======================
 
 function prev(){
 
@@ -171,18 +203,56 @@ function prev(){
   audio.play();
 }
 
+// =======================
+// AUTO NEXT
+// =======================
+
+audio.onended = ()=>{
+
+  next();
+};
+
+// =======================
+// PROGRESS BAR
+// =======================
+
 audio.addEventListener(
 "timeupdate",
 ()=>{
 
   let p =
-  (audio.currentTime
-  /audio.duration)
-  *100;
+
+  (
+    audio.currentTime
+    /
+    audio.duration
+  ) * 100;
 
   bar.style.width =
   p + "%";
 });
+
+// =======================
+// SKIP 5 DETIK
+// =======================
+
+document
+.getElementById("rwd")
+.onclick = ()=>{
+
+  audio.currentTime -= 5;
+};
+
+document
+.getElementById("ffw")
+.onclick = ()=>{
+
+  audio.currentTime += 5;
+};
+
+// =======================
+// BUTTON EVENT
+// =======================
 
 play.onclick = toggle;
 
@@ -194,6 +264,10 @@ document
 .getElementById("prev")
 .onclick = prev;
 
+// =======================
+// PLAYLIST
+// =======================
+
 files.forEach((f,i)=>{
 
   let div =
@@ -202,7 +276,11 @@ files.forEach((f,i)=>{
   div.className =
   "track";
 
-  div.textContent = f;
+  div.textContent =
+  f;
+
+  div.dataset.i =
+  i;
 
   div.onclick = ()=>{
 
@@ -213,5 +291,36 @@ files.forEach((f,i)=>{
 
   playlist.appendChild(div);
 });
+
+// =======================
+// ACTIVE TRACK
+// =======================
+
+function highlight(){
+
+  document
+  .querySelectorAll(".track")
+  .forEach(e=>{
+
+    e.classList
+    .remove("active");
+  });
+
+  let el =
+
+  document.querySelector(
+  `[data-i="${index}"]`
+  );
+
+  if(el){
+
+    el.classList
+    .add("active");
+  }
+}
+
+// =======================
+// START
+// =======================
 
 load(0);
