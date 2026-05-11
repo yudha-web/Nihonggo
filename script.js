@@ -1,5 +1,4 @@
 const files = [
-
 "01 Dai 1 Ka - Kaiwa.mp3",
 "02 Dai 1 Ka - Mondai 1.mp3",
 "03 Dai 1 Ka - Mondai 2.mp3",
@@ -88,347 +87,127 @@ const files = [
 "86 Dai 25 Ka - Mondai 1.mp3",
 "87 Dai 25 Ka - Mondai 2.mp3",
 "88 Juned.mp3",
-"89 Yanto.mp3",
-
+"89 Yanto.mp3"
 ];
 
-const audio =
-document.getElementById("audio");
-
-const play =
-document.getElementById("play");
-
-const title =
-document.getElementById("title");
-
-const bar =
-document.getElementById("bar");
-
-const playlist =
-document.getElementById("playlist");
-
-const current =
-document.getElementById("current");
-
-const duration =
-document.getElementById("duration");
-
-const progress =
-document.querySelector(".progress");
+// ELEMENT
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("play");
+const title = document.getElementById("title");
+const bar = document.getElementById("bar");
+const progress = document.getElementById("progress");
+const playlist = document.getElementById("playlist");
+const miniTitle = document.getElementById("mini-title");
+const miniPlay = document.getElementById("mini-play");
+const currentTimeEl = document.getElementById("current");
+const durationEl = document.getElementById("duration");
 
 let index = 0;
+let isPlaying = false;
 
-/* LOAD */
-
+// LOAD SONG
 function load(i){
-
   index = i;
 
-  audio.src =
-  "audio/" + files[i];
+  audio.src = "audio/" + files[i];
+  title.textContent = files[i];
+  miniTitle.textContent = files[i];
 
-  title.textContent =
-  files[i];
-
-  highlight();
+  updateActive();
 }
 
-/* PLAY */
-
+// PLAY / PAUSE
 function toggle(){
-
   if(audio.paused){
-
     audio.play();
-
-  }else{
-
+  } else {
     audio.pause();
   }
 }
 
-audio.onplay = ()=>{
-
-  play.textContent = "⏸";
+audio.onplay = () => {
+  isPlaying = true;
+  playBtn.textContent = "⏸";
+  miniPlay.textContent = "⏸";
 };
 
-audio.onpause = ()=>{
-
-  play.textContent = "▶";
+audio.onpause = () => {
+  isPlaying = false;
+  playBtn.textContent = "▶";
+  miniPlay.textContent = "▶";
 };
 
-/* NEXT */
-
+// NEXT
 function next(){
-
   index++;
-
-  if(index >= files.length){
-
-    index = 0;
-  }
-
+  if(index >= files.length) index = 0;
   load(index);
-
   audio.play();
 }
 
-/* PREV */
-
+// PREV
 function prev(){
-
   index--;
-
-  if(index < 0){
-
-    index =
-    files.length - 1;
-  }
-
+  if(index < 0) index = files.length - 1;
   load(index);
-
   audio.play();
 }
 
-/* TIME UPDATE */
+// PROGRESS UPDATE
+audio.addEventListener("timeupdate", () => {
+  if(!audio.duration) return;
 
-audio.addEventListener(
-"timeupdate",
-()=>{
+  let percent = (audio.currentTime / audio.duration) * 100;
+  bar.style.width = percent + "%";
 
-  let p =
-
-  (
-    audio.currentTime
-    /
-    audio.duration
-  ) * 100;
-
-  bar.style.width =
-  p + "%";
-
-  // CURRENT
-
-  let cmin =
-  Math.floor(
-  audio.currentTime / 60
-  );
-
-  let csec =
-  Math.floor(
-  audio.currentTime % 60
-  );
-
-  if(csec < 10){
-
-    csec =
-    "0" + csec;
-  }
-
-  current.textContent =
-  cmin + ":" + csec;
-
-  // DURATION
-
-  let dmin =
-  Math.floor(
-  audio.duration / 60
-  );
-
-  let dsec =
-  Math.floor(
-  audio.duration % 60
-  );
-
-  if(dsec < 10){
-
-    dsec =
-    "0" + dsec;
-  }
-
-  duration.textContent =
-  dmin + ":" + dsec;
+  currentTimeEl.textContent = format(audio.currentTime);
+  durationEl.textContent = format(audio.duration);
 });
 
-/* SEEK + DRAG */
+// SEEK (DRAG BAR)
+progress.onclick = (e) => {
+  const rect = progress.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const percent = x / rect.width;
 
-let dragging = false;
+  audio.currentTime = percent * audio.duration;
+};
 
-function updateSeek(x){
+// FORMAT TIME
+function format(sec){
+  if(isNaN(sec)) return "00:00";
 
-  let rect =
-  progress.getBoundingClientRect();
+  let m = Math.floor(sec / 60);
+  let s = Math.floor(sec % 60);
 
-  let offsetX =
-  x - rect.left;
-
-  if(offsetX < 0){
-
-    offsetX = 0;
-  }
-
-  if(offsetX > rect.width){
-
-    offsetX = rect.width;
-  }
-
-  let percent =
-
-  offsetX / rect.width;
-
-  bar.style.width =
-
-  (percent * 100) + "%";
-
-  audio.currentTime =
-
-  percent * audio.duration;
+  return `${m}:${s < 10 ? "0"+s : s}`;
 }
 
-/* CLICK */
-
-progress.addEventListener(
-"click",
-(e)=>{
-
-  updateSeek(e.clientX);
-});
-
-/* DRAG START */
-
-progress.addEventListener(
-"mousedown",
-(e)=>{
-
-  dragging = true;
-
-  updateSeek(e.clientX);
-});
-
-/* DRAG MOVE */
-
-document.addEventListener(
-"mousemove",
-(e)=>{
-
-  if(dragging){
-
-    updateSeek(e.clientX);
-  }
-});
-
-/* DRAG END */
-
-document.addEventListener(
-"mouseup",
-()=>{
-
-  dragging = false;
-});
-
-/* MOBILE TOUCH */
-
-progress.addEventListener(
-"touchstart",
-(e)=>{
-
-  updateSeek(
-  e.touches[0].clientX
-  );
-});
-
-progress.addEventListener(
-"touchmove",
-(e)=>{
-
-  updateSeek(
-  e.touches[0].clientX
-  );
-});
-
-/* SKIP */
-
-document
-.getElementById("ffw")
-.onclick = ()=>{
-
-  audio.currentTime += 5;
-};
-
-document
-.getElementById("rwd")
-.onclick = ()=>{
-
-  audio.currentTime -= 5;
-};
-
-/* BUTTON */
-
-play.onclick = toggle;
-
-document
-.getElementById("next")
-.onclick = next;
-
-document
-.getElementById("prev")
-.onclick = prev;
-
-/* PLAYLIST */
-
+// PLAYLIST
 files.forEach((f,i)=>{
-
-  let div =
-  document.createElement("div");
-
-  div.className =
-  "track";
-
+  const div = document.createElement("div");
+  div.className = "track";
   div.textContent = f;
 
-  div.onclick = ()=>{
-
+  div.onclick = () => {
     load(i);
-
     audio.play();
   };
-
-  div.dataset.i = i;
 
   playlist.appendChild(div);
 });
 
-/* HIGHLIGHT */
-
-function highlight(){
-
-  document
-  .querySelectorAll(".track")
-  .forEach(e=>
-    e.classList.remove(
-    "active"
-  ));
-
-  let el =
-  document.querySelector(
-  `[data-i="${index}"]`
-  );
-
-  if(el){
-
-    el.classList.add(
-    "active"
-    );
-  }
+function updateActive(){
+  document.querySelectorAll(".track").forEach((t,i)=>{
+    t.classList.toggle("active", i === index);
+  });
 }
 
-/* AUTO NEXT */
+// EVENTS
+playBtn.onclick = toggle;
+miniPlay.onclick = toggle;
+document.getElementById("next").onclick = next;
+document.getElementById("prev").onclick = prev;
 
-audio.onended = ()=>{
-
-  next();
-};
-
-/* INIT */
-
+// INIT
 load(0);
