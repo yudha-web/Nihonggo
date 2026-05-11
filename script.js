@@ -90,124 +90,119 @@ const files = [
 "89 Yanto.mp3"
 ];
 
-// ELEMENT
+let index = 0;
+let shuffle = false;
+let repeat = "off";
+
 const audio = document.getElementById("audio");
-const playBtn = document.getElementById("play");
+const play = document.getElementById("play");
 const title = document.getElementById("title");
 const bar = document.getElementById("bar");
-const progress = document.getElementById("progress");
 const playlist = document.getElementById("playlist");
-const miniTitle = document.getElementById("mini-title");
-const miniPlay = document.getElementById("mini-play");
-const currentTimeEl = document.getElementById("current");
-const durationEl = document.getElementById("duration");
 
-let index = 0;
-let isPlaying = false;
+const vol = document.getElementById("vol");
+audio.volume = 0.5;
 
-// LOAD SONG
+/* LOAD */
 function load(i){
   index = i;
-
   audio.src = "audio/" + files[i];
   title.textContent = files[i];
-  miniTitle.textContent = files[i];
-
   updateActive();
 }
 
-// PLAY / PAUSE
+/* PLAY */
 function toggle(){
-  if(audio.paused){
+  audio.paused ? audio.play() : audio.pause();
+}
+
+audio.onplay = ()=> play.textContent = "⏸";
+audio.onpause = ()=> play.textContent = "▶";
+
+/* NEXT */
+function next(){
+  if(shuffle){
+    index = Math.floor(Math.random()*files.length);
+  } else {
+    index++;
+  }
+
+  if(index >= files.length){
+    if(repeat === "all") index = 0;
+    else return;
+  }
+
+  load(index);
+  audio.play();
+}
+
+/* PREV */
+function prev(){
+  index = (index-1+files.length)%files.length;
+  load(index);
+  audio.play();
+}
+
+/* END */
+audio.onended = ()=>{
+  if(repeat === "one"){
+    audio.currentTime = 0;
     audio.play();
   } else {
-    audio.pause();
+    next();
   }
-}
-
-audio.onplay = () => {
-  isPlaying = true;
-  playBtn.textContent = "⏸";
-  miniPlay.textContent = "⏸";
 };
 
-audio.onpause = () => {
-  isPlaying = false;
-  playBtn.textContent = "▶";
-  miniPlay.textContent = "▶";
-};
-
-// NEXT
-function next(){
-  index++;
-  if(index >= files.length) index = 0;
-  load(index);
-  audio.play();
-}
-
-// PREV
-function prev(){
-  index--;
-  if(index < 0) index = files.length - 1;
-  load(index);
-  audio.play();
-}
-
-// PROGRESS UPDATE
-audio.addEventListener("timeupdate", () => {
+/* PROGRESS */
+audio.ontimeupdate = ()=>{
   if(!audio.duration) return;
-
-  let percent = (audio.currentTime / audio.duration) * 100;
-  bar.style.width = percent + "%";
-
-  currentTimeEl.textContent = format(audio.currentTime);
-  durationEl.textContent = format(audio.duration);
-});
-
-// SEEK (DRAG BAR)
-progress.onclick = (e) => {
-  const rect = progress.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const percent = x / rect.width;
-
-  audio.currentTime = percent * audio.duration;
+  bar.style.width = (audio.currentTime/audio.duration)*100 + "%";
+  document.getElementById("current").textContent = format(audio.currentTime);
+  document.getElementById("duration").textContent = format(audio.duration);
 };
 
-// FORMAT TIME
-function format(sec){
-  if(isNaN(sec)) return "00:00";
+/* SEEK */
+document.getElementById("progress").onclick = (e)=>{
+  const rect = e.target.getBoundingClientRect();
+  audio.currentTime = (e.clientX-rect.left)/rect.width*audio.duration;
+};
 
-  let m = Math.floor(sec / 60);
-  let s = Math.floor(sec % 60);
-
-  return `${m}:${s < 10 ? "0"+s : s}`;
+/* FORMAT */
+function format(t){
+  let m = Math.floor(t/60)||0;
+  let s = Math.floor(t%60)||0;
+  return m+":"+(s<10?"0":"")+s;
 }
 
-// PLAYLIST
+/* PLAYLIST */
 files.forEach((f,i)=>{
-  const div = document.createElement("div");
+  let div = document.createElement("div");
   div.className = "track";
   div.textContent = f;
-
-  div.onclick = () => {
-    load(i);
-    audio.play();
-  };
-
+  div.onclick = ()=>{ load(i); audio.play(); };
   playlist.appendChild(div);
 });
 
+/* ACTIVE */
 function updateActive(){
   document.querySelectorAll(".track").forEach((t,i)=>{
-    t.classList.toggle("active", i === index);
+    t.classList.toggle("active", i===index);
   });
 }
 
-// EVENTS
-playBtn.onclick = toggle;
-miniPlay.onclick = toggle;
+/* VOLUME */
+vol.oninput = ()=> audio.volume = vol.value;
+
+/* BUTTONS */
+play.onclick = toggle;
 document.getElementById("next").onclick = next;
 document.getElementById("prev").onclick = prev;
 
-// INIT
+/* EXTRA TOGGLE */
+window.toggleShuffle = ()=> shuffle = !shuffle;
+window.toggleRepeat = ()=>{
+  repeat = repeat==="off"?"all":repeat==="all"?"one":"off";
+};
+
+/* INIT */
 load(0);
