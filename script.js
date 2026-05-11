@@ -23,53 +23,49 @@ const songs = [
     '85 Dai 25 Ka - Kaiwa.mp3', '86 Dai 25 Ka - Mondai 1.mp3', '87 Dai 25 Ka - Mondai 2.mp3', '88 Juned.mp3', '89 Yanto.mp3'
 ];
 
-let currentSongIndex = localStorage.getItem('lastPlayedIndex') || 0;
+let currentIndex = localStorage.getItem('lastIdx') || 0;
 let isPlaying = false;
+let currentSpeed = 1;
 const audio = document.getElementById('main-audio');
-
-// UI Elements
-const songTbody = document.getElementById('song-tbody');
 const playBtn = document.getElementById('play-pause');
-const progressBar = document.getElementById('progress-fill');
-const progressContainer = document.getElementById('progress-container');
+const speedBtn = document.getElementById('speed-btn');
 
-// Easter Egg Logic
-let logoClick = 0;
+// Easter Egg 5x Klik Logo
+let logoClicks = 0;
 document.getElementById('logo').onclick = () => {
-    logoClick++;
-    if(logoClick === 5) {
-        alert("Mode Rahasia: Aktif! Memutar lagu Yanto...");
-        playSong(88); // Index Yanto
+    logoClicks++;
+    if(logoClicks === 5) {
+        alert("Mode Rahasia Aktif! Memutar Lagu Yanto...");
+        playSong(88); 
         document.documentElement.style.setProperty('--spotify-green', '#ff0055');
-        logoClick = 0;
+        logoClicks = 0;
     }
 };
 
-// Render Table
 function renderSongs(filter = "") {
-    songTbody.innerHTML = '';
+    const tbody = document.getElementById('song-tbody');
+    tbody.innerHTML = '';
     songs.forEach((song, index) => {
-        if(song.toLowerCase().includes(filter.toLowerCase())) {
+        if (song.toLowerCase().includes(filter.toLowerCase())) {
             const tr = document.createElement('tr');
-            if(index == currentSongIndex) tr.classList.add('active-row');
-            
+            if (index == currentIndex) tr.classList.add('active-row');
             tr.innerHTML = `
-                <td class="col-id">${index == currentSongIndex && isPlaying ? '<i class="fa-solid fa-volume-high anim-bounce"></i>' : index + 1}</td>
+                <td>${index == currentIndex && isPlaying ? '<i class="fa-solid fa-volume-high"></i>' : index + 1}</td>
                 <td>${song.replace('.mp3', '')}</td>
-                <td class="col-action">...</td>
+                <td style="text-align: right;">...</td>
             `;
             tr.onclick = () => playSong(index);
-            songTbody.appendChild(tr);
+            tbody.appendChild(tr);
         }
     });
 }
 
-// Player Functions
 function playSong(index) {
-    currentSongIndex = index;
-    localStorage.setItem('lastPlayedIndex', index);
+    currentIndex = index;
+    localStorage.setItem('lastIdx', index);
     audio.src = `audio/${songs[index]}`;
     document.getElementById('player-title').innerText = songs[index].replace('.mp3', '');
+    audio.playbackRate = currentSpeed;
     audio.play();
     isPlaying = true;
     updateUI();
@@ -81,48 +77,55 @@ function updateUI() {
 }
 
 playBtn.onclick = () => {
-    if(isPlaying) audio.pause(); else audio.play();
+    if (isPlaying) audio.pause(); else audio.play();
     isPlaying = !isPlaying;
     updateUI();
 };
 
 document.getElementById('next').onclick = () => {
-    currentSongIndex = (parseInt(currentSongIndex) + 1) % songs.length;
-    playSong(currentSongIndex);
+    currentIndex = (parseInt(currentIndex) + 1) % songs.length;
+    playSong(currentIndex);
 };
 
 document.getElementById('prev').onclick = () => {
-    currentSongIndex = (parseInt(currentSongIndex) - 1 + songs.length) % songs.length;
-    playSong(currentSongIndex);
+    currentIndex = (parseInt(currentIndex) - 1 + songs.length) % songs.length;
+    playSong(currentIndex);
 };
 
-// Audio Progress
+// Speed Control Logic
+speedBtn.onclick = () => {
+    if (currentSpeed === 1) currentSpeed = 1.5;
+    else if (currentSpeed === 1.5) currentSpeed = 0.5;
+    else currentSpeed = 1;
+    
+    audio.playbackRate = currentSpeed;
+    speedBtn.innerText = currentSpeed + 'x';
+    speedBtn.style.color = currentSpeed === 1 ? 'white' : 'var(--spotify-green)';
+    speedBtn.style.borderColor = currentSpeed === 1 ? '#555' : 'var(--spotify-green)';
+};
+
+// Progress Bar Logic
 audio.ontimeupdate = () => {
-    const { currentTime, duration } = audio;
-    const progressPercent = (currentTime / duration) * 100;
-    progressBar.style.width = `${progressPercent}%`;
-    document.getElementById('curr-time').innerText = formatTime(currentTime);
-    if(duration) document.getElementById('total-time').innerText = formatTime(duration);
+    const prog = (audio.currentTime / audio.duration) * 100;
+    document.getElementById('progress-fill').style.width = prog + "%";
+    document.getElementById('curr-time').innerText = formatTime(audio.currentTime);
+    if(audio.duration) document.getElementById('total-time').innerText = formatTime(audio.duration);
 };
 
-progressContainer.onclick = (e) => {
-    const width = progressContainer.clientWidth;
+document.getElementById('progress-container').onclick = (e) => {
     const clickX = e.offsetX;
-    const duration = audio.duration;
-    audio.currentTime = (clickX / width) * duration;
+    const width = e.target.clientWidth;
+    audio.currentTime = (clickX / width) * audio.duration;
 };
 
 audio.onended = () => document.getElementById('next').click();
-
-// Volume & Search
 document.getElementById('volume-slider').oninput = (e) => audio.volume = e.target.value;
 document.getElementById('search-input').oninput = (e) => renderSongs(e.target.value);
 
-function formatTime(time) {
-    const min = Math.floor(time / 60);
-    const sec = Math.floor(time % 60);
-    return `${min}:${sec < 10 ? '0'+sec : sec}`;
+function formatTime(s) {
+    const m = Math.floor(s / 60);
+    const sc = Math.floor(s % 60);
+    return `${m}:${sc < 10 ? '0' + sc : sc}`;
 }
 
-// Init
 renderSongs();
