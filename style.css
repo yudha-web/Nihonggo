@@ -1,145 +1,94 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
 body{
+  margin:0;
   font-family:sans-serif;
-  background:linear-gradient(180deg,#020617,#0f172a);
-  color:white;
-  min-height:100vh;
+  background:#0f1720;
+  color:#fff;
+  padding:20px;
+
+  /* INI KUNCI BIAR BISA REFRESH */
   overflow-y:auto;
   -webkit-overflow-scrolling:touch;
 }
 
-/* WRAP */
 .wrap{
-  max-width:600px;
+  max-width:500px;
   margin:auto;
-  padding:20px;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-}
-
-/* TITLE */
-h1{
-  font-size:28px;
-  margin-bottom:10px;
-}
-
-/* PLAYER BOX */
-.player{
-  margin-top:20px;
-  padding:20px;
-  border-radius:25px;
-  background:rgba(15,23,42,.9);
-  border:1px solid rgba(255,255,255,.08);
 }
 
 /* BUTTON */
-.controls{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:12px;
-  margin-top:10px;
-}
-
 button{
-  border:none;
   cursor:pointer;
 }
 
-.small{
-  width:55px;
-  height:55px;
+.bigbtn{
+  width:70px;
+  height:70px;
   border-radius:50%;
-  background:#1e293b;
-  color:white;
+  border:none;
+  background:#FFD700;
+  font-size:22px;
+  font-weight:bold;
 }
 
-.play{
-  width:75px;
-  height:75px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#facc15,#f59e0b);
+.smbtn{
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  background:#222;
+  color:#fff;
+}
+
+.smbtn:hover{
+  background:#FFD700;
   color:black;
-  font-size:26px;
 }
 
-/* TITLE LAGU */
+/* TITLE */
 #title{
-  margin-top:15px;
-  font-size:14px;
-  color:#facc15;
-  word-break:break-word;
+  margin-top:10px;
 }
 
 /* PROGRESS */
-.progress-container{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-top:20px;
-}
-
-#current,#duration{
-  width:45px;
-  font-size:12px;
-  opacity:.7;
-}
-
 .progress{
-  flex:1;
   height:10px;
-  background:#1e293b;
-  border-radius:20px;
+  background:#333;
+  border-radius:10px;
+  margin:10px 0;
   overflow:hidden;
-  position:relative;
 }
 
 #bar{
   height:100%;
   width:0%;
-  background:linear-gradient(90deg,#facc15,#f59e0b);
+  background:#FFD700;
 }
 
 /* PLAYLIST */
 #playlist{
   margin-top:20px;
-  max-height:350px;
+  max-height:400px;
   overflow-y:auto;
-  padding-right:5px;
 }
 
 .track{
-  padding:14px;
-  margin-bottom:10px;
-  border-radius:15px;
-  background:rgba(255,255,255,.04);
+  padding:10px;
+  border-bottom:1px solid #333;
   cursor:pointer;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
 }
 
 .track:hover{
-  background:rgba(255,255,255,.08);
+  background:#222;
 }
 
 .track.active{
-  background:linear-gradient(90deg,#facc15,#f59e0b);
+  background:#FFD700;
   color:black;
-  font-weight:bold;
 }
 
 /* FOOTER */
 footer{
   margin-top:20px;
   text-align:center;
-  opacity:.7;
+  opacity:0.7;
   font-size:13px;
-  padding:20px 0;
 }
