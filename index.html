@@ -1,42 +1,62 @@
-<!doctype html>
-<html lang="id">
-
-<head>
-<meta charset="utf-8">
-<meta name="viewport"
-content="width=device-width,initial-scale=1">
-
-<title>Nihonggo Player</title>
-
-<link rel="stylesheet"
-href="style.css">
-</head>
-
 <body>
 
 <div class="wrap">
 
-<h1>🎧 Nihonggo Player</h1>
+<div class="top">
+
+<div class="cover">
+🎧
+</div>
+
+<h1>Nihonggo Player</h1>
 
 <div id="title">
 Loading...
 </div>
 
+</div>
+
+<div class="player">
+
 <div class="controls">
 
-<button id="prev">⏮</button>
+<button
+id="prev"
+class="small">
+⏮
+</button>
 
-<button id="play">
+<button
+id="rwd"
+class="small">
+-5
+</button>
+
+<button
+id="play"
+class="play">
 ▶
 </button>
 
-<button id="next">⏭</button>
+<button
+id="ffw"
+class="small">
++5
+</button>
+
+<button
+id="next"
+class="small">
+⏭
+</button>
 
 </div>
 
 <div class="progress">
 
 <div id="bar"></div>
+
+</div>
 
 </div>
 
@@ -49,4 +69,3 @@ Loading...
 <script src="script.js"></script>
 
 </body>
-</html>
