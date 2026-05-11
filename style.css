@@ -19,26 +19,7 @@ body{
 
   min-height:100vh;
 
-  overflow-x:hidden;
-}
-
-/* SCROLL */
-
-body::-webkit-scrollbar{
-
-  width:8px;
-}
-
-body::-webkit-scrollbar-thumb{
-
-  background:#facc15;
-
-  border-radius:20px;
-}
-
-body::-webkit-scrollbar-track{
-
-  background:#111827;
+  overflow:hidden;
 }
 
 /* BACKGROUND */
@@ -69,6 +50,12 @@ body::-webkit-scrollbar-track{
   margin:auto;
 
   padding:20px;
+
+  height:100vh;
+
+  display:flex;
+
+  flex-direction:column;
 }
 
 /* HEADER */
@@ -77,13 +64,13 @@ body::-webkit-scrollbar-track{
 
   text-align:center;
 
-  margin-top:20px;
+  margin-top:10px;
 }
 
 .cover{
 
-  width:180px;
-  height:180px;
+  width:170px;
+  height:170px;
 
   margin:auto;
 
@@ -167,13 +154,7 @@ h1{
 
 .player{
 
-  position:sticky;
-
-  top:10px;
-
-  z-index:999;
-
-  margin-top:30px;
+  margin-top:25px;
 
   padding:25px;
 
@@ -349,8 +330,33 @@ button:hover{
 
   margin-top:25px;
 
-  padding-bottom:100px;
+  flex:1;
+
+  overflow-y:auto;
+
+  padding-right:5px;
 }
+
+/* PLAYLIST SCROLL */
+
+#playlist::-webkit-scrollbar{
+
+  width:6px;
+}
+
+#playlist::-webkit-scrollbar-thumb{
+
+  background:#facc15;
+
+  border-radius:20px;
+}
+
+#playlist::-webkit-scrollbar-track{
+
+  background:#111827;
+}
+
+/* TRACK */
 
 .track{
 
@@ -408,13 +414,13 @@ button:hover{
 
 footer{
 
-  margin-top:35px;
+  margin-top:15px;
 
   text-align:center;
 
   opacity:.7;
 
-  padding-bottom:20px;
+  padding-bottom:10px;
 
   font-size:14px;
 }
@@ -425,8 +431,8 @@ footer{
 
   .cover{
 
-    width:150px;
-    height:150px;
+    width:140px;
+    height:140px;
 
     font-size:60px;
   }
