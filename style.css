@@ -1,186 +1,126 @@
-/* ===== BASIC ===== */
 body{
   margin:0;
-  font-family:sans-serif;
-  background:#0f1720;
-  color:#fff;
+  font-family:Arial;
+  background:#0b0f19;
+  color:white;
 }
 
-.wrap{
+.app{
   max-width:520px;
   margin:auto;
-  padding:20px;
-  padding-bottom:90px; /* biar tidak ketutup mini player */
+  padding:15px;
 }
 
-/* ===== TITLE ===== */
-h2{
+/* TOP */
+.top{
   text-align:center;
-  margin-bottom:10px;
 }
 
-/* ===== SEARCH ===== */
 #search{
   width:100%;
   padding:10px;
+  margin-top:10px;
   border:none;
   border-radius:10px;
-  background:#1e293b;
-  color:#fff;
-  outline:none;
-  margin-bottom:10px;
+  background:#111827;
+  color:white;
 }
 
-/* ===== CONTROLS ===== */
+/* ALBUM */
+.album{
+  text-align:center;
+  margin:15px 0;
+}
+
+#visual{
+  margin-top:5px;
+  color:#1db954;
+  animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+  0%{opacity:0.5;}
+  50%{opacity:1;}
+  100%{opacity:0.5;}
+}
+
+/* PLAYER */
+.player{
+  background:#111827;
+  padding:15px;
+  border-radius:15px;
+}
+
+/* PROGRESS */
+#progress{
+  width:100%;
+  height:6px;
+  background:#222;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+#bar{
+  width:0%;
+  height:100%;
+  background:#1db954;
+}
+
+/* TIME */
+.time{
+  text-align:center;
+  font-size:12px;
+  opacity:0.7;
+  margin-top:5px;
+}
+
+/* BUTTON */
 .controls{
   display:flex;
   justify-content:center;
   gap:8px;
-  margin:10px 0;
+  margin-top:10px;
+  flex-wrap:wrap;
 }
 
 button{
-  border:none;
-  cursor:pointer;
-  transition:0.2s;
-}
-
-.controls button{
-  background:#1e293b;
-  color:white;
   padding:10px;
+  border:none;
   border-radius:10px;
-}
-
-.controls button:hover{
-  background:#FFD700;
-  color:black;
-}
-
-/* PLAY BUTTON BESAR */
-#play{
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  background:#FFD700;
-  font-size:22px;
-}
-
-/* ===== TITLE LAGU ===== */
-#title{
-  text-align:center;
-  margin:10px 0;
-  font-weight:bold;
-}
-
-/* ===== TIME ===== */
-.time{
-  display:flex;
-  justify-content:center;
-  gap:5px;
-  font-size:12px;
-  opacity:0.8;
-}
-
-/* ===== PROGRESS ===== */
-#progress{
-  width:100%;
-  height:10px;
-  background:#334155;
-  border-radius:10px;
-  margin:10px 0;
-  cursor:pointer;
-  overflow:hidden;
-}
-
-#bar{
-  height:100%;
-  width:0%;
-  background:#FFD700;
-  transition:0.1s;
-}
-
-/* ===== VOLUME ===== */
-.volume{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin:10px 0;
-}
-
-#volume{
-  width:100%;
-}
-
-/* ===== MODE ===== */
-.mode{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-bottom:10px;
-}
-
-.mode button{
-  padding:8px 12px;
-  border-radius:10px;
-  background:#1e293b;
+  background:#1f2937;
   color:white;
 }
 
-.mode button:hover{
-  background:#FFD700;
+button:hover{
+  background:#1db954;
   color:black;
 }
 
-/* ===== PLAYLIST ===== */
+/* VOLUME */
+.volume{
+  text-align:center;
+  margin-top:10px;
+}
+
+/* PLAYLIST */
 #playlist{
-  max-height:320px;
+  margin-top:15px;
+  height:420px;
   overflow-y:auto;
-  border-top:1px solid #334155;
 }
 
 .track{
   padding:10px;
-  border-bottom:1px solid #334155;
+  border-bottom:1px solid #1f2937;
   cursor:pointer;
-  transition:0.2s;
 }
 
 .track:hover{
-  background:#1e293b;
+  background:#111827;
 }
 
 .track.active{
-  background:#FFD700;
+  background:#1db954;
   color:black;
-}
-
-/* ===== MINI PLAYER ===== */
-#mini-player{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  background:#111827;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 15px;
-  border-top:1px solid #334155;
-}
-
-#mini-play{
-  background:#FFD700;
-  border:none;
-  padding:8px 12px;
-  border-radius:10px;
-  cursor:pointer;
-}
-
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  font-size:12px;
-  margin-top:20px;
-  opacity:0.6;
+  font-weight:bold;
 }
