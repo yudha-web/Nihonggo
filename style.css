@@ -19,7 +19,7 @@ body{
 
   min-height:100vh;
 
-  overflow:hidden;
+  overflow-y:auto;
 }
 
 /* BACKGROUND */
@@ -51,7 +51,7 @@ body{
 
   padding:20px;
 
-  height:100vh;
+  min-height:100vh;
 
   display:flex;
 
@@ -330,14 +330,14 @@ button:hover{
 
   margin-top:25px;
 
-  flex:1;
+  max-height:400px;
 
   overflow-y:auto;
 
   padding-right:5px;
 }
 
-/* PLAYLIST SCROLL */
+/* SCROLL */
 
 #playlist::-webkit-scrollbar{
 
@@ -414,13 +414,13 @@ button:hover{
 
 footer{
 
-  margin-top:15px;
+  margin-top:20px;
 
   text-align:center;
 
   opacity:.7;
 
-  padding-bottom:10px;
+  padding:20px 0 40px;
 
   font-size:14px;
 }
