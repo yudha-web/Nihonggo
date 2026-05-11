@@ -250,24 +250,100 @@ audio.addEventListener(
   dmin + ":" + dsec;
 });
 
-/* SEEK */
+/* SEEK + DRAG */
+
+let dragging = false;
+
+function updateSeek(x){
+
+  let rect =
+  progress.getBoundingClientRect();
+
+  let offsetX =
+  x - rect.left;
+
+  if(offsetX < 0){
+
+    offsetX = 0;
+  }
+
+  if(offsetX > rect.width){
+
+    offsetX = rect.width;
+  }
+
+  let percent =
+
+  offsetX / rect.width;
+
+  bar.style.width =
+
+  (percent * 100) + "%";
+
+  audio.currentTime =
+
+  percent * audio.duration;
+}
+
+/* CLICK */
 
 progress.addEventListener(
 "click",
 (e)=>{
 
-  let width =
-  progress.clientWidth;
+  updateSeek(e.clientX);
+});
 
-  let clickX =
-  e.offsetX;
+/* DRAG START */
 
-  let duration =
-  audio.duration;
+progress.addEventListener(
+"mousedown",
+(e)=>{
 
-  audio.currentTime =
-  (clickX / width)
-  * duration;
+  dragging = true;
+
+  updateSeek(e.clientX);
+});
+
+/* DRAG MOVE */
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+  if(dragging){
+
+    updateSeek(e.clientX);
+  }
+});
+
+/* DRAG END */
+
+document.addEventListener(
+"mouseup",
+()=>{
+
+  dragging = false;
+});
+
+/* MOBILE TOUCH */
+
+progress.addEventListener(
+"touchstart",
+(e)=>{
+
+  updateSeek(
+  e.touches[0].clientX
+  );
+});
+
+progress.addEventListener(
+"touchmove",
+(e)=>{
+
+  updateSeek(
+  e.touches[0].clientX
+  );
 });
 
 /* SKIP */
