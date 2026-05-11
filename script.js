@@ -1,6 +1,6 @@
 const files = [
 
-""01 Dai 1 Ka - Kaiwa.mp3",
+"01 Dai 1 Ka - Kaiwa.mp3",
 "02 Dai 1 Ka - Mondai 1.mp3",
 "03 Dai 1 Ka - Mondai 2.mp3",
 "04 Dai 1 Ka - Mondai 3.mp3",
