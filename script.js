@@ -1,10 +1,12 @@
 const files = [
 
 "01 Dai 1 Ka - Kaiwa.mp3",
-
 "02 Dai 1 Ka - Mondai 1.mp3",
+"03 Dai 1 Ka - Mondai 2.mp3",
 
-"03 Dai 1 Ka - Mondai 2.mp3"
+// dst...
+
+"89 Yanto.mp3"
 
 ];
 
